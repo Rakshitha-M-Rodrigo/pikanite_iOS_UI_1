@@ -14,6 +14,7 @@
 		AC6A69462000B45B0097DC45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC6A69442000B45B0097DC45 /* LaunchScreen.storyboard */; };
 		AC6A69512000B45B0097DC45 /* pikaniteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6A69502000B45B0097DC45 /* pikaniteTests.swift */; };
 		AC6A695C2000B45B0097DC45 /* pikaniteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6A695B2000B45B0097DC45 /* pikaniteUITests.swift */; };
+		AC6A696B2000BC2C0097DC45 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC6A696A2000BC2C0097DC45 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		AC6A69572000B45B0097DC45 /* pikaniteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pikaniteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC6A695B2000B45B0097DC45 /* pikaniteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pikaniteUITests.swift; sourceTree = "<group>"; };
 		AC6A695D2000B45B0097DC45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC6A696A2000BC2C0097DC45 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC6A696B2000BC2C0097DC45 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +84,7 @@
 				AC6A694F2000B45B0097DC45 /* pikaniteTests */,
 				AC6A695A2000B45B0097DC45 /* pikaniteUITests */,
 				AC6A69392000B45A0097DC45 /* Products */,
+				AC6A69692000BC2C0097DC45 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,6 +127,14 @@
 				AC6A695D2000B45B0097DC45 /* Info.plist */,
 			);
 			path = pikaniteUITests;
+			sourceTree = "<group>";
+		};
+		AC6A69692000BC2C0097DC45 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AC6A696A2000BC2C0097DC45 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,6 +206,14 @@
 					AC6A69372000B45A0097DC45 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					AC6A694B2000B45B0097DC45 = {
 						CreatedOnToolsVersion = 9.2;
@@ -433,7 +453,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.pikanite.pikanite;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -448,7 +468,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.pikanite.pikanite;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
