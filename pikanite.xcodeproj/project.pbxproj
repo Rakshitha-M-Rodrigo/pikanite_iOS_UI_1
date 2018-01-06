@@ -1,0 +1,563 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AC6A693C2000B45B0097DC45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6A693B2000B45B0097DC45 /* AppDelegate.swift */; };
+		AC6A693E2000B45B0097DC45 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6A693D2000B45B0097DC45 /* ViewController.swift */; };
+		AC6A69412000B45B0097DC45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC6A693F2000B45B0097DC45 /* Main.storyboard */; };
+		AC6A69432000B45B0097DC45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC6A69422000B45B0097DC45 /* Assets.xcassets */; };
+		AC6A69462000B45B0097DC45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC6A69442000B45B0097DC45 /* LaunchScreen.storyboard */; };
+		AC6A69512000B45B0097DC45 /* pikaniteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6A69502000B45B0097DC45 /* pikaniteTests.swift */; };
+		AC6A695C2000B45B0097DC45 /* pikaniteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6A695B2000B45B0097DC45 /* pikaniteUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AC6A694D2000B45B0097DC45 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC6A69302000B45A0097DC45 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AC6A69372000B45A0097DC45;
+			remoteInfo = pikanite;
+		};
+		AC6A69582000B45B0097DC45 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC6A69302000B45A0097DC45 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AC6A69372000B45A0097DC45;
+			remoteInfo = pikanite;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AC6A69382000B45A0097DC45 /* pikanite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pikanite.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC6A693B2000B45B0097DC45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AC6A693D2000B45B0097DC45 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AC6A69402000B45B0097DC45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AC6A69422000B45B0097DC45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AC6A69452000B45B0097DC45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AC6A69472000B45B0097DC45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC6A694C2000B45B0097DC45 /* pikaniteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pikaniteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC6A69502000B45B0097DC45 /* pikaniteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pikaniteTests.swift; sourceTree = "<group>"; };
+		AC6A69522000B45B0097DC45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC6A69572000B45B0097DC45 /* pikaniteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pikaniteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC6A695B2000B45B0097DC45 /* pikaniteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pikaniteUITests.swift; sourceTree = "<group>"; };
+		AC6A695D2000B45B0097DC45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AC6A69352000B45A0097DC45 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC6A69492000B45B0097DC45 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC6A69542000B45B0097DC45 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AC6A692F2000B45A0097DC45 = {
+			isa = PBXGroup;
+			children = (
+				AC6A693A2000B45A0097DC45 /* pikanite */,
+				AC6A694F2000B45B0097DC45 /* pikaniteTests */,
+				AC6A695A2000B45B0097DC45 /* pikaniteUITests */,
+				AC6A69392000B45A0097DC45 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AC6A69392000B45A0097DC45 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AC6A69382000B45A0097DC45 /* pikanite.app */,
+				AC6A694C2000B45B0097DC45 /* pikaniteTests.xctest */,
+				AC6A69572000B45B0097DC45 /* pikaniteUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AC6A693A2000B45A0097DC45 /* pikanite */ = {
+			isa = PBXGroup;
+			children = (
+				AC6A693B2000B45B0097DC45 /* AppDelegate.swift */,
+				AC6A693D2000B45B0097DC45 /* ViewController.swift */,
+				AC6A693F2000B45B0097DC45 /* Main.storyboard */,
+				AC6A69422000B45B0097DC45 /* Assets.xcassets */,
+				AC6A69442000B45B0097DC45 /* LaunchScreen.storyboard */,
+				AC6A69472000B45B0097DC45 /* Info.plist */,
+			);
+			path = pikanite;
+			sourceTree = "<group>";
+		};
+		AC6A694F2000B45B0097DC45 /* pikaniteTests */ = {
+			isa = PBXGroup;
+			children = (
+				AC6A69502000B45B0097DC45 /* pikaniteTests.swift */,
+				AC6A69522000B45B0097DC45 /* Info.plist */,
+			);
+			path = pikaniteTests;
+			sourceTree = "<group>";
+		};
+		AC6A695A2000B45B0097DC45 /* pikaniteUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AC6A695B2000B45B0097DC45 /* pikaniteUITests.swift */,
+				AC6A695D2000B45B0097DC45 /* Info.plist */,
+			);
+			path = pikaniteUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AC6A69372000B45A0097DC45 /* pikanite */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC6A69602000B45B0097DC45 /* Build configuration list for PBXNativeTarget "pikanite" */;
+			buildPhases = (
+				AC6A69342000B45A0097DC45 /* Sources */,
+				AC6A69352000B45A0097DC45 /* Frameworks */,
+				AC6A69362000B45A0097DC45 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = pikanite;
+			productName = pikanite;
+			productReference = AC6A69382000B45A0097DC45 /* pikanite.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AC6A694B2000B45B0097DC45 /* pikaniteTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC6A69632000B45B0097DC45 /* Build configuration list for PBXNativeTarget "pikaniteTests" */;
+			buildPhases = (
+				AC6A69482000B45B0097DC45 /* Sources */,
+				AC6A69492000B45B0097DC45 /* Frameworks */,
+				AC6A694A2000B45B0097DC45 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AC6A694E2000B45B0097DC45 /* PBXTargetDependency */,
+			);
+			name = pikaniteTests;
+			productName = pikaniteTests;
+			productReference = AC6A694C2000B45B0097DC45 /* pikaniteTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AC6A69562000B45B0097DC45 /* pikaniteUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC6A69662000B45B0097DC45 /* Build configuration list for PBXNativeTarget "pikaniteUITests" */;
+			buildPhases = (
+				AC6A69532000B45B0097DC45 /* Sources */,
+				AC6A69542000B45B0097DC45 /* Frameworks */,
+				AC6A69552000B45B0097DC45 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AC6A69592000B45B0097DC45 /* PBXTargetDependency */,
+			);
+			name = pikaniteUITests;
+			productName = pikaniteUITests;
+			productReference = AC6A69572000B45B0097DC45 /* pikaniteUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AC6A69302000B45A0097DC45 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Rakshitha Muranga Rodrigo";
+				TargetAttributes = {
+					AC6A69372000B45A0097DC45 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					AC6A694B2000B45B0097DC45 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = AC6A69372000B45A0097DC45;
+					};
+					AC6A69562000B45B0097DC45 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = AC6A69372000B45A0097DC45;
+					};
+				};
+			};
+			buildConfigurationList = AC6A69332000B45A0097DC45 /* Build configuration list for PBXProject "pikanite" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AC6A692F2000B45A0097DC45;
+			productRefGroup = AC6A69392000B45A0097DC45 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AC6A69372000B45A0097DC45 /* pikanite */,
+				AC6A694B2000B45B0097DC45 /* pikaniteTests */,
+				AC6A69562000B45B0097DC45 /* pikaniteUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AC6A69362000B45A0097DC45 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC6A69462000B45B0097DC45 /* LaunchScreen.storyboard in Resources */,
+				AC6A69432000B45B0097DC45 /* Assets.xcassets in Resources */,
+				AC6A69412000B45B0097DC45 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC6A694A2000B45B0097DC45 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC6A69552000B45B0097DC45 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AC6A69342000B45A0097DC45 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC6A693E2000B45B0097DC45 /* ViewController.swift in Sources */,
+				AC6A693C2000B45B0097DC45 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC6A69482000B45B0097DC45 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC6A69512000B45B0097DC45 /* pikaniteTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC6A69532000B45B0097DC45 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC6A695C2000B45B0097DC45 /* pikaniteUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AC6A694E2000B45B0097DC45 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AC6A69372000B45A0097DC45 /* pikanite */;
+			targetProxy = AC6A694D2000B45B0097DC45 /* PBXContainerItemProxy */;
+		};
+		AC6A69592000B45B0097DC45 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AC6A69372000B45A0097DC45 /* pikanite */;
+			targetProxy = AC6A69582000B45B0097DC45 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AC6A693F2000B45B0097DC45 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC6A69402000B45B0097DC45 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AC6A69442000B45B0097DC45 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC6A69452000B45B0097DC45 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AC6A695E2000B45B0097DC45 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AC6A695F2000B45B0097DC45 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AC6A69612000B45B0097DC45 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 77NLQ5W586;
+				INFOPLIST_FILE = pikanite/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pikanite.pikanite;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AC6A69622000B45B0097DC45 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 77NLQ5W586;
+				INFOPLIST_FILE = pikanite/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pikanite.pikanite;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AC6A69642000B45B0097DC45 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 77NLQ5W586;
+				INFOPLIST_FILE = pikaniteTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pikanite.pikaniteTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/pikanite.app/pikanite";
+			};
+			name = Debug;
+		};
+		AC6A69652000B45B0097DC45 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 77NLQ5W586;
+				INFOPLIST_FILE = pikaniteTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pikanite.pikaniteTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/pikanite.app/pikanite";
+			};
+			name = Release;
+		};
+		AC6A69672000B45B0097DC45 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 77NLQ5W586;
+				INFOPLIST_FILE = pikaniteUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pikanite.pikaniteUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = pikanite;
+			};
+			name = Debug;
+		};
+		AC6A69682000B45B0097DC45 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 77NLQ5W586;
+				INFOPLIST_FILE = pikaniteUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pikanite.pikaniteUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = pikanite;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AC6A69332000B45A0097DC45 /* Build configuration list for PBXProject "pikanite" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC6A695E2000B45B0097DC45 /* Debug */,
+				AC6A695F2000B45B0097DC45 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC6A69602000B45B0097DC45 /* Build configuration list for PBXNativeTarget "pikanite" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC6A69612000B45B0097DC45 /* Debug */,
+				AC6A69622000B45B0097DC45 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC6A69632000B45B0097DC45 /* Build configuration list for PBXNativeTarget "pikaniteTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC6A69642000B45B0097DC45 /* Debug */,
+				AC6A69652000B45B0097DC45 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC6A69662000B45B0097DC45 /* Build configuration list for PBXNativeTarget "pikaniteUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC6A69672000B45B0097DC45 /* Debug */,
+				AC6A69682000B45B0097DC45 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AC6A69302000B45A0097DC45 /* Project object */;
+}
