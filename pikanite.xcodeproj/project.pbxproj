@@ -15,6 +15,7 @@
 		AC6A69512000B45B0097DC45 /* pikaniteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6A69502000B45B0097DC45 /* pikaniteTests.swift */; };
 		AC6A695C2000B45B0097DC45 /* pikaniteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6A695B2000B45B0097DC45 /* pikaniteUITests.swift */; };
 		AC6A696B2000BC2C0097DC45 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC6A696A2000BC2C0097DC45 /* MapKit.framework */; };
+		AC6A697C2001DE030097DC45 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6A697B2001DE030097DC45 /* IntroViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		AC6A695B2000B45B0097DC45 /* pikaniteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pikaniteUITests.swift; sourceTree = "<group>"; };
 		AC6A695D2000B45B0097DC45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC6A696A2000BC2C0097DC45 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		AC6A697B2001DE030097DC45 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,11 @@
 		AC6A693A2000B45A0097DC45 /* pikanite */ = {
 			isa = PBXGroup;
 			children = (
+				AC6A69792001DD420097DC45 /* controllers */,
+				AC6A697A2001DD420097DC45 /* models */,
+				AC6A69772001DD420097DC45 /* userHelper */,
+				AC6A69782001DD420097DC45 /* utilities */,
+				AC6A69762001DD420097DC45 /* views */,
 				AC6A693B2000B45B0097DC45 /* AppDelegate.swift */,
 				AC6A693D2000B45B0097DC45 /* ViewController.swift */,
 				AC6A693F2000B45B0097DC45 /* Main.storyboard */,
@@ -135,6 +142,42 @@
 				AC6A696A2000BC2C0097DC45 /* MapKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AC6A69762001DD420097DC45 /* views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		AC6A69772001DD420097DC45 /* userHelper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = userHelper;
+			sourceTree = "<group>";
+		};
+		AC6A69782001DD420097DC45 /* utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = utilities;
+			sourceTree = "<group>";
+		};
+		AC6A69792001DD420097DC45 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AC6A697B2001DE030097DC45 /* IntroViewController.swift */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
+		AC6A697A2001DD420097DC45 /* models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,6 +322,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC6A697C2001DE030097DC45 /* IntroViewController.swift in Sources */,
 				AC6A693E2000B45B0097DC45 /* ViewController.swift in Sources */,
 				AC6A693C2000B45B0097DC45 /* AppDelegate.swift in Sources */,
 			);
