@@ -16,6 +16,7 @@
 		AC6A695C2000B45B0097DC45 /* pikaniteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6A695B2000B45B0097DC45 /* pikaniteUITests.swift */; };
 		AC6A696B2000BC2C0097DC45 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC6A696A2000BC2C0097DC45 /* MapKit.framework */; };
 		AC6A697C2001DE030097DC45 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6A697B2001DE030097DC45 /* IntroViewController.swift */; };
+		ACF2623E20069EB40001F6BC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF2623D20069EB40001F6BC /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		AC6A695D2000B45B0097DC45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC6A696A2000BC2C0097DC45 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		AC6A697B2001DE030097DC45 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
+		ACF2623D20069EB40001F6BC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				AC6A697B2001DE030097DC45 /* IntroViewController.swift */,
+				ACF2623D20069EB40001F6BC /* LoginViewController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACF2623E20069EB40001F6BC /* LoginViewController.swift in Sources */,
 				AC6A697C2001DE030097DC45 /* IntroViewController.swift in Sources */,
 				AC6A693E2000B45B0097DC45 /* ViewController.swift in Sources */,
 				AC6A693C2000B45B0097DC45 /* AppDelegate.swift in Sources */,
