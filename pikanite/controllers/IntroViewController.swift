@@ -27,10 +27,13 @@ class IntroViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet var mainContainerView: UIView!
     
+    var hiLableCenter: CGPoint!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var hiLableCenter: CGPoint!
+        
         
         //animation
         self.hiImageView.alpha = 0
@@ -38,17 +41,16 @@ class IntroViewController: UIViewController {
         self.hiDescriptionLabel.alpha = 0
         self.introControllerView.alpha = 0
         self.hiLabel.font.withSize(1)
-        hiLableCenter = self.hiLabel.center
-        self.hiLabel.center = self.mainContainerView.center
+        self.hiLabel.layer.setAffineTransform(CGAffineTransform(scaleX: 0.9, y: 0.9))
+        
         
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
-            UIView.animate(withDuration: 1, delay: 0, options: .curveEaseIn, animations: {
+
+            UIView.animate(withDuration: 1.75, delay: 0, options: .curveEaseIn, animations: {
                 self.hiLabel.alpha = 1
-                self.hiLabel.font.withSize(40)
+                self.hiLabel.layer.setAffineTransform(CGAffineTransform(scaleX: 1, y: 1))
             }, completion: nil)
-            UIView.animate(withDuration: 3,delay: 1, animations: {
-                self.hiLabel.center = hiLableCenter
-            })
+         
             
             DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
                 UIView.animate(withDuration: 2, animations: {
