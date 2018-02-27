@@ -63,8 +63,10 @@ class BaseViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelega
                 //no profile image on google.
                 UserDefaults.standard.set("", forKey: "profileImageURL")
             }
+            if (checkUserEmail(email: email!)){
+                self.registerNewSocialMediaUser(name: name!, email: email!, socialLoginId: userId!, userType: "google")
+            }
             
-            self.registerNewSocialMediaUser(name: name!, email: email!, socialLoginId: userId!, userType: "google")
         }
         
             
@@ -248,9 +250,6 @@ class BaseViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelega
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "YesNoPromptViewController") as! YesNoPromptViewController
         vc.modalPresentationStyle = .overFullScreen
         vc.modalTransitionStyle = .crossDissolve
-//        vc.alertTitle = title
-//        vc.alertMessage = alertMessage
-//        vc.alertImage = 0
         self.present(vc, animated: true, completion: nil)
     }
     
@@ -266,7 +265,6 @@ class BaseViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelega
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "BookingStatusViewController") as! BookingStatusViewController
         vc.modalPresentationStyle = .overFullScreen
         vc.modalTransitionStyle = .crossDissolve
-        //vc.logginType = logginType
         self.present(vc, animated: true, completion: nil)
     }
     
@@ -420,8 +418,8 @@ class BaseViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelega
         appDelegate.userProfile.userFirstName = UserDefaults.standard.string(forKey: "profileName")!
     }
     
-    func checkUserEmail(email: String){
-        UserHelper.checkUser(email: email) { (success, resposnse, errors) in
+    func checkUserEmail(email: String) -> Bool {
+        UserHelper.checkUser(email: email){ (success, resposnse, errors) in
             if (errors == nil){
                 let status = (resposnse!.dictionaryObject)!["message"]! as! String
                 
@@ -429,6 +427,7 @@ class BaseViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelega
                     print("===> user does not exist")
                     self.register = true
                 } else if (status == "success"){
+                    self.register = false
                     let content = (resposnse!.dictionaryObject)!["content"]! as! [String: Any]
                     print("===> user exist")
                     print(content["name"] as! String)
@@ -447,6 +446,7 @@ class BaseViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelega
                 }
             }
         }
+        return self.register
     }
     
     func bookHotelNow(userEmail: String, HotelEmail: String, RoomCount: String, PromoCode: String = "nan"){

@@ -176,15 +176,16 @@ class LoginViewController: BaseViewController  {
         
     }
     
-    func checkUser(email: String){
+    func checkUser(email: String) -> Bool{
         UserHelper.checkUser(email: email) { (success, resposnse, errors) in
             if (errors == nil){
                 let status = (resposnse!.dictionaryObject)!["message"]! as! String
                 
                 if (status == "failed"){
                     print("===> user does not exist")
-                    
+                    self.register = true
                 } else if (status == "success"){
+                    self.register = false
                     let content = (resposnse!.dictionaryObject)!["content"]! as! [String: Any]
                     print("===> user exist")
                     print(content["name"] as! String)
@@ -203,6 +204,7 @@ class LoginViewController: BaseViewController  {
                 }
             }
         }
+       return self.register
     }
     
 }

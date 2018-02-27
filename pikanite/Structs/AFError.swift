@@ -1,10 +1,3 @@
-//
-//  AFError.swift
-//  tabbarconverted
-//
-//  Created by Sachithra Udayanga on 11/9/17.
-//  Copyright © 2017 Sachithra Udayanga. All rights reserved.
-//
 
 import Foundation
 import ObjectMapper

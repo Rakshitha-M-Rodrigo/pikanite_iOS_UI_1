@@ -1,10 +1,3 @@
-//
-//  UAImageFilter.swift
-//  tabbarconverted
-//
-//  Created by Gayanath Damith Amarasinghe on 12/11/17.
-//  Copyright © 2017 Sachithra Udayanga. All rights reserved.
-//
 
 import Foundation
 import UIKit
