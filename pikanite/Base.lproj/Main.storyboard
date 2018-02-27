@@ -4787,6 +4787,9 @@ Please Enjoy the other features while we are readying a wallet for you!</string>
                                                                         <integer key="value" value="15"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="updataProfileButtonPressed:" destination="kBh-yr-7dh" eventType="touchUpInside" id="sQG-51-lHD"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" red="0.0" green="0.1450980392" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -4820,11 +4823,16 @@ Please Enjoy the other features while we are readying a wallet for you!</string>
                                                             <constraint firstItem="8vR-1e-F1s" firstAttribute="top" secondItem="Bhi-G0-uOp" secondAttribute="bottom" constant="20" id="rqG-2y-cYS"/>
                                                             <constraint firstAttribute="bottom" secondItem="V33-ek-yQ0" secondAttribute="bottom" constant="25.329999999999998" id="waK-Il-UWw"/>
                                                         </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="8"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ChR-wC-gwP">
+                                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ChR-wC-gwP">
                                                         <rect key="frame" x="10" y="266" width="355" height="180"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Basic Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a1O-PO-NO1">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a1O-PO-NO1">
                                                                 <rect key="frame" x="10" y="10" width="335" height="17"/>
                                                                 <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="14"/>
                                                                 <color key="textColor" red="0.99963909390000005" green="1" blue="0.99975615740000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -4875,6 +4883,9 @@ Please Enjoy the other features while we are readying a wallet for you!</string>
                                                                         <integer key="value" value="15"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="updatePasswordButtonPressed:" destination="kBh-yr-7dh" eventType="touchUpInside" id="NHE-Yg-fg0"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" red="0.0" green="0.1450980392" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -4898,17 +4909,30 @@ Please Enjoy the other features while we are readying a wallet for you!</string>
                                                             <constraint firstAttribute="height" constant="180" id="yFm-Ef-cDg"/>
                                                             <constraint firstItem="YMY-A4-VGw" firstAttribute="leading" secondItem="pOz-Ag-CDL" secondAttribute="trailing" constant="8" id="yey-PR-s4c"/>
                                                         </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="8"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1P8-Dw-0FK">
+                                                        <rect key="frame" x="10" y="266" width="355" height="180"/>
+                                                        <color key="backgroundColor" red="0.025568826119999999" green="0.10914153610000001" blue="0.14902529119999999" alpha="0.79604559075342463" colorSpace="custom" customColorSpace="displayP3"/>
                                                     </view>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstItem="ChR-wC-gwP" firstAttribute="top" secondItem="4VA-Te-wPl" secondAttribute="bottom" constant="10" id="BlC-gf-eRa"/>
+                                                    <constraint firstItem="1P8-Dw-0FK" firstAttribute="height" secondItem="ChR-wC-gwP" secondAttribute="height" id="L4P-9w-6k4"/>
                                                     <constraint firstItem="ChR-wC-gwP" firstAttribute="leading" secondItem="Uop-XP-W7Y" secondAttribute="leading" constant="10" id="TpC-p7-aZ0"/>
                                                     <constraint firstItem="4VA-Te-wPl" firstAttribute="leading" secondItem="Uop-XP-W7Y" secondAttribute="leading" constant="10" id="Tqq-hR-cpt"/>
                                                     <constraint firstAttribute="trailing" secondItem="4VA-Te-wPl" secondAttribute="trailing" constant="10" id="cTJ-Uj-yJZ"/>
                                                     <constraint firstAttribute="trailing" secondItem="ChR-wC-gwP" secondAttribute="trailing" constant="10" id="f6f-g5-LGH"/>
+                                                    <constraint firstItem="1P8-Dw-0FK" firstAttribute="centerX" secondItem="ChR-wC-gwP" secondAttribute="centerX" id="ml1-Wv-Kga"/>
+                                                    <constraint firstItem="1P8-Dw-0FK" firstAttribute="width" secondItem="ChR-wC-gwP" secondAttribute="width" id="tx6-zJ-JC9"/>
                                                     <constraint firstItem="4VA-Te-wPl" firstAttribute="top" secondItem="Uop-XP-W7Y" secondAttribute="top" constant="10" id="vOo-1j-yti"/>
                                                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ChR-wC-gwP" secondAttribute="bottom" constant="50" id="vk7-Iv-iid"/>
+                                                    <constraint firstItem="1P8-Dw-0FK" firstAttribute="centerY" secondItem="ChR-wC-gwP" secondAttribute="centerY" id="yRW-Us-2Ob"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -4948,6 +4972,7 @@ Please Enjoy the other features while we are readying a wallet for you!</string>
                     <connections>
                         <outlet property="newPasswordTextField" destination="jsD-3a-Ir0" id="p3M-gc-GEN"/>
                         <outlet property="oldPasswordTextField" destination="YMY-A4-VGw" id="fE2-vi-qYh"/>
+                        <outlet property="passwordChangeGuardView" destination="1P8-Dw-0FK" id="9NE-hi-VDj"/>
                         <outlet property="userBirthdayTextField" destination="SM6-v6-MS0" id="0xa-25-OAa"/>
                         <outlet property="userEmailTextField" destination="5F8-1M-ReH" id="alW-h8-fSf"/>
                         <outlet property="userNameTextField" destination="p1z-1W-nrt" id="yw3-Mj-6es"/>
@@ -5402,8 +5427,6 @@ explore them tonight.</string>
                                 <variation key="default">
                                     <mask key="subviews">
                                         <exclude reference="CaS-Pt-UfM"/>
-                                        <exclude reference="BuK-ZZ-gip"/>
-                                        <exclude reference="6YZ-a3-eoZ"/>
                                         <exclude reference="50x-TL-GYk"/>
                                     </mask>
                                 </variation>

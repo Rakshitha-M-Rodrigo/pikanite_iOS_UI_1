@@ -269,4 +269,16 @@ struct RequestUrls {
             return getBaseUrl() + "/user/social"
         }
     }
+    
+    static var userProfileUpdateUrl: String {
+        get {
+            return getBaseUrl() + "/user/update"
+        }
+    }
+    
+    static var updatePassword: String {
+        get {
+            return getBaseUrl() + "/user/changepwd"
+        }
+    }
 }

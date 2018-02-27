@@ -802,4 +802,79 @@ class UserHelper: RequestHelper {
             }
         }
     }
+    
+    
+    static func updateUserPassword(userEmail: String, oldPassword: String, newPassword: String, completion: @escaping ((_ isSuccess: Bool, _ response: JSON?, _ error: AFErrors?) -> ())) {
+        
+        let params = ["Email": userEmail, "OldPassword": oldPassword, "NewPassword": newPassword]
+        
+        Alamofire.request(RequestUrls.updatePassword, method: .post, parameters: params, encoding: JSONEncoding.default, headers: getCommonHeaders()).responseJSON { (dataResponse) in
+            if dataResponse.result.isSuccess {
+                let resultJSON = JSON(dataResponse.result.value!)
+                
+                if resultJSON["error"].stringValue  == "Unauthenticated." {
+                    self.signOut()
+                    return
+                }
+                
+                print(resultJSON)
+                print(resultJSON as Any)
+                if let BookingInfo:JSON  = resultJSON{
+                    completion(true, BookingInfo, nil)
+                    return
+                } else {
+                    completion(false, nil, RequestHelper.getDefaultApiErrors(errorId: "Parse Error", message: "Content object not found"))
+                    return
+                }
+                
+                
+                
+                guard let messageCode = resultJSON["message"].string, let messageText = resultJSON["details"].string else {
+                    completion(false, nil, RequestHelper.getDefaultApiErrors())
+                    return
+                }
+                
+            } else {
+                completion(false, nil, RequestHelper.getDefaultApiErrors())
+                return
+            }
+        }
+    }
+    
+    static func updateUserProfile(userID: String, birthDay: String, name: String, contactNumber: String, completion: @escaping ((_ isSuccess: Bool, _ response: JSON?, _ error: AFErrors?) -> ())) {
+        
+        let params = ["UserId": userID, "BirthDay": birthDay, "Name": name, "ContactNumber": contactNumber]
+        
+        Alamofire.request(RequestUrls.userProfileUpdateUrl, method: .put, parameters: params, encoding: JSONEncoding.default, headers: getCommonHeaders()).responseJSON { (dataResponse) in
+            if dataResponse.result.isSuccess {
+                let resultJSON = JSON(dataResponse.result.value!)
+                
+                if resultJSON["error"].stringValue  == "Unauthenticated." {
+                    self.signOut()
+                    return
+                }
+                
+                print(resultJSON)
+                print(resultJSON as Any)
+                if let updateInfo:JSON  = resultJSON{
+                    completion(true, updateInfo, nil)
+                    return
+                } else {
+                    completion(false, nil, RequestHelper.getDefaultApiErrors(errorId: "Parse Error", message: "Content object not found"))
+                    return
+                }
+                
+                
+                
+                guard let messageCode = resultJSON["message"].string, let messageText = resultJSON["details"].string else {
+                    completion(false, nil, RequestHelper.getDefaultApiErrors())
+                    return
+                }
+                
+            } else {
+                completion(false, nil, RequestHelper.getDefaultApiErrors())
+                return
+            }
+        }
+    }
 }

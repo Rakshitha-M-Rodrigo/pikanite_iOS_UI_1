@@ -109,7 +109,10 @@ class LoginViewController: BaseViewController  {
                     UserDefaults.standard.set(email,forKey: "userEmail")
                     
                     //self.checkUser(email: email)
-                    self.registerNewSocialMediaUser(name: name, email: email, socialLoginId: id, userType: "facebook")
+                    if(self.checkFbUserEmail(email: email)){
+                        self.registerNewSocialMediaUser(name: name, email: email, socialLoginId: id, userType: "facebook")
+                    }
+                    
                     
                 }
             })
@@ -176,7 +179,7 @@ class LoginViewController: BaseViewController  {
         
     }
     
-    func checkUser(email: String) -> Bool{
+    func checkFbUserEmail(email: String) -> Bool{
         UserHelper.checkUser(email: email) { (success, resposnse, errors) in
             if (errors == nil){
                 let status = (resposnse!.dictionaryObject)!["message"]! as! String
