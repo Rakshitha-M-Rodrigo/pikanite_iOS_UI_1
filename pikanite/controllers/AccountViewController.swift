@@ -129,6 +129,25 @@ class AccountViewController: BaseViewController, MFMailComposeViewControllerDele
         self.pushViewController(viewController: "ProfileViewController")
     }
     
+    @IBAction func profilePictureButtonPressed(_ sender: Any) {
+        let picker = UIImagePickerController()
+        picker.delegate = self as? UIImagePickerControllerDelegate & UINavigationControllerDelegate
+        let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "Camera", style: .default, handler: {
+            action in
+            picker.sourceType = .camera
+            picker.allowsEditing = true
+            self.present(picker, animated: true, completion: nil)
+        }))
+        alert.addAction(UIAlertAction(title: "Photo Library", style: .default, handler: {
+            action in
+            picker.sourceType = .photoLibrary
+            picker.allowsEditing = true
+            self.present(picker, animated: true, completion: nil)
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
     
     func sendEmail() {
         if MFMailComposeViewController.canSendMail() {
@@ -146,6 +165,33 @@ class AccountViewController: BaseViewController, MFMailComposeViewControllerDele
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         controller.dismiss(animated: true)
     }
+    
+    func resizeImage(image: UIImage, newWidth: CGFloat) -> UIImage {
+        let scale = newWidth / image.size.width
+        let newHeight = image.size.height * scale
+        UIGraphicsBeginImageContext(CGSize(width: newWidth, height: newHeight))
+        image.draw(in: CGRect(origin: CGPoint(x: 0,y :0), size: CGSize(width: newWidth, height: newHeight)))
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return newImage!
+    }
   
 
+}
+
+extension AccountViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    @objc func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        let img = (info[UIImagePickerControllerOriginalImage] as? UIImage)!
+        let resizedImage = resizeImage(image: img, newWidth: 200)
+        let data  = UIImagePNGRepresentation(resizedImage) as Data?
+        self.profilePicImageView.image = img
+//        self.updateProfilePicture(imageData: data!)
+        picker.dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
+    }
+    
 }

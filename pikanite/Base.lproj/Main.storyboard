@@ -4052,6 +4052,12 @@ Please Enjoy the other features while we are readying a wallet for you!</string>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AWs-zY-EVx">
+                                                        <rect key="frame" x="137" y="34" width="100" height="100"/>
+                                                        <connections>
+                                                            <action selector="profilePictureButtonPressed:" destination="BRc-9h-Zj2" eventType="touchUpInside" id="ZmN-xM-oES"/>
+                                                        </connections>
+                                                    </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zhf-8F-CzW">
                                                         <rect key="frame" x="133" y="146.66666666666666" width="145" height="25"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
@@ -4481,14 +4487,18 @@ Please Enjoy the other features while we are readying a wallet for you!</string>
                                                     <constraint firstItem="qFm-XK-usd" firstAttribute="centerX" secondItem="zMW-4W-qTH" secondAttribute="centerX" id="B4x-RA-hbE"/>
                                                     <constraint firstItem="vnO-8B-U9f" firstAttribute="centerY" secondItem="bdc-GU-Upy" secondAttribute="centerY" id="CVj-Kt-5CS"/>
                                                     <constraint firstItem="Zhf-8F-CzW" firstAttribute="height" secondItem="vnO-8B-U9f" secondAttribute="height" id="DCF-Dc-p4b"/>
+                                                    <constraint firstItem="AWs-zY-EVx" firstAttribute="centerY" secondItem="qFm-XK-usd" secondAttribute="centerY" id="DdL-pP-VYT"/>
+                                                    <constraint firstItem="AWs-zY-EVx" firstAttribute="height" secondItem="qFm-XK-usd" secondAttribute="height" id="F0p-w6-mzP"/>
                                                     <constraint firstItem="vnO-8B-U9f" firstAttribute="leading" secondItem="bdc-GU-Upy" secondAttribute="trailing" constant="10" id="F87-ME-QMj"/>
                                                     <constraint firstItem="pY7-gD-4yj" firstAttribute="width" secondItem="zMW-4W-qTH" secondAttribute="width" multiplier="3" id="FW9-Gl-Yyl"/>
                                                     <constraint firstItem="Zhf-8F-CzW" firstAttribute="trailing" secondItem="vnO-8B-U9f" secondAttribute="trailing" id="FfE-kH-yE1"/>
+                                                    <constraint firstItem="AWs-zY-EVx" firstAttribute="centerX" secondItem="qFm-XK-usd" secondAttribute="centerX" id="Gtl-cc-tMC"/>
                                                     <constraint firstItem="pY7-gD-4yj" firstAttribute="centerX" secondItem="zMW-4W-qTH" secondAttribute="centerX" id="OW4-fD-APx"/>
                                                     <constraint firstAttribute="bottom" secondItem="yj1-Dx-TU6" secondAttribute="bottom" id="aBV-Av-KyQ"/>
                                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="vnO-8B-U9f" secondAttribute="trailing" constant="20" id="aMv-rF-YOf"/>
                                                     <constraint firstItem="pY7-gD-4yj" firstAttribute="baseline" secondItem="qFm-XK-usd" secondAttribute="firstBaseline" constant="60" id="cFu-1S-yxC"/>
                                                     <constraint firstItem="Zhf-8F-CzW" firstAttribute="leading" secondItem="bdc-GU-Upy" secondAttribute="leading" id="cq3-rg-Xka"/>
+                                                    <constraint firstItem="AWs-zY-EVx" firstAttribute="width" secondItem="qFm-XK-usd" secondAttribute="width" id="edf-bp-J6V"/>
                                                     <constraint firstItem="bdc-GU-Upy" firstAttribute="centerX" secondItem="zMW-4W-qTH" secondAttribute="centerX" id="jGD-gQ-2of"/>
                                                     <constraint firstItem="bdc-GU-Upy" firstAttribute="top" secondItem="qFm-XK-usd" secondAttribute="bottom" constant="10" id="opp-7u-PZd"/>
                                                     <constraint firstAttribute="trailing" secondItem="yj1-Dx-TU6" secondAttribute="trailing" id="u3B-6J-e8q"/>
@@ -4847,11 +4857,16 @@ Please Enjoy the other features while we are readying a wallet for you!</string>
                                                                 <color key="textColor" red="0.46274509800000002" green="0.59215686270000001" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Old Password Here" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YMY-A4-VGw">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Old Password Here" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YMY-A4-VGw">
                                                                 <rect key="frame" x="107.66666666666667" y="46" width="227.33333333333331" height="17"/>
                                                                 <color key="textColor" red="0.46274509800000002" green="0.59215686270000001" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                                                        <color key="value" red="0.46274509800000002" green="0.59215686270000001" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VFG-FV-xlm">
                                                                 <rect key="frame" x="20" y="81" width="100" height="14"/>
@@ -4862,11 +4877,16 @@ Please Enjoy the other features while we are readying a wallet for you!</string>
                                                                 <color key="textColor" red="0.46274509800000002" green="0.59215686270000001" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="New Password Here" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jsD-3a-Ir0">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter New Password Here" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jsD-3a-Ir0">
                                                                 <rect key="frame" x="127.66666666666664" y="79.666666666666686" width="207.33333333333337" height="17"/>
                                                                 <color key="textColor" red="0.46274509800000002" green="0.59215686270000001" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                                                        <color key="value" red="0.46274509800000002" green="0.59215686270000001" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
                                                             </textField>
                                                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nmf-Rl-bqz">
                                                                 <rect key="frame" x="53.333333333333329" y="124.66666666666669" width="248.33333333333337" height="30"/>
