@@ -1,19 +1,81 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="VarelaRound-Regular.ttf">
+            <string>VarelaRound-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1fv-Id-WRt">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jeg-vm-oQ3">
+                                        <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pikanite_logo_white" translatesAutoresizingMaskIntoConstraints="NO" id="umO-B1-cvp">
+                                                <rect key="frame" x="70" y="176" width="235" height="235"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="235" id="JDQ-XA-5Da"/>
+                                                </constraints>
+                                            </imageView>
+                                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="e1D-nS-qcZ">
+                                                <rect key="frame" x="177.66666666666666" y="419" width="20" height="20"/>
+                                                <color key="color" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </activityIndicatorView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Minute Hotel Deals" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ho-hw-Tal">
+                                                <rect key="frame" x="92.333333333333329" y="468" width="191.66666666666669" height="20"/>
+                                                <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.0" green="0.1450980392" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="tintColor" red="0.078613735739999996" green="0.028627999130000002" blue="0.27844977380000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstItem="umO-B1-cvp" firstAttribute="leading" secondItem="jeg-vm-oQ3" secondAttribute="leading" constant="70" id="A01-fe-n63"/>
+                                            <constraint firstItem="e1D-nS-qcZ" firstAttribute="top" secondItem="umO-B1-cvp" secondAttribute="bottom" constant="8" id="NFA-bn-bwR"/>
+                                            <constraint firstAttribute="trailing" secondItem="umO-B1-cvp" secondAttribute="trailing" constant="70" id="RWd-Tp-SwP"/>
+                                            <constraint firstItem="3ho-hw-Tal" firstAttribute="centerX" secondItem="jeg-vm-oQ3" secondAttribute="centerX" id="ZY4-Gq-6hg"/>
+                                            <constraint firstItem="3ho-hw-Tal" firstAttribute="top" secondItem="e1D-nS-qcZ" secondAttribute="bottom" constant="29" id="cyP-yj-TVS"/>
+                                            <constraint firstItem="e1D-nS-qcZ" firstAttribute="centerX" secondItem="jeg-vm-oQ3" secondAttribute="centerX" id="htQ-68-UR5"/>
+                                            <constraint firstItem="umO-B1-cvp" firstAttribute="centerY" secondItem="jeg-vm-oQ3" secondAttribute="centerY" multiplier="0.8" id="kSd-AA-0qK"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.1450980392" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="jeg-vm-oQ3" firstAttribute="trailing" secondItem="ckM-Dk-bl6" secondAttribute="trailing" id="dP7-vm-f04"/>
+                                    <constraint firstItem="jeg-vm-oQ3" firstAttribute="top" secondItem="ckM-Dk-bl6" secondAttribute="top" id="hpi-iG-zqW"/>
+                                    <constraint firstItem="jeg-vm-oQ3" firstAttribute="bottom" secondItem="ckM-Dk-bl6" secondAttribute="bottom" id="qOU-dS-hHa"/>
+                                    <constraint firstItem="jeg-vm-oQ3" firstAttribute="leading" secondItem="ckM-Dk-bl6" secondAttribute="leading" id="yIv-xo-BcR"/>
+                                </constraints>
+                                <viewLayoutGuide key="safeArea" id="ckM-Dk-bl6"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="1fv-Id-WRt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="VMv-mb-mz3"/>
+                            <constraint firstItem="1fv-Id-WRt" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="a4J-b2-HVW"/>
+                            <constraint firstAttribute="bottom" secondItem="1fv-Id-WRt" secondAttribute="bottom" id="d9j-FA-VLL"/>
+                            <constraint firstItem="1fv-Id-WRt" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="zL1-eB-q2J"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -22,4 +84,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="pikanite_logo_white" width="1068" height="1068"/>
+    </resources>
 </document>

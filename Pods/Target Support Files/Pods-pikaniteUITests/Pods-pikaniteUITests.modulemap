@@ -1,0 +1,6 @@
+framework module Pods_pikaniteUITests {
+  umbrella header "Pods-pikaniteUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

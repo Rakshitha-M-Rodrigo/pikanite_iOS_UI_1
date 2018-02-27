@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="VarelaRound-Regular.ttf">
+            <string>VarelaRound-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="665" id="KGk-i7-Jjw" customClass="SplashTableViewCell" customModule="pikanite" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="356" height="665"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="356" height="664.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="djD-YG-DHN">
+                        <rect key="frame" x="0.0" y="0.0" width="356" height="664.5"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TU9-oT-gRH">
+                                <rect key="frame" x="0.0" y="0.0" width="356" height="664.5"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pikanite_logo_white" translatesAutoresizingMaskIntoConstraints="NO" id="JcB-QZ-Gzs">
+                                        <rect key="frame" x="70" y="148" width="216" height="235"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="235" id="l7n-a1-kti"/>
+                                        </constraints>
+                                    </imageView>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="yuQ-WC-4mJ">
+                                        <rect key="frame" x="168" y="391" width="20" height="20"/>
+                                    </activityIndicatorView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Minute Hotel Deals" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a0G-64-IW5">
+                                        <rect key="frame" x="83" y="440" width="191.5" height="20"/>
+                                        <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.1450980392" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" red="0.078613735739999996" green="0.028627999130000002" blue="0.27844977380000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="JcB-QZ-Gzs" firstAttribute="leading" secondItem="TU9-oT-gRH" secondAttribute="leading" constant="70" id="1gr-Cb-tWK"/>
+                                    <constraint firstItem="a0G-64-IW5" firstAttribute="centerX" secondItem="TU9-oT-gRH" secondAttribute="centerX" id="Ibh-83-f1A"/>
+                                    <constraint firstItem="a0G-64-IW5" firstAttribute="top" secondItem="yuQ-WC-4mJ" secondAttribute="bottom" constant="29" id="LP1-Ip-RGp"/>
+                                    <constraint firstAttribute="trailing" secondItem="JcB-QZ-Gzs" secondAttribute="trailing" constant="70" id="PFm-r3-41Q"/>
+                                    <constraint firstItem="yuQ-WC-4mJ" firstAttribute="top" secondItem="JcB-QZ-Gzs" secondAttribute="bottom" constant="8" id="X4t-Fq-aLW"/>
+                                    <constraint firstItem="yuQ-WC-4mJ" firstAttribute="centerX" secondItem="TU9-oT-gRH" secondAttribute="centerX" id="hHj-dM-KNm"/>
+                                    <constraint firstItem="JcB-QZ-Gzs" firstAttribute="centerY" secondItem="TU9-oT-gRH" secondAttribute="centerY" multiplier="0.8" id="hYZ-qR-j4j"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.1450980392" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="TU9-oT-gRH" firstAttribute="top" secondItem="QTq-nT-odb" secondAttribute="top" id="46d-xm-pU6"/>
+                            <constraint firstItem="TU9-oT-gRH" firstAttribute="bottom" secondItem="QTq-nT-odb" secondAttribute="bottom" id="JBj-US-3oB"/>
+                            <constraint firstItem="TU9-oT-gRH" firstAttribute="leading" secondItem="QTq-nT-odb" secondAttribute="leading" id="NfJ-Pi-6Ou"/>
+                            <constraint firstItem="TU9-oT-gRH" firstAttribute="trailing" secondItem="QTq-nT-odb" secondAttribute="trailing" id="z2I-cR-bAI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="QTq-nT-odb"/>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="djD-YG-DHN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="02e-dY-dHu"/>
+                    <constraint firstAttribute="trailing" secondItem="djD-YG-DHN" secondAttribute="trailing" id="drk-GF-uwz"/>
+                    <constraint firstItem="djD-YG-DHN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="pVT-aE-i82"/>
+                    <constraint firstAttribute="bottom" secondItem="djD-YG-DHN" secondAttribute="bottom" id="q96-zl-J1c"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="activityIndicator" destination="yuQ-WC-4mJ" id="lNm-Hd-x49"/>
+            </connections>
+            <point key="canvasLocation" x="87" y="157.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="pikanite_logo_white" width="1068" height="1068"/>
+    </resources>
+</document>

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="VarelaRound-Regular.ttf">
+            <string>VarelaRound-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PastBookingTableViewCell" rowHeight="114" id="KGk-i7-Jjw" customClass="PastBookingTableViewCell" customModule="pikanite" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="354" height="124"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="354" height="123.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qkz-lw-x7z">
+                        <rect key="frame" x="10" y="10" width="334" height="113.5"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="O35-Hl-q3V">
+                                <rect key="frame" x="10" y="10" width="93.5" height="93.5"/>
+                                <color key="backgroundColor" red="0.23921987410000001" green="0.54140239950000002" blue="0.75296825170000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="O35-Hl-q3V" secondAttribute="height" multiplier="1:1" id="5FO-Tn-htI"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kabalana Hotel by Ceilo villas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ypb-KU-vgY">
+                                <rect key="frame" x="118.5" y="10" width="200.5" height="18.5"/>
+                                <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="15"/>
+                                <color key="textColor" red="0.99963909390000005" green="1" blue="0.99975615740000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="zix-i2-dDe">
+                                <rect key="frame" x="118" y="33.5" width="200.5" height="14.5"/>
+                                <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="12"/>
+                                <color key="textColor" red="0.46274509800000002" green="0.59215686270000001" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="6ep-Ay-DAq">
+                                <rect key="frame" x="118" y="48" width="200.5" height="14.5"/>
+                                <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="12"/>
+                                <color key="textColor" red="0.46274509800000002" green="0.59215686270000001" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="d47-xG-aMs">
+                                <rect key="frame" x="118" y="62.5" width="200.5" height="14.5"/>
+                                <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="12"/>
+                                <color key="textColor" red="0.46274509800000002" green="0.59215686270000001" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tell us your opinion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="BxG-gn-f2J">
+                                <rect key="frame" x="118" y="82" width="110.5" height="14.5"/>
+                                <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="12"/>
+                                <color key="textColor" red="0.28326743840000002" green="0.49251383539999999" blue="0.59217196699999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qtE-AT-5yQ">
+                                <rect key="frame" x="274" y="79.5" width="20" height="20"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_heart" translatesAutoresizingMaskIntoConstraints="NO" id="DYw-R5-2fp">
+                                        <rect key="frame" x="3" y="3" width="14" height="14"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.59388977289199829" green="0.79268985986709595" blue="0.19191575050354004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="5oC-zx-08G"/>
+                                    <constraint firstItem="DYw-R5-2fp" firstAttribute="height" secondItem="qtE-AT-5yQ" secondAttribute="height" multiplier="0.7" id="Dtl-HR-eaT"/>
+                                    <constraint firstAttribute="width" constant="20" id="TdP-t4-3Rd"/>
+                                    <constraint firstItem="DYw-R5-2fp" firstAttribute="centerX" secondItem="qtE-AT-5yQ" secondAttribute="centerX" id="hXO-Li-oNt"/>
+                                    <constraint firstItem="DYw-R5-2fp" firstAttribute="centerY" secondItem="qtE-AT-5yQ" secondAttribute="centerY" id="l7g-Of-ym8"/>
+                                    <constraint firstItem="DYw-R5-2fp" firstAttribute="width" secondItem="qtE-AT-5yQ" secondAttribute="width" multiplier="0.7" id="xb6-Zh-0L4"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hoI-7S-Sn6">
+                                <rect key="frame" x="304" y="79" width="20" height="20"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="icon_share" translatesAutoresizingMaskIntoConstraints="NO" id="Mmw-u7-gve">
+                                        <rect key="frame" x="3" y="3" width="14" height="14"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.80870324373245239" green="0.23638343811035156" blue="0.21564668416976929" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="Mmw-u7-gve" firstAttribute="width" secondItem="hoI-7S-Sn6" secondAttribute="width" multiplier="0.7" id="8Vv-Ds-ibu"/>
+                                    <constraint firstAttribute="height" constant="20" id="Dej-FD-xN1"/>
+                                    <constraint firstItem="Mmw-u7-gve" firstAttribute="centerY" secondItem="hoI-7S-Sn6" secondAttribute="centerY" id="Gkg-VG-RjN"/>
+                                    <constraint firstAttribute="width" constant="20" id="QIH-de-lff"/>
+                                    <constraint firstItem="Mmw-u7-gve" firstAttribute="height" secondItem="hoI-7S-Sn6" secondAttribute="height" multiplier="0.7" id="eww-ag-m7s"/>
+                                    <constraint firstItem="Mmw-u7-gve" firstAttribute="centerX" secondItem="hoI-7S-Sn6" secondAttribute="centerX" id="oMo-C4-XBP"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.1450980392" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="d47-xG-aMs" firstAttribute="leading" secondItem="6ep-Ay-DAq" secondAttribute="leading" id="4QJ-Sq-GDA"/>
+                            <constraint firstItem="ypb-KU-vgY" firstAttribute="top" secondItem="qkz-lw-x7z" secondAttribute="top" constant="10" id="8j4-i6-R8M"/>
+                            <constraint firstAttribute="bottom" secondItem="O35-Hl-q3V" secondAttribute="bottom" constant="10" id="BQn-fY-oaU"/>
+                            <constraint firstItem="qtE-AT-5yQ" firstAttribute="leading" secondItem="BxG-gn-f2J" secondAttribute="trailing" priority="250" constant="45.5" id="Cww-x1-J7j"/>
+                            <constraint firstItem="O35-Hl-q3V" firstAttribute="top" secondItem="qkz-lw-x7z" secondAttribute="top" constant="10" id="D2V-1a-LHK"/>
+                            <constraint firstAttribute="bottom" secondItem="BxG-gn-f2J" secondAttribute="bottom" constant="17" id="F75-GP-pun"/>
+                            <constraint firstItem="6ep-Ay-DAq" firstAttribute="trailing" secondItem="zix-i2-dDe" secondAttribute="trailing" id="HkW-RH-RlY"/>
+                            <constraint firstItem="ypb-KU-vgY" firstAttribute="leading" secondItem="O35-Hl-q3V" secondAttribute="trailing" constant="15" id="O7D-iG-Dwm"/>
+                            <constraint firstItem="hoI-7S-Sn6" firstAttribute="leading" secondItem="qtE-AT-5yQ" secondAttribute="trailing" constant="10" id="QUz-dh-ub2"/>
+                            <constraint firstItem="BxG-gn-f2J" firstAttribute="top" secondItem="d47-xG-aMs" secondAttribute="bottom" constant="5" id="Qpd-yR-0LT"/>
+                            <constraint firstItem="hoI-7S-Sn6" firstAttribute="centerY" secondItem="qtE-AT-5yQ" secondAttribute="centerY" id="RB0-hG-7k4"/>
+                            <constraint firstItem="BxG-gn-f2J" firstAttribute="leading" secondItem="d47-xG-aMs" secondAttribute="leading" id="S1W-oj-JgI"/>
+                            <constraint firstAttribute="trailing" secondItem="hoI-7S-Sn6" secondAttribute="trailing" constant="10" id="X5Y-fP-gq5"/>
+                            <constraint firstItem="zix-i2-dDe" firstAttribute="trailing" secondItem="ypb-KU-vgY" secondAttribute="trailing" id="XR6-Yr-yHX"/>
+                            <constraint firstItem="d47-xG-aMs" firstAttribute="trailing" secondItem="6ep-Ay-DAq" secondAttribute="trailing" id="YV7-Xu-IWu"/>
+                            <constraint firstItem="qtE-AT-5yQ" firstAttribute="centerY" secondItem="BxG-gn-f2J" secondAttribute="centerY" id="bxc-sx-LfZ"/>
+                            <constraint firstItem="zix-i2-dDe" firstAttribute="leading" secondItem="ypb-KU-vgY" secondAttribute="leading" id="d5H-Wb-cEW"/>
+                            <constraint firstItem="zix-i2-dDe" firstAttribute="top" secondItem="ypb-KU-vgY" secondAttribute="bottom" constant="5" id="dOL-oN-TYp"/>
+                            <constraint firstItem="6ep-Ay-DAq" firstAttribute="leading" secondItem="zix-i2-dDe" secondAttribute="leading" id="kl2-fC-HQt"/>
+                            <constraint firstItem="O35-Hl-q3V" firstAttribute="leading" secondItem="qkz-lw-x7z" secondAttribute="leading" constant="10" id="lO2-MU-RuK"/>
+                            <constraint firstAttribute="trailing" secondItem="ypb-KU-vgY" secondAttribute="trailing" constant="15" id="nvz-yX-lDa"/>
+                            <constraint firstItem="6ep-Ay-DAq" firstAttribute="top" secondItem="zix-i2-dDe" secondAttribute="bottom" id="xS5-re-3F1"/>
+                            <constraint firstItem="d47-xG-aMs" firstAttribute="top" secondItem="6ep-Ay-DAq" secondAttribute="bottom" id="y4h-vY-loM"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="BxG-gn-f2J"/>
+                                <exclude reference="qtE-AT-5yQ"/>
+                                <exclude reference="hoI-7S-Sn6"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="qkz-lw-x7z" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="K55-q9-tRf"/>
+                    <constraint firstAttribute="trailing" secondItem="qkz-lw-x7z" secondAttribute="trailing" constant="10" id="ZNV-Xp-cHk"/>
+                    <constraint firstItem="qkz-lw-x7z" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="fK6-WT-9tl"/>
+                    <constraint firstAttribute="bottom" secondItem="qkz-lw-x7z" secondAttribute="bottom" id="sFI-iu-iLA"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="dateLabel" destination="zix-i2-dDe" id="R50-vL-mWm"/>
+                <outlet property="hotelImageView" destination="O35-Hl-q3V" id="tZv-y8-gB1"/>
+                <outlet property="hotelName" destination="ypb-KU-vgY" id="33S-Xm-uGX"/>
+                <outlet property="priceLabel" destination="d47-xG-aMs" id="FCF-oy-ANL"/>
+                <outlet property="timeLabel" destination="6ep-Ay-DAq" id="ng2-B6-B2R"/>
+            </connections>
+            <point key="canvasLocation" x="108" y="37"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="icon_heart" width="100" height="100"/>
+        <image name="icon_share" width="100" height="100"/>
+    </resources>
+</document>

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class IntroViewController: UIViewController {
+class IntroViewController: BaseViewController, UIGestureRecognizerDelegate {
 
     //MARK: outlets
     @IBOutlet weak var hiImageView: UIImageView!
@@ -27,7 +27,15 @@ class IntroViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet var mainContainerView: UIView!
     
+    @IBOutlet weak var Dot1: UIView!
+    @IBOutlet weak var Dot2: UIView!
+    @IBOutlet weak var Dot3: UIView!
+    
+    @IBOutlet weak var introView_3: UIView!
+    
     var hiLableCenter: CGPoint!
+    var currentScrollRect = 0
+    var currentScrollRectValue = 0
     
     
     override func viewDidLoad() {
@@ -42,6 +50,18 @@ class IntroViewController: UIViewController {
         self.introControllerView.alpha = 0
         self.hiLabel.font.withSize(1)
         self.hiLabel.layer.setAffineTransform(CGAffineTransform(scaleX: 0.9, y: 0.9))
+        
+        self.Dot1.backgroundColor = UIColor.white
+        self.Dot2.backgroundColor = UIColor.black
+        self.Dot3.backgroundColor = UIColor.black
+        
+        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(handleGesture))
+        swipeRight.direction = .right
+        self.view.addGestureRecognizer(swipeRight)
+        
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(handleGesture))
+        swipeLeft.direction = .left
+        self.view.addGestureRecognizer(swipeLeft)
         
         
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
@@ -72,7 +92,39 @@ class IntroViewController: UIViewController {
         })
    
     }
-
+    
+    @objc func handleGesture(gesture: UISwipeGestureRecognizer) -> Void {
+        if gesture.direction == UISwipeGestureRecognizerDirection.right {
+            print("Swipe Right")
+        }
+        else if gesture.direction == UISwipeGestureRecognizerDirection.left {
+            print("Swipe Left")
+            if(currentScrollRect==2){
+                self.pushViewControllerWithNavigationController(viewController: "LoginViewController")
+            }
+        }
+        else if gesture.direction == UISwipeGestureRecognizerDirection.up {
+            print("Swipe Up")
+        }
+        else if gesture.direction == UISwipeGestureRecognizerDirection.down {
+            print("Swipe Down")
+        }
+    }
+    
+    @IBAction func nextButtonPressed(_ sender: Any) {
+        self.currentScrollRectValue = self.currentScrollRect+1
+        self.scrollView.scrollRectToVisible(CGRect(x:self.view.frame.size.width * CGFloat(currentScrollRectValue), y:0, width:self.view.frame.width, height: self.view.frame.height), animated: true)
+        if(currentScrollRect==2){
+            self.pushViewControllerWithNavigationController(viewController: "LoginViewController")
+        }
+        
+    }
+    
+    @IBAction func skipButtonPressed(_ sender: Any) {
+        self.pushViewControllerWithNavigationController(viewController: "LoginViewController")
+    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         
@@ -86,6 +138,35 @@ extension IntroViewController: UIScrollViewDelegate{
         let offset = scrollView.contentOffset
         let percentage = (offset.x / (self.scrollView.frame.size.width  * 2) ) * 100
         print(percentage)
+        
+        if (percentage>=0 && percentage<=33){
+            UIView.animate(withDuration: 0.3, animations: {
+                self.Dot1.backgroundColor = UIColor.white
+                self.Dot2.backgroundColor = UIColor.black
+                self.Dot3.backgroundColor = UIColor.black
+                self.currentScrollRect = 0
+                
+                
+            })
+        }
+        if (percentage>=34 && percentage<=66){
+            UIView.animate(withDuration: 0.3, animations: {
+                self.Dot1.backgroundColor = UIColor.black
+                self.Dot2.backgroundColor = UIColor.white
+                self.Dot3.backgroundColor = UIColor.black
+                self.currentScrollRect = 1
+                
+            })
+        }
+        if (percentage>=67 && percentage<=100){
+            UIView.animate(withDuration: 0.3, animations: {
+                self.Dot1.backgroundColor = UIColor.black
+                self.Dot2.backgroundColor = UIColor.black
+                self.Dot3.backgroundColor = UIColor.white
+                self.currentScrollRect = 2
+                
+            })
+        }
         
     }
 }

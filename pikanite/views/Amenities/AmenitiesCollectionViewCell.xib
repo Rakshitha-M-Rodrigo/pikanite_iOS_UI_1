@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="VarelaRound-Regular.ttf">
+            <string>VarelaRound-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AmenitiesCollectionViewCell" id="gTV-IL-0wX" customClass="AmenitiesCollectionViewCell" customModule="pikanite" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="128" height="67"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="128" height="67"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e7z-UI-J9L">
+                        <rect key="frame" x="0.0" y="0.0" width="128" height="67"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="amenities_24hFrontDesk" translatesAutoresizingMaskIntoConstraints="NO" id="jZa-dj-XXP">
+                                <rect key="frame" x="44" y="5" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="CzJ-v6-Mav"/>
+                                    <constraint firstAttribute="width" constant="40" id="tt9-vQ-LRS"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spa &amp; Fitness Center" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mtm-7C-dqc">
+                                <rect key="frame" x="3" y="50" width="122.5" height="14.5"/>
+                                <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="12"/>
+                                <color key="textColor" red="0.28326743841171265" green="0.49251383543014526" blue="0.59217196702957153" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.1450980392" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="mtm-7C-dqc" firstAttribute="leading" secondItem="JU0-yn-o5T" secondAttribute="leading" constant="3" id="8jb-Or-kEc"/>
+                            <constraint firstAttribute="width" priority="250" constant="124" id="9lz-Go-hvG"/>
+                            <constraint firstAttribute="height" constant="67" id="SWy-L7-ZyS"/>
+                            <constraint firstItem="JU0-yn-o5T" firstAttribute="trailing" secondItem="mtm-7C-dqc" secondAttribute="trailing" constant="3" id="T3f-B2-EsF"/>
+                            <constraint firstItem="mtm-7C-dqc" firstAttribute="top" secondItem="jZa-dj-XXP" secondAttribute="bottom" constant="5" id="cwm-Ir-W9N"/>
+                            <constraint firstItem="jZa-dj-XXP" firstAttribute="centerX" secondItem="mtm-7C-dqc" secondAttribute="centerX" id="dJu-Gw-T13"/>
+                            <constraint firstItem="jZa-dj-XXP" firstAttribute="top" secondItem="JU0-yn-o5T" secondAttribute="top" constant="5" id="iap-sf-8nT"/>
+                            <constraint firstItem="jZa-dj-XXP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="JU0-yn-o5T" secondAttribute="leading" constant="10" id="mDt-bE-hhn"/>
+                            <constraint firstItem="JU0-yn-o5T" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="jZa-dj-XXP" secondAttribute="trailing" constant="10" id="oJo-wk-RDV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="JU0-yn-o5T"/>
+                    </view>
+                </subviews>
+            </view>
+            <color key="backgroundColor" red="0.0" green="0.1450980392" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstItem="e7z-UI-J9L" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="1c0-h3-opm"/>
+                <constraint firstAttribute="trailing" secondItem="e7z-UI-J9L" secondAttribute="trailing" id="6uv-p1-n5q"/>
+                <constraint firstItem="e7z-UI-J9L" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="dEQ-mD-Akb"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="124" height="74"/>
+            <connections>
+                <outlet property="amenityImage" destination="jZa-dj-XXP" id="l42-Ps-lYD"/>
+                <outlet property="amenityNameLabel" destination="mtm-7C-dqc" id="E5r-XA-BOM"/>
+                <outlet property="contentCellView" destination="e7z-UI-J9L" id="ql0-jF-6dF"/>
+                <outlet property="heightConstraint" destination="SWy-L7-ZyS" id="T1w-Qn-us3"/>
+                <outlet property="widthConstraint" destination="9lz-Go-hvG" id="JeS-Yb-Cw0"/>
+            </connections>
+            <point key="canvasLocation" x="67" y="67"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="amenities_24hFrontDesk" width="256" height="256"/>
+    </resources>
+</document>

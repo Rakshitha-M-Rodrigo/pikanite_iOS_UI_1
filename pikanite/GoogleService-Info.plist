@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>506232476199-ebm6amcgql48rm8nf16949ls2csokumm.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.506232476199-ebm6amcgql48rm8nf16949ls2csokumm</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAZ8zvhuIF55uzS4MzgQ5bfisP9QzpxFkE</string>
+	<key>GCM_SENDER_ID</key>
+	<string>506232476199</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.pikanite.pikanite</string>
+	<key>PROJECT_ID</key>
+	<string>pikanite-1518671478870</string>
+	<key>STORAGE_BUCKET</key>
+	<string>pikanite-1518671478870.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:506232476199:ios:3c256d9c8d453c44</string>
+	<key>DATABASE_URL</key>
+	<string>https://pikanite-1518671478870.firebaseio.com</string>
+</dict>
+</plist>

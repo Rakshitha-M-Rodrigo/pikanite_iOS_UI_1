@@ -4,30 +4,41 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="VarelaRound-Regular.ttf">
+            <string>VarelaRound-Regular</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DiscoverTableViewCell" rowHeight="278" id="KGk-i7-Jjw" customClass="DiscoverTableViewCell" customModule="pikanite" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="278"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DiscoverTableViewCell" rowHeight="266" id="KGk-i7-Jjw" customClass="DiscoverTableViewCell" customModule="pikanite" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="266"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="277.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="265.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ijE-aE-mSN">
-                        <rect key="frame" x="10" y="10" width="355" height="267.5"/>
+                        <rect key="frame" x="10" y="10" width="355" height="255.5"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sTH-iy-ndd">
-                                <rect key="frame" x="10" y="10" width="335" height="150"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sTH-iy-ndd">
+                                <rect key="frame" x="0.0" y="0.0" width="355" height="160"/>
+                                <color key="backgroundColor" red="0.058418251570000003" green="0.53737175459999997" blue="0.75296914579999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="sTH-iy-ndd" secondAttribute="height" multiplier="67:30" id="Yov-vL-EjQ"/>
+                                    <constraint firstAttribute="width" secondItem="sTH-iy-ndd" secondAttribute="height" multiplier="71:32" id="RgY-hq-dKZ"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BOc-NZ-5cG">
                                 <rect key="frame" x="285" y="20" width="50" height="50"/>
@@ -36,21 +47,96 @@
                                     <constraint firstAttribute="height" constant="50" id="JLl-GQ-bDG"/>
                                     <constraint firstAttribute="width" constant="50" id="ZR8-wA-T24"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hotel Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WQJ-dW-HnF">
+                                <rect key="frame" x="10" y="175" width="193" height="21"/>
+                                <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sea Rd, Colombo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IHU-Sm-46R">
+                                <rect key="frame" x="10" y="196" width="213" height="17"/>
+                                <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="14"/>
+                                <color key="textColor" red="0.46274509803921571" green="0.59215686274509804" blue="0.63529411764705879" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LKR 18,300" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xVF-sN-Wuh">
+                                <rect key="frame" x="203" y="175" width="142" height="19.5"/>
+                                <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Novel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5xr-MP-whE">
+                                <rect key="frame" x="10" y="213" width="177.5" height="14.5"/>
+                                <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="12"/>
+                                <color key="textColor" red="0.46274509803921571" green="0.59215686274509804" blue="0.63529411764705879" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="was LKR 19,000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vzh-PR-VUG">
+                                <rect key="frame" x="167.5" y="196.5" width="177.5" height="17"/>
+                                <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="14"/>
+                                <color key="textColor" red="0.46274509803921571" green="0.59215686274509804" blue="0.63529411764705879" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="~*~ pikanite - special - offer -- ~*~" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dx7-AS-8BS">
+                                <rect key="frame" x="10" y="227.5" width="335" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.46274509803921571" green="0.59215686274509804" blue="0.63529411764705879" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Incl. Tax)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d5X-hc-Nc4">
+                                <rect key="frame" x="291.5" y="212.5" width="53.5" height="14.5"/>
+                                <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="12"/>
+                                <color key="textColor" red="0.46274509803921571" green="0.59215686274509804" blue="0.63529411764705879" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.1450980392" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <rect key="contentStretch" x="0.0" y="0.0" width="0.94999999999999996" height="1"/>
                         <constraints>
-                            <constraint firstItem="sTH-iy-ndd" firstAttribute="top" secondItem="ijE-aE-mSN" secondAttribute="top" constant="10" id="4nE-bh-LNG"/>
-                            <constraint firstItem="BOc-NZ-5cG" firstAttribute="top" secondItem="sTH-iy-ndd" secondAttribute="top" constant="10" id="Eji-Is-fzR"/>
-                            <constraint firstItem="BOc-NZ-5cG" firstAttribute="trailing" secondItem="sTH-iy-ndd" secondAttribute="trailing" constant="-10" id="XJc-gL-gjf"/>
-                            <constraint firstItem="sTH-iy-ndd" firstAttribute="leading" secondItem="ijE-aE-mSN" secondAttribute="leading" constant="10" id="azj-wp-MTe"/>
-                            <constraint firstAttribute="trailing" secondItem="sTH-iy-ndd" secondAttribute="trailing" constant="10" id="r3g-kT-F2Y"/>
+                            <constraint firstItem="sTH-iy-ndd" firstAttribute="top" secondItem="ijE-aE-mSN" secondAttribute="top" id="4nE-bh-LNG"/>
+                            <constraint firstItem="Dx7-AS-8BS" firstAttribute="top" secondItem="d5X-hc-Nc4" secondAttribute="bottom" id="7JJ-FO-Fa7"/>
+                            <constraint firstItem="5xr-MP-whE" firstAttribute="width" secondItem="sTH-iy-ndd" secondAttribute="width" multiplier="0.5" id="A4O-Wn-CNW"/>
+                            <constraint firstItem="BOc-NZ-5cG" firstAttribute="top" secondItem="sTH-iy-ndd" secondAttribute="top" id="Eji-Is-fzR"/>
+                            <constraint firstItem="xVF-sN-Wuh" firstAttribute="leading" secondItem="WQJ-dW-HnF" secondAttribute="trailing" id="EyX-r3-RXc"/>
+                            <constraint firstItem="WQJ-dW-HnF" firstAttribute="leading" secondItem="ijE-aE-mSN" secondAttribute="leading" constant="10" id="Hsy-EA-sCz"/>
+                            <constraint firstItem="xVF-sN-Wuh" firstAttribute="top" secondItem="WQJ-dW-HnF" secondAttribute="top" id="KW4-Xh-zg8"/>
+                            <constraint firstAttribute="trailing" secondItem="Vzh-PR-VUG" secondAttribute="trailing" constant="10" id="Mkp-4d-e4o"/>
+                            <constraint firstItem="5xr-MP-whE" firstAttribute="leading" secondItem="ijE-aE-mSN" secondAttribute="leading" constant="10" id="QAQ-RG-0Q1"/>
+                            <constraint firstItem="IHU-Sm-46R" firstAttribute="width" secondItem="sTH-iy-ndd" secondAttribute="width" multiplier="0.6" id="QjU-XK-q9t"/>
+                            <constraint firstItem="BOc-NZ-5cG" firstAttribute="trailing" secondItem="sTH-iy-ndd" secondAttribute="trailing" id="XJc-gL-gjf"/>
+                            <constraint firstItem="sTH-iy-ndd" firstAttribute="leading" secondItem="ijE-aE-mSN" secondAttribute="leading" id="azj-wp-MTe"/>
+                            <constraint firstItem="Dx7-AS-8BS" firstAttribute="top" secondItem="5xr-MP-whE" secondAttribute="bottom" id="dVt-OF-Ia9"/>
+                            <constraint firstItem="Vzh-PR-VUG" firstAttribute="centerY" secondItem="IHU-Sm-46R" secondAttribute="centerY" id="hqI-og-Ds3"/>
+                            <constraint firstItem="Vzh-PR-VUG" firstAttribute="width" secondItem="sTH-iy-ndd" secondAttribute="width" multiplier="0.5" id="iVd-OW-xVC"/>
+                            <constraint firstItem="xVF-sN-Wuh" firstAttribute="width" secondItem="sTH-iy-ndd" secondAttribute="width" multiplier="0.4" id="jk8-ze-7zf"/>
+                            <constraint firstAttribute="trailing" secondItem="Dx7-AS-8BS" secondAttribute="trailing" constant="10" id="lOg-MX-x64"/>
+                            <constraint firstItem="IHU-Sm-46R" firstAttribute="top" secondItem="WQJ-dW-HnF" secondAttribute="bottom" id="lvP-8W-6Ba"/>
+                            <constraint firstItem="Dx7-AS-8BS" firstAttribute="leading" secondItem="ijE-aE-mSN" secondAttribute="leading" constant="10" id="lwc-mM-lSN"/>
+                            <constraint firstAttribute="trailing" secondItem="xVF-sN-Wuh" secondAttribute="trailing" constant="10" id="p5r-9y-xiu"/>
+                            <constraint firstItem="d5X-hc-Nc4" firstAttribute="centerY" secondItem="5xr-MP-whE" secondAttribute="centerY" id="qTX-dz-dyx"/>
+                            <constraint firstAttribute="trailing" secondItem="sTH-iy-ndd" secondAttribute="trailing" id="r3g-kT-F2Y"/>
+                            <constraint firstAttribute="trailing" secondItem="d5X-hc-Nc4" secondAttribute="trailing" constant="10" id="s9j-Sm-jXr"/>
+                            <constraint firstItem="5xr-MP-whE" firstAttribute="top" secondItem="IHU-Sm-46R" secondAttribute="bottom" id="tKq-lB-U2G"/>
+                            <constraint firstItem="IHU-Sm-46R" firstAttribute="leading" secondItem="ijE-aE-mSN" secondAttribute="leading" constant="10" id="uQy-Jb-WDs"/>
+                            <constraint firstAttribute="bottom" secondItem="Dx7-AS-8BS" secondAttribute="bottom" constant="10" id="wLy-gT-lps"/>
+                            <constraint firstItem="WQJ-dW-HnF" firstAttribute="top" secondItem="sTH-iy-ndd" secondAttribute="bottom" constant="15" id="yhQ-OZ-Iue"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                 <integer key="value" value="8"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="BOc-NZ-5cG"/>
+                            </mask>
+                        </variation>
                     </view>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -61,8 +147,19 @@
                     <constraint firstAttribute="bottom" secondItem="ijE-aE-mSN" secondAttribute="bottom" id="oxU-7k-CQd"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <point key="canvasLocation" x="61.5" y="171"/>
+            <connections>
+                <outlet property="additoinalInfo" destination="Dx7-AS-8BS" id="gjS-Pv-wem"/>
+                <outlet property="address" destination="IHU-Sm-46R" id="YrH-Fj-KSN"/>
+                <outlet property="hotelImageView" destination="sTH-iy-ndd" id="aMp-gy-T6m"/>
+                <outlet property="hotelName" destination="WQJ-dW-HnF" id="Q9a-B6-uOO"/>
+                <outlet property="previousPrice" destination="Vzh-PR-VUG" id="jaZ-0C-Irw"/>
+                <outlet property="price" destination="xVF-sN-Wuh" id="AFY-e7-9eA"/>
+                <outlet property="profile" destination="5xr-MP-whE" id="1Rf-ia-VUP"/>
+                <outlet property="taxDetails" destination="d5X-hc-Nc4" id="uIw-iO-eV8"/>
+            </connections>
+            <point key="canvasLocation" x="61.5" y="165"/>
         </tableViewCell>
     </objects>
 </document>
