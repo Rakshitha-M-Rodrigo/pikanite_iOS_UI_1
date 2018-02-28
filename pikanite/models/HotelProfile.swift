@@ -24,7 +24,7 @@ struct HotelProfile{
     var hotelPartnerId: String = ""
     var hotelRoomCount: Int = 0
     var multipleEmail: String = ""
-    var userCount: Int = 0
+    var guestCountInRoom: Int = 0
     var regDate: String = ""
     var hotelProfile: String = ""
     var rating: Int = 0
@@ -50,4 +50,11 @@ struct HotelProfile{
     var image2: String = ""
     var image1: String = ""
     var profilePic: String = ""
+    
+    //added by achsuthan
+    
+    var breakfastIncluded: Bool!
+    var smokingPolicy : Bool!
+    var extraCharge : String = "Extra guests may be charged additionally at the hotel's discretion"
+    var nonRefundable : String = "Booking non-refundable"
 }

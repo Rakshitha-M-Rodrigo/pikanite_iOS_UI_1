@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2EB2010833378CC1CCCEDB8C /* Pods_pikanite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E7335094072B3F34A26AD18 /* Pods_pikanite.framework */; };
+		4FD614C82046D22E00C46C48 /* PromoCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD614C72046D22E00C46C48 /* PromoCodeViewController.swift */; };
 		767FDF5E1EC54E67A1F0C3AF /* Pods_pikaniteUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B63159AA5A395CCE2E669AE /* Pods_pikaniteUITests.framework */; };
 		AC08A697202AC9F6000BC364 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC08A695202AC9F6000BC364 /* SplashViewController.swift */; };
 		AC08A698202AC9F6000BC364 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC08A696202AC9F6000BC364 /* SplashViewController.xib */; };
@@ -159,6 +160,7 @@
 /* Begin PBXFileReference section */
 		1E1CA3430B8FC61C351C68DC /* Pods-pikanite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pikanite.release.xcconfig"; path = "Pods/Target Support Files/Pods-pikanite/Pods-pikanite.release.xcconfig"; sourceTree = "<group>"; };
 		21ED903FF1B91059D7451775 /* Pods-pikaniteUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pikaniteUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-pikaniteUITests/Pods-pikaniteUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		4FD614C72046D22E00C46C48 /* PromoCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoCodeViewController.swift; sourceTree = "<group>"; };
 		64E52810BEE0A441FAC8095B /* Pods_pikaniteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pikaniteTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B63159AA5A395CCE2E669AE /* Pods_pikaniteUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pikaniteUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E7335094072B3F34A26AD18 /* Pods_pikanite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pikanite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -663,6 +665,7 @@
 				ACBA49B5203C476A00E2833A /* TermsOfUseViewController.swift */,
 				ACBA49B7203C4FFF00E2833A /* UserGuideViewController.swift */,
 				AC6D074A203E6FB10054DDF2 /* ProfileViewController.swift */,
+				4FD614C72046D22E00C46C48 /* PromoCodeViewController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -1104,13 +1107,11 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-pikanite/Pods-pikanite-resources.sh",
-				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle",
-				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Versions/A/Resources/GooglePlaces.bundle",
 				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1231,6 +1232,7 @@
 				AC15EE452035398E008E2DD9 /* InstagramManager.swift in Sources */,
 				AC15F9C22025B13500C2D5DA /* CustomLoadingView.swift in Sources */,
 				ACF34047202A83E90022C385 /* SignUpViewController.swift in Sources */,
+				4FD614C82046D22E00C46C48 /* PromoCodeViewController.swift in Sources */,
 				AC6D074B203E6FB10054DDF2 /* ProfileViewController.swift in Sources */,
 				AC15EE472035398E008E2DD9 /* ProfileUpdateHelper.swift in Sources */,
 				AC15F9AF2025B13500C2D5DA /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,

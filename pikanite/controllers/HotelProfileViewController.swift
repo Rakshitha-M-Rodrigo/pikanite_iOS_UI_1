@@ -90,7 +90,7 @@ class HotelProfileViewController: BaseViewController, GMSMapViewDelegate, CLLoca
         
         
         getHotelProfile()
-        getMap()
+        //getMap()
         
 //        6.887755, 79.870558
 //self.offerArray[offerIndex].lat
@@ -157,69 +157,193 @@ class HotelProfileViewController: BaseViewController, GMSMapViewDelegate, CLLoca
     }
     
     func getHotelProfile(){
-        self.showActivityIndicator()
-        UserHelper.getHotelProfile(hotelID: self.offerArray[offerIndex].hotelId) { (isSuccess, response, errors) in
+        //self.showActivityIndicator()
+//        UserHelper.getHotelProfile(hotelID: self.offerArray[offerIndex].hotelId) { (isSuccess, response, errors) in
+//            if isSuccess && response != nil {
+////                print("========== ***** =============")
+////                print(response as Any)
+////                print("========== ***** =============")
+////                print(response?.dictionaryObject! as Any)
+////                print("------------------------------")
+////                print("count : \(response!.count)")
+//
+//                let jsonData = (response?.dictionaryObject)!
+//                print("<><><><><><><><><><><><><><><><>")
+//                print("JSON responce \(jsonData)")
+//                print("<><><><><><><><><><><><><><><><>")
+//                let dataDictionary = jsonData as! [String: Any]
+//
+//                print("<><><><><><><><><><><><><><><><>")
+//                print("JSON responce \(dataDictionary["room"]! as! [String : Any])")
+//                print("<><><><><><><><><><><><><><><><>")
+//
+//                self.hotel.id = dataDictionary["_id"]! as! String
+//                self.hotel.amenities = dataDictionary["amenities"]! as! String
+//                self.hotel.hotelZipcode = dataDictionary["hotelZipcode"]! as! Int
+//                self.hotel.hotelAddress = dataDictionary["hotelAddress"]! as! String
+//                self.hotel.nearestCityDistance = dataDictionary["nearestCityDistance"]! as! String
+//                self.hotel.nearestCity = dataDictionary["nearestCity"]! as! String
+//                self.hotel.country = dataDictionary["country"]! as! String
+//                self.hotel.contactNumber = dataDictionary["contactNumber"]! as! String
+//                self.hotel.hotelEmail = dataDictionary["hotelEmail"]! as! String
+//                self.hotel.hotelWebSite = dataDictionary["hotelWebSite"]! as! String
+//                self.hotel.hotelName = dataDictionary["hotelName"]! as! String
+//                self.hotel.hotelPartnerId = dataDictionary["hotelPartnerId"]! as! String
+////                self.hotel.hotelRoomCount = dataDictionary["hotelRoomCount"]! as! Int
+////                self.hotel.multipleEmail = dataDictionary["multipleEmail"]! as! String
+//                self.hotel.userCount = dataDictionary["userCount"]! as! Int
+//                self.hotel.regDate = dataDictionary["regDate"]! as! String
+//                self.hotel.hotelProfile = dataDictionary["hotelProfile"]! as! String
+//                self.hotel.rating = dataDictionary["rating"]! as! Int
+//                //    self.hotel.hotelLikeAboutInfo: String = ""
+////                self.hotel.fact1 = (dataDictionary["hotelLikeAboutInfo"]! as! [String: Any])["fact1"] as! String
+////                self.hotel.fact2 = (dataDictionary["hotelLikeAboutInfo"]! as! [String: Any])["fact2"] as! String
+////                self.hotel.fact3 = (dataDictionary["hotelLikeAboutInfo"]! as! [String: Any])["fact3"] as! String
+//                //    self.hotel.needToKnow: String = ""
+//                self.hotel.coupleFriendly = (dataDictionary["needToKnow"]! as! [String: Any])["coupleFriendly"] as! Bool
+//                self.hotel.petLimit = (dataDictionary["needToKnow"]! as! [String: Any])["petLimit"] as! Bool
+//                self.hotel.cancellationLimit = (dataDictionary["needToKnow"]! as! [String: Any])["cancellationLimit"] as! Bool
+//                self.hotel.ageLimit = (dataDictionary["needToKnow"]! as! [String: Any])["ageLimit"] as! String
+//                self.hotel.checkOutTimeEnd = (dataDictionary["needToKnow"]! as! [String: Any])["checkOutTimeEnd"] as! String
+//                self.hotel.checkOutTimeStart = (dataDictionary["needToKnow"]! as! [String: Any])["checkOutTimeStart"] as! String
+//                self.hotel.checkInTimeEnd = (dataDictionary["needToKnow"]! as! [String: Any])["checkInTimeEnd"] as! String
+//                self.hotel.checkInTimeStart = (dataDictionary["needToKnow"]! as! [String: Any])["checkInTimeStart"] as! String
+//                //    self.hotel.location: String = ""
+//                self.hotel.lon = (dataDictionary["location"]! as! [String: Any])["lon"] as! Double
+//                self.hotel.lat = (dataDictionary["location"]! as! [String: Any])["lat"] as! Double
+//                //    self.hotel.image: String = ""
+//                self.hotel.image4 = dataDictionary["_id"]! as! String
+//                self.hotel.image3 = dataDictionary["_id"]! as! String
+//                self.hotel.image2 = dataDictionary["_id"]! as! String
+//                self.hotel.image1 = dataDictionary["_id"]! as! String
+//                self.hotel.profilePic = dataDictionary["_id"]! as! String
+//
+////                if let breakfast : String = (dataDictionary["room"]! as! [String :Any])["breakfastIncluded"] as? String
+////                {
+////                    self.hotel.breakfastIncluded = breakfast
+////                    print("Breakfast included\(self.hotel.breakfastIncluded)")
+////                }
+//
+//
+//
+//                self.extractAmenities()
+//                print(self.hotel as! Any)
+//                self.hideActivityIndicator()
+//
+//
+//                //self.loadData()
+//                //self.collectionView.reloadData()
+//
+//
+//            } else if errors != nil {
+//                self.hideActivityIndicator()
+//                if errors!.errors.count > 0 {
+//                    //                    self.showAlert(message: errors!.errors[0].message)
+//                }
+//            }
+//
+//        }
+        
+        
+       // self.showActivityIndicator()
+        UserHelper.getHotelProfileInfo(hotelID: self.offerArray[offerIndex].hotelId) { (isSuccess, response, errors) in
             if isSuccess && response != nil {
-                print("========== ***** =============")
-                print(response as Any)
-                print("========== ***** =============")
-                print(response?.dictionaryObject! as Any)
-                print("------------------------------")
-                print("count : \(response!.count)")
+                //                print("========== ***** =============")
+                //                print(response as Any)
+                //                print("========== ***** =============")
+                //                print(response?.dictionaryObject! as Any)
+                //                print("------------------------------")
+                //                print("count : \(response!.count)")
                 
                 let jsonData = (response?.dictionaryObject)!
-                let dataDictionary = jsonData as! [String: Any]
+                print("<><><><><><><><><><><><><><><><>")
+                print("JSON responce \(jsonData)")
+                print("<><><><><><><><><><><><><><><><>")
+                let data = jsonData as! [String: Any]
+                let dataDictionary = jsonData["content"] as! [String: Any]
                 
-                self.hotel.id = dataDictionary["_id"]! as! String
-                self.hotel.amenities = dataDictionary["amenities"]! as! String
-                self.hotel.hotelZipcode = dataDictionary["hotelZipcode"]! as! Int
-                self.hotel.hotelAddress = dataDictionary["hotelAddress"]! as! String
-                self.hotel.nearestCityDistance = dataDictionary["nearestCityDistance"]! as! String
-                self.hotel.nearestCity = dataDictionary["nearestCity"]! as! String
-                self.hotel.country = dataDictionary["country"]! as! String
-                self.hotel.contactNumber = dataDictionary["contactNumber"]! as! String
-                self.hotel.hotelEmail = dataDictionary["hotelEmail"]! as! String
-                self.hotel.hotelWebSite = dataDictionary["hotelWebSite"]! as! String
-                self.hotel.hotelName = dataDictionary["hotelName"]! as! String
-                self.hotel.hotelPartnerId = dataDictionary["hotelPartnerId"]! as! String
-//                self.hotel.hotelRoomCount = dataDictionary["hotelRoomCount"]! as! Int
-//                self.hotel.multipleEmail = dataDictionary["multipleEmail"]! as! String
-                self.hotel.userCount = dataDictionary["userCount"]! as! Int
-                self.hotel.regDate = dataDictionary["regDate"]! as! String
-                self.hotel.hotelProfile = dataDictionary["hotelProfile"]! as! String
-                self.hotel.rating = dataDictionary["rating"]! as! Int
+                print("<><><><><><><><><><><><><><><><>")
+                print("JSON responce \(dataDictionary)")
+                print("<><><><><><><><><><><><><><><><>")
+                
+                let dataDictionaryOther = (dataDictionary["other"]! as! [String: Any])
+                print("Rooms \(dataDictionaryOther)")
+                
+                let dataDictionaryOffer = (dataDictionary["offer"]! as! [String: Any])
+                print("Rooms \(dataDictionaryOffer)")
+                
+                
+                self.hotel.id = dataDictionaryOffer["hotelId"]! as! String
+                self.hotel.amenities = dataDictionaryOther ["amenities"] as! String
+                //self.hotel.hotelZipcode = dataDictionary["hotelZipcode"]! as! Int
+                self.hotel.hotelAddress = dataDictionaryOffer ["hotelAddress"] as! String
+                self.hotel.nearestCityDistance = dataDictionaryOffer["nearestCityDistance"] as! String
+                self.hotel.nearestCity = dataDictionaryOffer["nearestCity"] as! String
+                self.hotel.country = dataDictionaryOffer ["country"] as! String
+                self.hotel.contactNumber = dataDictionaryOffer["contactNumber"] as! String
+                self.hotel.hotelEmail = dataDictionaryOffer["hotelEmail"]! as! String
+                self.hotel.hotelWebSite = dataDictionaryOffer["hotelWebsite"]! as! String
+                self.hotel.hotelName = dataDictionaryOffer["hotelName"]! as! String
+                //self.hotel.hotelPartnerId = dataDictionary["hotelPartnerId"]! as! String
+                //                self.hotel.hotelRoomCount = dataDictionary["hotelRoomCount"]! as! Int
+                //                self.hotel.multipleEmail = dataDictionary["multipleEmail"]! as! String
+                
+                
+                self.hotel.guestCountInRoom = (dataDictionaryOffer["room"]! as! [String: Any])["guestCountInRoom"] as! Int
+                
+                //self.hotel.regDate = dataDictionary["regDate"]! as! String
+                //self.hotel.hotelProfile = dataDictionary["hotelProfile"]! as! String
+                self.hotel.rating = dataDictionaryOffer["rating"]! as! Int
                 //    self.hotel.hotelLikeAboutInfo: String = ""
-//                self.hotel.fact1 = (dataDictionary["hotelLikeAboutInfo"]! as! [String: Any])["fact1"] as! String
-//                self.hotel.fact2 = (dataDictionary["hotelLikeAboutInfo"]! as! [String: Any])["fact2"] as! String
-//                self.hotel.fact3 = (dataDictionary["hotelLikeAboutInfo"]! as! [String: Any])["fact3"] as! String
+                //                self.hotel.fact1 = (dataDictionary["hotelLikeAboutInfo"]! as! [String: Any])["fact1"] as! String
+                //                self.hotel.fact2 = (dataDictionary["hotelLikeAboutInfo"]! as! [String: Any])["fact2"] as! String
+                //                self.hotel.fact3 = (dataDictionary["hotelLikeAboutInfo"]! as! [String: Any])["fact3"] as! String
                 //    self.hotel.needToKnow: String = ""
-                self.hotel.coupleFriendly = (dataDictionary["needToKnow"]! as! [String: Any])["coupleFriendly"] as! Bool
-                self.hotel.petLimit = (dataDictionary["needToKnow"]! as! [String: Any])["petLimit"] as! Bool
-                self.hotel.cancellationLimit = (dataDictionary["needToKnow"]! as! [String: Any])["cancellationLimit"] as! Bool
-                self.hotel.ageLimit = (dataDictionary["needToKnow"]! as! [String: Any])["ageLimit"] as! String
-                self.hotel.checkOutTimeEnd = (dataDictionary["needToKnow"]! as! [String: Any])["checkOutTimeEnd"] as! String
-                self.hotel.checkOutTimeStart = (dataDictionary["needToKnow"]! as! [String: Any])["checkOutTimeStart"] as! String
-                self.hotel.checkInTimeEnd = (dataDictionary["needToKnow"]! as! [String: Any])["checkInTimeEnd"] as! String
-                self.hotel.checkInTimeStart = (dataDictionary["needToKnow"]! as! [String: Any])["checkInTimeStart"] as! String
+                //self.hotel.coupleFriendly = (dataDictionary["needToKnow"]! as! [String: Any])["coupleFriendly"] as! Bool
+                //self.hotel.petLimit = (dataDictionary["needToKnow"]! as! [String: Any])["petLimit"] as! Bool
+                //self.hotel.cancellationLimit = (dataDictionary["needToKnow"]! as! [String: Any])["cancellationLimit"] as! Bool
+                self.hotel.ageLimit = dataDictionaryOther["ageLimit"] as! String
+                //self.hotel.checkOutTimeEnd = dataDictionaryOther["checkInTime"] as! String
+                
+                self.hotel.checkOutTimeStart = dataDictionaryOther["checkInTime"] as! String
+                //self.hotel.checkInTimeEnd = (dataDictionary["needToKnow"]! as! [String: Any])["checkInTimeEnd"] as! String
+                
+                self.hotel.checkInTimeStart = dataDictionaryOther["checkOutTime"] as! String
+                
                 //    self.hotel.location: String = ""
-                self.hotel.lon = (dataDictionary["location"]! as! [String: Any])["lon"] as! Double
-                self.hotel.lat = (dataDictionary["location"]! as! [String: Any])["lat"] as! Double
+                self.hotel.lon = (dataDictionaryOffer["location"]! as! [String: Any])["lon"] as! Double
+                self.hotel.lat = (dataDictionaryOffer["location"]! as! [String: Any])["lat"] as! Double
                 //    self.hotel.image: String = ""
-                self.hotel.image4 = dataDictionary["_id"]! as! String
-                self.hotel.image3 = dataDictionary["_id"]! as! String
-                self.hotel.image2 = dataDictionary["_id"]! as! String
-                self.hotel.image1 = dataDictionary["_id"]! as! String
-                self.hotel.profilePic = dataDictionary["_id"]! as! String
-
+                self.hotel.image4 = dataDictionaryOffer["hotelId"]! as! String
+                self.hotel.image3 = dataDictionaryOffer["hotelId"]! as! String
+                self.hotel.image2 = dataDictionaryOffer["hotelId"]! as! String
+                self.hotel.image1 = dataDictionaryOffer["hotelId"]! as! String
+                self.hotel.profilePic = dataDictionaryOffer["hotelId"]! as! String
                 
                 
-                self.extractAmenities()
-                print(self.hotel as! Any)
-                self.hideActivityIndicator()
-
+                if let breakfast:Bool = (dataDictionaryOffer["room"]! as! [String: Any])["breakfastIncluded"] as! Bool
+                {
+                    self.hotel.breakfastIncluded = breakfast
+                }
                 
-                self.loadData()
-                self.collectionView.reloadData()
+                if let hotelRoom:Int = dataDictionaryOther["hotelRoomCount"]! as! Int
+                {
+                    self.hotel.hotelRoomCount = hotelRoom
+                }
+                
+                print("Hotel Room Count \(self.hotel.hotelRoomCount)")
+                print("Breakfast included \(self.hotel.breakfastIncluded)")
+                
+                
+                
+//                
+//               self.extractAmenities()
+//                print(self.hotel as! Any)
+//                //self.hideActivityIndicator()
+//                
+//                
+//                self.loadData()
+//                self.collectionView.reloadData()
                 
                 
             } else if errors != nil {
@@ -228,7 +352,7 @@ class HotelProfileViewController: BaseViewController, GMSMapViewDelegate, CLLoca
                     //                    self.showAlert(message: errors!.errors[0].message)
                 }
             }
-                
+            
         }
     }
     
@@ -241,31 +365,92 @@ class HotelProfileViewController: BaseViewController, GMSMapViewDelegate, CLLoca
         self.checkingTimesLabel.text = "Check-In: \(self.getTimeOn_HH_MM_Format(string:(self.hotel.checkInTimeStart)))        Check-Out: \(self.getTimeOn_HH_MM_Format(string:self.hotel.checkOutTimeStart))"
         
         var needToKnow: [String] = []
+        
+        
         //coupleFriendly: false, petLimit: false, cancellationLimit: false, ageLimit: "21+ to Book"
-        if (self.hotel.coupleFriendly){
-            needToKnow.append("Couple Friendy")
-        } else {
-            needToKnow.append("Non - Couple Friendy")
+        
+        
+//        if (self.hotel.coupleFriendly){
+//            needToKnow.append("Couple Friendy")
+//        } else {
+//            needToKnow.append("Non - Couple Friendy")
+//        }
+//        if (self.hotel.petLimit){
+//            needToKnow.append("Pets are allowed")
+//        } else {
+//            needToKnow.append("Pets are not allowed")
+//        }
+//        if (self.hotel.cancellationLimit){
+//            needToKnow.append("Can be cancelled")
+//        } else {
+//            needToKnow.append("Can not be cancelled")
+//        }
+        
+        if(self.hotel.breakfastIncluded != nil)
+        {
+            if(self.hotel.breakfastIncluded)
+            {
+                needToKnow.append("Breakfast included")
+            }
+            else
+            {
+                needToKnow.append("Breakfast not included")
+            }
         }
-        if (self.hotel.petLimit){
-            needToKnow.append("Pets are allowed")
-        } else {
-            needToKnow.append("Pets are not allowed")
+        
+        
+        
+        if (self.hotel.ageLimit == "21+ to Book") {
+            needToKnow.append("You have to be 18+ to Book")
         }
-        if (self.hotel.cancellationLimit){
-            needToKnow.append("Can be cancelled")
-        } else {
-            needToKnow.append("Can not be cancelled")
+        else if (self.hotel.ageLimit  == "18+ to Book") {
+            needToKnow.append("You have to be 21+ to Book")
         }
+        else if (self.hotel.ageLimit  == "No Age Limit") {
+            needToKnow.append("No Age Limit")
+        }
+        if(self.hotel.guestCountInRoom > 1)
+        {
+            needToKnow.append("This room can accommodate \(self.hotel.guestCountInRoom) guests")
+        }
+        else
+        {
+            needToKnow.append("This room can accommodate \(self.hotel.guestCountInRoom) guest")
+        }
+        
+        if(self.hotel.smokingPolicy != nil)
+        {
+            if(self.hotel.smokingPolicy)
+            {
+                needToKnow.append("This is a smoking room")
+            }
+            else
+            {
+                needToKnow.append("This is a non-smoking room")
+            }
+        }
+
+        
+        needToKnow.append(self.hotel.extraCharge)
+        
+        needToKnow.append(self.hotel.nonRefundable)
+
+        if (self.hotel.hotelRoomCount>0)
+        {
+            needToKnow.append("This property has \(self.hotel.hotelRoomCount) rooms")
+        }
+        
+        
         
         let bullete = self.bulletSymbol
         self.needToKNowLabel.text = "\(bullete) \(needToKnow[0])\n\(bullete) \(needToKnow[1])\n\(bullete) \(needToKnow[2])"
     
         
+        
         self.userEmailLabel.text = UserDefaults.standard.string(forKey: "userEmail")
         self.userNameLabel.text = UserDefaults.standard.string(forKey: "UserName")
         self.userPhoneNumberLabel.text = UserDefaults.standard.string(forKey: "userContactNumber")
-        //self.birthdayLabel.text = UserDefaults.standard.string(forKey: "userBirthDay")
+        self.birthdayLabel.text = UserDefaults.standard.string(forKey: "userBirthDay")
         
         self.roomTypeLabel.text = self.offerArray[offerIndex].roomType
         self.roomCountLabel.text = "1"

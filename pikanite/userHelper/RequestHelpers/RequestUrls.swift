@@ -287,4 +287,16 @@ struct RequestUrls {
             return getBaseUrl() + "/info/dateAndTimeNow"
         }
     }
+    
+    static var checkPromoCode: String {
+        get {
+            return getBaseUrl() + "/promo/"
+        }
+    }
+    
+    static var hotelProfileInfo: String {
+        get {
+            return getBaseUrl() + "/offer/info"
+        }
+    }
 }

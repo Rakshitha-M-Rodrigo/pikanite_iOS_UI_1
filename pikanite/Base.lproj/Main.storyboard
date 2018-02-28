@@ -7483,6 +7483,152 @@ can let you Know the best deals in town!</string>
             </objects>
             <point key="canvasLocation" x="608.79999999999995" y="133.74384236453201"/>
         </scene>
+        <!--Promo Code View Controller-->
+        <scene sceneID="J3n-N4-M1X">
+            <objects>
+                <viewController storyboardIdentifier="PromoCodeViewController" id="MHA-Ec-zK5" customClass="PromoCodeViewController" customModule="pikanite" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mxr-ZJ-RhE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e3e-RM-g9v" customClass="TPKeyboardAvoidingScrollView">
+                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Jh-Tl-uHo">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="734"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Promo Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ePr-Op-Wyz">
+                                                <rect key="frame" x="129" y="30" width="138" height="24"/>
+                                                <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="20"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_back_white" translatesAutoresizingMaskIntoConstraints="NO" id="xWh-h3-oqw">
+                                                <rect key="frame" x="20" y="22" width="40" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="I3x-AU-vqk"/>
+                                                    <constraint firstAttribute="height" constant="40" id="eGt-Mn-kgD"/>
+                                                </constraints>
+                                            </imageView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yoM-4R-ThE">
+                                                <rect key="frame" x="38" y="249" width="300" height="60"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reedeem Code" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Gw-h1-odQ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="300" height="20"/>
+                                                        <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Promo Code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bo0-jz-v7c">
+                                                        <rect key="frame" x="0.0" y="25" width="300" height="31"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="Lato-Medium" family="Lato" pointSize="25"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2DK-bv-2er">
+                                                        <rect key="frame" x="0.0" y="59" width="300" height="1"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="1" id="1kJ-1i-Mjr"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="bo0-jz-v7c" firstAttribute="leading" secondItem="yoM-4R-ThE" secondAttribute="leading" id="1K6-tx-BGJ"/>
+                                                    <constraint firstItem="0Gw-h1-odQ" firstAttribute="leading" secondItem="yoM-4R-ThE" secondAttribute="leading" id="AbA-SI-CYn"/>
+                                                    <constraint firstAttribute="bottom" secondItem="2DK-bv-2er" secondAttribute="bottom" id="Aqa-N2-qgW"/>
+                                                    <constraint firstAttribute="trailing" secondItem="0Gw-h1-odQ" secondAttribute="trailing" id="BxB-mR-ccL"/>
+                                                    <constraint firstAttribute="trailing" secondItem="bo0-jz-v7c" secondAttribute="trailing" id="Lwn-fC-uS5"/>
+                                                    <constraint firstAttribute="trailing" secondItem="2DK-bv-2er" secondAttribute="trailing" id="Q3q-ai-qR1"/>
+                                                    <constraint firstItem="bo0-jz-v7c" firstAttribute="top" secondItem="0Gw-h1-odQ" secondAttribute="bottom" constant="5" id="R3N-xx-i9n"/>
+                                                    <constraint firstItem="0Gw-h1-odQ" firstAttribute="top" secondItem="yoM-4R-ThE" secondAttribute="top" id="e1T-q3-uwr"/>
+                                                    <constraint firstItem="2DK-bv-2er" firstAttribute="leading" secondItem="yoM-4R-ThE" secondAttribute="leading" id="jsU-cP-t5c"/>
+                                                    <constraint firstAttribute="height" constant="60" id="tpF-w6-XzU"/>
+                                                    <constraint firstItem="2DK-bv-2er" firstAttribute="top" secondItem="bo0-jz-v7c" secondAttribute="bottom" constant="3" id="wtI-Nz-gS4"/>
+                                                </constraints>
+                                            </view>
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l6Q-Li-9PM">
+                                                <rect key="frame" x="53" y="436" width="270" height="50"/>
+                                                <color key="backgroundColor" red="0.084843628109999999" green="0.67771238089999997" blue="0.94121080639999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="ES4-uS-oUo"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="20"/>
+                                                <state key="normal" title="Verify">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="btVerify:" destination="MHA-Ec-zK5" eventType="touchUpInside" id="PIJ-I5-CgA"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*Multiple promotions cannot be combined. Please use your unique Promo Code" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rlD-u4-C36">
+                                                <rect key="frame" x="21" y="337" width="335" height="62"/>
+                                                <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.0" green="0.1450980392" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstItem="xWh-h3-oqw" firstAttribute="leading" secondItem="7Jh-Tl-uHo" secondAttribute="leading" constant="20" id="414-ru-5fP"/>
+                                            <constraint firstAttribute="trailing" secondItem="rlD-u4-C36" secondAttribute="trailing" constant="19" id="4Hp-L4-v4q"/>
+                                            <constraint firstItem="l6Q-Li-9PM" firstAttribute="width" secondItem="bo0-jz-v7c" secondAttribute="width" multiplier="0.9" id="9o1-8E-btu">
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </constraint>
+                                            <constraint firstItem="l6Q-Li-9PM" firstAttribute="centerX" secondItem="bo0-jz-v7c" secondAttribute="centerX" id="BSK-9y-53t"/>
+                                            <constraint firstItem="l6Q-Li-9PM" firstAttribute="top" secondItem="bo0-jz-v7c" secondAttribute="bottom" constant="131" id="Fyj-QD-A7B"/>
+                                            <constraint firstItem="rlD-u4-C36" firstAttribute="leading" secondItem="7Jh-Tl-uHo" secondAttribute="leading" constant="21" id="QQU-hf-sbf"/>
+                                            <constraint firstItem="ePr-Op-Wyz" firstAttribute="centerX" secondItem="7Jh-Tl-uHo" secondAttribute="centerX" constant="10.5" id="RaD-8d-7iR"/>
+                                            <constraint firstItem="l6Q-Li-9PM" firstAttribute="top" secondItem="rlD-u4-C36" secondAttribute="bottom" constant="37" id="bhl-5h-tlq"/>
+                                            <constraint firstItem="yoM-4R-ThE" firstAttribute="centerX" secondItem="7Jh-Tl-uHo" secondAttribute="centerX" id="idT-e5-EQR"/>
+                                            <constraint firstItem="yoM-4R-ThE" firstAttribute="centerY" secondItem="7Jh-Tl-uHo" secondAttribute="centerY" constant="-88" id="jsv-JO-tk8"/>
+                                            <constraint firstItem="ePr-Op-Wyz" firstAttribute="top" secondItem="7Jh-Tl-uHo" secondAttribute="top" constant="30" id="lkF-N4-xkI"/>
+                                            <constraint firstItem="rlD-u4-C36" firstAttribute="centerX" secondItem="l6Q-Li-9PM" secondAttribute="centerX" id="ta2-Lp-mYA"/>
+                                            <constraint firstItem="xWh-h3-oqw" firstAttribute="centerY" secondItem="ePr-Op-Wyz" secondAttribute="centerY" id="xPa-ey-aum"/>
+                                            <constraint firstItem="yoM-4R-ThE" firstAttribute="width" secondItem="7Jh-Tl-uHo" secondAttribute="width" multiplier="0.8" id="y7N-Lq-o9C"/>
+                                            <constraint firstItem="rlD-u4-C36" firstAttribute="top" secondItem="yoM-4R-ThE" secondAttribute="bottom" constant="28" id="zoD-bd-iZt"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="7Jh-Tl-uHo" firstAttribute="top" secondItem="e3e-RM-g9v" secondAttribute="top" id="H3y-dm-PnH"/>
+                                    <constraint firstAttribute="bottom" secondItem="7Jh-Tl-uHo" secondAttribute="bottom" id="I1Y-GU-nKp"/>
+                                    <constraint firstItem="7Jh-Tl-uHo" firstAttribute="leading" secondItem="e3e-RM-g9v" secondAttribute="leading" id="hmr-Vr-Mad"/>
+                                    <constraint firstAttribute="trailing" secondItem="7Jh-Tl-uHo" secondAttribute="trailing" id="te8-Cd-R7Y"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.1450980392" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="7Jh-Tl-uHo" firstAttribute="height" secondItem="dfo-gP-XGG" secondAttribute="height" priority="250" id="3fh-jK-kRp"/>
+                            <constraint firstItem="e3e-RM-g9v" firstAttribute="top" secondItem="dfo-gP-XGG" secondAttribute="top" id="BLE-Ib-ALg"/>
+                            <constraint firstItem="e3e-RM-g9v" firstAttribute="width" secondItem="dfo-gP-XGG" secondAttribute="width" id="BON-cy-n5J"/>
+                            <constraint firstItem="dfo-gP-XGG" firstAttribute="bottom" secondItem="e3e-RM-g9v" secondAttribute="bottom" id="Ent-T4-JnP"/>
+                            <constraint firstItem="e3e-RM-g9v" firstAttribute="leading" secondItem="dfo-gP-XGG" secondAttribute="leading" id="Gi0-r5-IIO"/>
+                            <constraint firstItem="7Jh-Tl-uHo" firstAttribute="width" secondItem="dfo-gP-XGG" secondAttribute="width" id="U9x-yK-JFK"/>
+                            <constraint firstItem="e3e-RM-g9v" firstAttribute="height" secondItem="dfo-gP-XGG" secondAttribute="height" id="g0d-r4-Af5"/>
+                            <constraint firstItem="dfo-gP-XGG" firstAttribute="trailing" secondItem="e3e-RM-g9v" secondAttribute="trailing" id="hyK-A8-7Ne"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dfo-gP-XGG"/>
+                    </view>
+                    <connections>
+                        <outlet property="txtPromoCode" destination="bo0-jz-v7c" id="MJq-nR-hvh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uWq-Az-4cs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3535.1999999999998" y="135.96059113300493"/>
+        </scene>
     </scenes>
     <resources>
         <image name="icon_HotelSignUP" width="100" height="100"/>

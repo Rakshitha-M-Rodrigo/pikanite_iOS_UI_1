@@ -913,4 +913,75 @@ class UserHelper: RequestHelper {
             }
         }
     }
+    
+    static func checkPromoCode(promoCode: String, completion: @escaping ((_ isSuccess: Bool, _ response: JSON?, _ error: AFErrors?) -> ())) {
+        
+        
+        let url = RequestUrls.checkPromoCode + "/\(promoCode)"
+        print("promo code \(promoCode)")
+        Alamofire.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: getCommonHeaders()).responseJSON { (dataResponse) in
+            if dataResponse.result.isSuccess {
+                let resultJSON = JSON(dataResponse.result.value!)
+                
+                if resultJSON["error"].stringValue  == "Unauthenticated." {
+                    self.signOut()
+                    return
+                }
+                
+                print(resultJSON)
+                print(resultJSON as Any)
+                if let updateInfo:JSON  = resultJSON{
+                    completion(true, updateInfo, nil)
+                    return
+                } else {
+                    completion(false, nil, RequestHelper.getDefaultApiErrors(errorId: "Parse Error", message: "Content object not found"))
+                    return
+                }
+                guard let messageCode = resultJSON["message"].string, let amount = resultJSON["amount"].double, let percentage = resultJSON["percentage"].double else {
+                    completion(false, nil, RequestHelper.getDefaultApiErrors())
+                    return
+                }
+                
+            } else {
+                completion(false, nil, RequestHelper.getDefaultApiErrors())
+                return
+            }
+        }
+    }
+    
+    static func getHotelProfileInfo(hotelID: String, completion: @escaping ((_ isSuccess: Bool, _ response: JSON?, _ error: AFErrors?) -> ())) {
+        
+        let url = RequestUrls.hotelProfileInfo + "/\(hotelID)"
+        
+        Alamofire.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: getCommonHeaders()).responseJSON { (dataResponse) in
+            if dataResponse.result.isSuccess {
+                let resultJSON = JSON(dataResponse.result.value!)
+                
+                if resultJSON["error"].stringValue  == "Unauthenticated." {
+                    self.signOut()
+                    return
+                }
+                
+                
+                if let hotelProfileString:JSON  = resultJSON{
+                    completion(true, hotelProfileString, nil)
+                    return
+                } else {
+                    completion(false, nil, RequestHelper.getDefaultApiErrors(errorId: "Parse Error", message: "Content object not found"))
+                    return
+                }
+                
+                
+                
+                guard let messageCode = resultJSON["message"].string, let messageText = resultJSON["success"].string else {
+                    completion(false, nil, RequestHelper.getDefaultApiErrors())
+                    return
+                }
+                
+                
+            } else {
+                completion(false, nil, RequestHelper.getDefaultApiErrors())
+            }
+        }
+    }
 }
