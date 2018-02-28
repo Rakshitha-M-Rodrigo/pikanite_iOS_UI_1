@@ -42,8 +42,9 @@ class PasswordPromptViewController: BaseViewController {
                         self.appDelegate.password = true
                         let promoCode = self.appDelegate.promoCode
                         let recordedDate = self.getCurrentDateTime()
+//                        self.dismiss(animated: true, completion: nil)
                         self.bookHotelNow(userEmail: self.userEmail, HotelEmail: self.hotelEmail, RoomCount: self.roomCount, PromoCode: promoCode)
-                        self.dismiss(animated: true, completion: nil)
+                        
                     } else {
                         self.hideActivityIndicator()
                         self.displayAlertWithOk(title: "Pikanite Says!", alertMessage: "Wrong password ! Please try again...")

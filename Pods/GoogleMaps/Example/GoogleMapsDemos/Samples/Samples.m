@@ -13,6 +13,10 @@
  * permissions and limitations under the License.
  */
 
+#if !defined(__has_feature) || !__has_feature(objc_arc)
+#error "This file requires ARC support."
+#endif
+
 #import "GoogleMapsDemos/Samples/Samples.h"
 
 // Map Demos
@@ -26,7 +30,6 @@
 #import "GoogleMapsDemos/Samples/MapTypesViewController.h"
 #import "GoogleMapsDemos/Samples/MapZoomViewController.h"
 #import "GoogleMapsDemos/Samples/MyLocationViewController.h"
-#import "GoogleMapsDemos/Samples/PaddingBehaviorViewController.h"
 #import "GoogleMapsDemos/Samples/SnapshotReadyViewController.h"
 #import "GoogleMapsDemos/Samples/StyledMapViewController.h"
 #import "GoogleMapsDemos/Samples/TrafficMapViewController.h"
@@ -108,9 +111,6 @@
    andDescription:nil],
     [self newDemo:[FrameRateViewController class]
         withTitle:@"Frame Rate"
-   andDescription:nil],
-    [self newDemo:[PaddingBehaviorViewController class]
-        withTitle:@"Padding Behavior"
    andDescription:nil],
   ];
 

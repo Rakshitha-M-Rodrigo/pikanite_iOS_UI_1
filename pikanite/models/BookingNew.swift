@@ -21,4 +21,6 @@ struct BookingNew{
     var recordedDate: String = ""
     var bookedCheckinTime: String = ""
     var bookedCheckoutTime: String = ""
+    
+    var checkoutDate: String = ""
 }

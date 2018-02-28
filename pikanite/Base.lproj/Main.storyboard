@@ -4039,7 +4039,7 @@ Please Enjoy the other features while we are readying a wallet for you!</string>
                                                             <constraint firstAttribute="width" secondItem="pY7-gD-4yj" secondAttribute="height" multiplier="500:80" id="nsI-YH-6qV"/>
                                                         </constraints>
                                                     </view>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_profile" translatesAutoresizingMaskIntoConstraints="NO" id="qFm-XK-usd">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qFm-XK-usd">
                                                         <rect key="frame" x="137" y="34.333333333333329" width="100" height="99.999999999999986"/>
                                                         <color key="backgroundColor" red="0.084292657670000007" green="0.67378646139999998" blue="0.93728911879999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <constraints>
@@ -4052,17 +4052,23 @@ Please Enjoy the other features while we are readying a wallet for you!</string>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_terms" translatesAutoresizingMaskIntoConstraints="NO" id="aw8-cH-zAn">
+                                                        <rect key="frame" x="214" y="95" width="25" height="25"/>
+                                                        <color key="backgroundColor" red="0.025568826119999999" green="0.10914153610000001" blue="0.14902529119999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="25" id="VXr-fj-EwZ"/>
+                                                            <constraint firstAttribute="width" constant="25" id="dyc-Uy-q1k"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <real key="value" value="12.5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </imageView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AWs-zY-EVx">
                                                         <rect key="frame" x="137" y="34" width="100" height="100"/>
                                                         <connections>
                                                             <action selector="profilePictureButtonPressed:" destination="BRc-9h-Zj2" eventType="touchUpInside" id="ZmN-xM-oES"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zhf-8F-CzW">
-                                                        <rect key="frame" x="133" y="146.66666666666666" width="145" height="25"/>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                                        <connections>
-                                                            <action selector="editProfileDetailsButtonPressed:" destination="BRc-9h-Zj2" eventType="touchUpInside" id="TH1-Me-dgp"/>
                                                         </connections>
                                                     </button>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yj1-Dx-TU6">
@@ -4479,6 +4485,13 @@ Please Enjoy the other features while we are readying a wallet for you!</string>
                                                             <constraint firstAttribute="height" constant="25" id="qUb-wU-i9l"/>
                                                         </constraints>
                                                     </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zhf-8F-CzW">
+                                                        <rect key="frame" x="133" y="146" width="145" height="25"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                        <connections>
+                                                            <action selector="editProfileDetailsButtonPressed:" destination="BRc-9h-Zj2" eventType="touchUpInside" id="TH1-Me-dgp"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.012788032181560993" green="0.070127971470355988" blue="0.09804331511259079" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
@@ -4493,7 +4506,9 @@ Please Enjoy the other features while we are readying a wallet for you!</string>
                                                     <constraint firstItem="pY7-gD-4yj" firstAttribute="width" secondItem="zMW-4W-qTH" secondAttribute="width" multiplier="3" id="FW9-Gl-Yyl"/>
                                                     <constraint firstItem="Zhf-8F-CzW" firstAttribute="trailing" secondItem="vnO-8B-U9f" secondAttribute="trailing" id="FfE-kH-yE1"/>
                                                     <constraint firstItem="AWs-zY-EVx" firstAttribute="centerX" secondItem="qFm-XK-usd" secondAttribute="centerX" id="Gtl-cc-tMC"/>
+                                                    <constraint firstItem="aw8-cH-zAn" firstAttribute="leading" secondItem="qFm-XK-usd" secondAttribute="trailing" constant="-23" id="HYM-q7-XZ1"/>
                                                     <constraint firstItem="pY7-gD-4yj" firstAttribute="centerX" secondItem="zMW-4W-qTH" secondAttribute="centerX" id="OW4-fD-APx"/>
+                                                    <constraint firstItem="aw8-cH-zAn" firstAttribute="top" secondItem="qFm-XK-usd" secondAttribute="bottom" constant="-39.333333333333314" id="SLL-5F-foK"/>
                                                     <constraint firstAttribute="bottom" secondItem="yj1-Dx-TU6" secondAttribute="bottom" id="aBV-Av-KyQ"/>
                                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="vnO-8B-U9f" secondAttribute="trailing" constant="20" id="aMv-rF-YOf"/>
                                                     <constraint firstItem="pY7-gD-4yj" firstAttribute="baseline" secondItem="qFm-XK-usd" secondAttribute="firstBaseline" constant="60" id="cFu-1S-yxC"/>
@@ -7502,7 +7517,6 @@ can let you Know the best deals in town!</string>
         <image name="image_discover" width="100" height="100"/>
         <image name="image_discoverSample" width="170" height="96"/>
         <image name="image_hi" width="100" height="100"/>
-        <image name="image_profile" width="100" height="100"/>
         <image name="pikanite_image_white" width="166" height="83"/>
         <image name="pikanite_logo_blue" width="1068" height="1068"/>
         <image name="pikanite_logo_white" width="1068" height="1068"/>

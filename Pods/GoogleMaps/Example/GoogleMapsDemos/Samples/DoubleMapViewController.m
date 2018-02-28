@@ -13,6 +13,10 @@
  * permissions and limitations under the License.
  */
 
+#if !defined(__has_feature) || !__has_feature(objc_arc)
+#error "This file requires ARC support."
+#endif
+
 #import "GoogleMapsDemos/Samples/DoubleMapViewController.h"
 
 #import <GoogleMaps/GoogleMaps.h>
@@ -58,9 +62,8 @@
   [self.view addSubview:_boundMapView];
 }
 
-- (void)viewWillTransitionToSize:(CGSize)size
-       withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
-  [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
+- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
+                                         duration:(NSTimeInterval)duration {
   CGRect frame = self.view.bounds;
   frame.size.height = frame.size.height / 2;
   _mapView.frame = frame;

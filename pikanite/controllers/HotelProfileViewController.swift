@@ -119,8 +119,8 @@ class HotelProfileViewController: BaseViewController, GMSMapViewDelegate, CLLoca
         
         let camera = GMSCameraPosition.camera(withLatitude: Double(lat), longitude: Double(lon), zoom: 15)
         let gMapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
-        gMapView.isMyLocationEnabled = true
-        gMapView.animate(to: camera)
+        self.mapView.isMyLocationEnabled = true
+        self.mapView.animate(to: camera)
         
         let marker = GMSMarker()
         marker.position = CLLocationCoordinate2DMake(Double(lat), Double(lon))
@@ -128,10 +128,9 @@ class HotelProfileViewController: BaseViewController, GMSMapViewDelegate, CLLoca
         marker.title = self.offerArray[offerIndex].hotelName // Marker title here
         marker.snippet = String(self.offerArray[offerIndex].discount)
         marker.infoWindowAnchor = CGPoint(x: 0.5, y: 0)
-        marker.icon = #imageLiteral(resourceName: "icon_mapMaker")
-        marker.map = self.mapView // Mapview here
-        
-        self.mapView.addSubview(gMapView)
+        marker.icon = self.imageWithImage(image: #imageLiteral(resourceName: "icon_mapMaker"), scaledToSize: CGSize(width: 40.0, height: 40.0))
+        marker.map = self.mapView
+       
     }
     
 
@@ -211,6 +210,7 @@ class HotelProfileViewController: BaseViewController, GMSMapViewDelegate, CLLoca
                 self.hotel.image2 = dataDictionary["_id"]! as! String
                 self.hotel.image1 = dataDictionary["_id"]! as! String
                 self.hotel.profilePic = dataDictionary["_id"]! as! String
+
                 
                 
                 self.extractAmenities()
@@ -238,7 +238,7 @@ class HotelProfileViewController: BaseViewController, GMSMapViewDelegate, CLLoca
         let addressDict = self.convertToDictionary(text: address)
         print(addressDict!)
         self.hotelAddressLabel.text = "\(addressDict!["No"]!), \(addressDict!["Street"]!), \(addressDict!["Address"]!)"
-        self.checkingTimesLabel.text = "Check-In: \(self.hotel.checkInTimeStart)        Check-Out: \(self.hotel.checkOutTimeStart)"
+        self.checkingTimesLabel.text = "Check-In: \(self.getTimeOn_HH_MM_Format(string:(self.hotel.checkInTimeStart)))        Check-Out: \(self.getTimeOn_HH_MM_Format(string:self.hotel.checkOutTimeStart))"
         
         var needToKnow: [String] = []
         //coupleFriendly: false, petLimit: false, cancellationLimit: false, ageLimit: "21+ to Book"
@@ -271,6 +271,9 @@ class HotelProfileViewController: BaseViewController, GMSMapViewDelegate, CLLoca
         self.roomCountLabel.text = "1"
         self.roomCostLabel.text = String(self.offerArray[offerIndex].discount)
         self.totalCostLabel.text = String(self.offerArray[offerIndex].discount)
+        
+        self.checkInDateLabel.text = self.getShrotDateTime(string: self.offerArray[offerIndex].recordDate)
+        self.checkOutDateLabel.text = self.getShrotDateTime(string: self.offerArray[offerIndex].closingDate)
         
     }
     

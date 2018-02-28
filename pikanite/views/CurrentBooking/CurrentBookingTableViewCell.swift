@@ -37,6 +37,8 @@ class CurrentBookingTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+        
+        self.hotelImageView.sd_setImage(with: URL(string: url))
 
         // Configure the view for the selected state
     }
@@ -47,17 +49,16 @@ class CurrentBookingTableViewCell: UITableViewCell {
         
         let camera = GMSCameraPosition.camera(withLatitude: Double(lat), longitude: Double(lon), zoom: 15)
         let gMapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
-        gMapView.isMyLocationEnabled = true
-        gMapView.animate(to: camera)
+        self.mapView.isMyLocationEnabled = true
+        self.mapView.animate(to: camera)
         
         let marker = GMSMarker()
         marker.position = CLLocationCoordinate2DMake(Double(lat), Double(lon))
         marker.appearAnimation = GMSMarkerAnimation.pop
-//        marker.title =
-//        Marker title here
-//        marker.snippet = String(self.offerArray[offerIndex].discount)
+        marker.title = self.hotelNameLabel.text!
+        marker.snippet = self.hotelAddressLabel.text!
         marker.infoWindowAnchor = CGPoint(x: 0.5, y: 0)
-        marker.icon = #imageLiteral(resourceName: "icon_mapMaker")
+        marker.icon = BaseViewController().imageWithImage(image: #imageLiteral(resourceName: "icon_mapMaker"), scaledToSize: CGSize(width: 40.0, height: 40.0))
         marker.map = self.mapView // Mapview here
         
         self.mapView.addSubview(gMapView)

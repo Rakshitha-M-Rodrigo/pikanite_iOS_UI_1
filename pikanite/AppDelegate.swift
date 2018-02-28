@@ -36,8 +36,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         //AIzaSyDL2poyoc6EeLpVIsTkfSgw45qqItED0bs
         
         //google API-Key
-        GMSServices.provideAPIKey("AIzaSyCQ7GrxR1vQhxzErwpdSUsUwUPBesiHECE")
-        GMSPlacesClient.provideAPIKey("AIzaSyCQ7GrxR1vQhxzErwpdSUsUwUPBesiHECE")
+        GMSServices.provideAPIKey("AIzaSyBUSGPhOVWRxVAqiNK4cuzlyvyfQsDXiI4")
+        GMSPlacesClient.provideAPIKey("AIzaSyBUSGPhOVWRxVAqiNK4cuzlyvyfQsDXiI4")
         
         GIDSignIn.sharedInstance().clientID = "610124749144-cujpq9t37na35b801kg77ajushv60vct.apps.googleusercontent.com"
         GIDSignIn.sharedInstance().delegate = self

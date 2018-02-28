@@ -470,6 +470,43 @@ class BaseViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelega
         self.hideActivityIndicator()
     }
     
+    func imageWithImage(image:UIImage, scaledToSize newSize:CGSize) -> UIImage{
+        UIGraphicsBeginImageContextWithOptions(newSize, false, 0.0);
+        //image.draw(in: CGRectMake(0, 0, newSize.width, newSize.height))
+        image.draw(in: CGRect(origin: CGPoint(x: 0,y :0), size: CGSize(width: newSize.width, height: newSize.height))  )
+        let newImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        return newImage
+    }
+    
+    func isBetweenMyTwoDates(date: NSDate, startDateString:String , endDateString: String) -> Bool {
+        let dateMaker = DateFormatter()
+        dateMaker.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+        let start = dateMaker.date(from: startDateString)!
+        let end = dateMaker.date(from: endDateString)!
+
+        
+        if start.compare(date as Date) == .orderedAscending && end.compare(date as Date) == .orderedDescending {
+            print("########===> within range")
+            return true
+        }
+        print("########===> not within range")
+        return false
+    }
+
+    func getCurrentTime()->String{
+        let date = NSDate()
+        let aStrDate = String(describing: date)//"2014-09-20 04:45:20 +0000"
+        let aDateFormatter = DateFormatter()
+        aDateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss Z"
+        let aDate: Date? = aDateFormatter.date(from: aStrDate)
+        aDateFormatter.dateFormat = "HH:mm:ss"
+        if let aDate = aDate {
+            print("\(aDateFormatter.string(from: aDate))")
+        }
+        return ("\(aDateFormatter.string(from: aDate!))")
+    }
+    
     func getCurrentDateTime()->String{
         let date = NSDate()
         let aStrDate = String(describing: date)//"2014-09-20 04:45:20 +0000"
@@ -483,12 +520,92 @@ class BaseViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelega
         return ("\(aDateFormatter.string(from: aDate!))")
     }
     
+    
+    func extractTimefromDateString(string: String)->String{
+        //        let date = NSDate()
+        let aStrDate = String(describing: string)//"2014-09-20 04:45:20 +0000"
+        let aDateFormatter = DateFormatter()
+        aDateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+        let aDate: Date? = aDateFormatter.date(from: aStrDate)
+        aDateFormatter.dateFormat = "HH:mm:ss"
+        if let aDate = aDate {
+            print("\(aDateFormatter.string(from: aDate))")
+        }
+        return ("\(aDateFormatter.string(from: aDate!))")
+    }
+    
+    func getShrotDateTime(string: String)->String{
+//        let date = NSDate()
+        let aStrDate = String(describing: string)//"2014-09-20 04:45:20 +0000"
+        let aDateFormatter = DateFormatter()
+        aDateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+        let aDate: Date? = aDateFormatter.date(from: aStrDate)
+        aDateFormatter.dateFormat = "E, dd MMM"
+        if let aDate = aDate {
+            print("\(aDateFormatter.string(from: aDate))")
+        }
+        return ("\(aDateFormatter.string(from: aDate!))")
+    }
+    
+    func getTimeOn_HH_MM_Format(string: String) -> String{
+        
+        let fullTime = string.components(separatedBy: ":")
+        let HH = fullTime[0]
+        let MM = fullTime[1]
+        let SS = fullTime[2]
+        return "\(HH):\(MM)"
+    }
+    
+    func getTimeOn_HH_MM_Array(string: String) -> [String:Any]{
+        
+        let fullTime = string.components(separatedBy: ":")
+        let HH = fullTime[0]
+        let MM = fullTime[1]
+        let SS = fullTime[2]
+        return ["HH":Int(HH)!, "MM":Int(MM)!, "SS":Int(SS)!]
+    }
+    
+    
+    func convertNextDate(dateString: String) -> String{
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+        let myDate = dateFormatter.date(from: dateString)!
+        let tomorrow = Calendar.current.date(byAdding: .day, value: 1, to: myDate)
+        let nextDate = dateFormatter.string(from: tomorrow!)
+        let formattedDate = self.ISOStringFromDate(date: tomorrow!)
+        print("your next Date is \(formattedDate)")
+        return formattedDate
+    }
+    
+    func getShrotDateTimeWithYear(string: String)->String{
+        //        let date = NSDate()
+        let aStrDate = String(describing: string)//"2014-09-20 04:45:20 +0000"
+        let aDateFormatter = DateFormatter()
+        aDateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+        let aDate: Date? = aDateFormatter.date(from: aStrDate)
+        aDateFormatter.dateFormat = "E, dd MMM yyyy"
+        if let aDate = aDate {
+            print("\(aDateFormatter.string(from: aDate))")
+        }
+        
+        return ("\(aDateFormatter.string(from: aDate!))")
+    }
+    
     func dateFromISOString(string: String) -> Date? {
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale(identifier: "en_US_POSIX")
         dateFormatter.timeZone = TimeZone.autoupdatingCurrent
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
         
+        return dateFormatter.date(from: string)
+    }
+    
+    func shortDateFromISOString(string: String) -> Date? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "en_US_POSIX")
+        dateFormatter.timeZone = TimeZone.autoupdatingCurrent
+        dateFormatter.dateFormat = "E,dd MMM"
+        print(dateFormatter.date(from: string) as! Any)
         return dateFormatter.date(from: string)
     }
     

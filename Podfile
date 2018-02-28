@@ -4,8 +4,10 @@
 target 'pikanite' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
-  pod 'GoogleMaps'
-  pod 'GooglePlaces'
+  #pod 'GoogleMaps'
+  #pod 'GooglePlaces'
+  pod 'GoogleMaps', '2.2'
+  pod 'GooglePlaces', '2.2'
   pod 'FSCalendar'
   #pod 'CalendarView'
   # Swift 3.2+ Compatibility

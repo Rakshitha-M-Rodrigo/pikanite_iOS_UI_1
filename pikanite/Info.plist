@@ -2,6 +2,16 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Pikanite need to access your location in-order to provide map facility to your hands!</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Pikanite accessing your camera to take your Profile Pic</string>
+	<key>Privacy - Location When In Use Usage Description </key>
+	<string>Pikanite need to access your location in-order to provide map facility to your hands!</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Pikanite need to access your location in-order to provide map facility to your hands!</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Pikanite is accessing your PhotoLibrary to take your profile picture</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>

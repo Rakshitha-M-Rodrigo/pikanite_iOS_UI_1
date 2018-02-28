@@ -13,6 +13,10 @@
  * permissions and limitations under the License.
  */
 
+#if !defined(__has_feature) || !__has_feature(objc_arc)
+#error "This file requires ARC support."
+#endif
+
 #import "GooglePlacesDemos/Support/MainSplitViewControllerBehaviorManager.h"
 
 @implementation MainSplitViewControllerBehaviorManager {
@@ -33,6 +37,34 @@
   } else {
     _hasBeenCollapsedBefore = YES;
     return YES;
+  }
+}
+
+#pragma mark - iOS 7 Support
+
+- (void)splitViewController:(UISplitViewController *)splitViewController
+     willHideViewController:(UIViewController *)aViewController
+          withBarButtonItem:(UIBarButtonItem *)barButtonItem
+       forPopoverController:(UIPopoverController *)pc {
+  // If the split view controller does not implement displayModeButtonItem (iOS 7) then provide
+  // a fallback.
+  if (![splitViewController respondsToSelector:@selector(displayModeButtonItem)]) {
+    UINavigationController *navigationController = splitViewController.viewControllers.lastObject;
+    UIViewController *rootViewController = navigationController.viewControllers.firstObject;
+    rootViewController.navigationItem.leftBarButtonItem = barButtonItem;
+    _iOS7DisplayModeButtonItem = barButtonItem;
+  }
+}
+
+- (void)splitViewController:(UISplitViewController *)splitViewController
+       willShowViewController:(UIViewController *)aViewController
+    invalidatingBarButtonItem:(UIBarButtonItem *)barButtonItem {
+  // If the split view controller does not implement displayModeButtonItem (iOS 7) then provide
+  // a fallback.
+  if (![splitViewController respondsToSelector:@selector(displayModeButtonItem)]) {
+    UINavigationController *navigationController = splitViewController.viewControllers.lastObject;
+    UIViewController *rootViewController = navigationController.viewControllers.firstObject;
+    rootViewController.navigationItem.leftBarButtonItem = nil;
   }
 }
 

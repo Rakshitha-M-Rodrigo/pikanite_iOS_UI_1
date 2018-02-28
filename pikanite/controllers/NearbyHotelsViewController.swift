@@ -52,7 +52,7 @@ class NearbyHotelsViewController: UIViewController {
         marker.position = CLLocationCoordinate2D(latitude: -33.86, longitude: 151.20)
         marker.title = "Sydney"
         marker.snippet = "Australia"
-        marker.map = gsmMapView
+        marker.map = self.mapView
     }
     
     
@@ -60,12 +60,13 @@ class NearbyHotelsViewController: UIViewController {
         
         let mainlon = self.offerArray[0].lon
         let mainlat = self.offerArray[0].lat
+        
         let camera = GMSCameraPosition.camera(withLatitude: Double(mainlat), longitude: Double(mainlon), zoom: 15)
         let gMapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
-        gMapView.isMyLocationEnabled = true
-        gMapView.animate(to: camera)
-        mapView.isMyLocationEnabled = true
-        mapView.addSubview(gMapView)
+        
+        self.mapView.animate(to: camera)
+        self.mapView.isMyLocationEnabled = true
+
         
         for i in 0..<offerArray.count{
             let lon = self.offerArray[i].lon
@@ -76,7 +77,7 @@ class NearbyHotelsViewController: UIViewController {
             marker.title = self.offerArray[i].hotelName
             marker.infoWindowAnchor = CGPoint(x: 0.5, y: 0)
             marker.icon = #imageLiteral(resourceName: "icon_mapMaker")
-            marker.map = mapView
+            marker.map = self.mapView
         }
         self.mapView.addSubview(gMapView)
     }

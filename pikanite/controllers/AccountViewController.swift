@@ -28,9 +28,19 @@ class AccountViewController: BaseViewController, MFMailComposeViewControllerDele
     var name: String = ""
     let dummy = "User"
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        self.performLoading()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.headerCurve.layer.cornerRadius = self.headerCurve.bounds.width / 1.9
+        //self.performLoading()
+    }
+
+    func performLoading(){
         if ((UserDefaults.standard.string(forKey: "profileImageURL"))! != nil){
             
             self.picURL = (UserDefaults.standard.string(forKey: "profileImageURL"))!
@@ -58,11 +68,8 @@ class AccountViewController: BaseViewController, MFMailComposeViewControllerDele
         } else {
             self.profilePicImageView.image = #imageLiteral(resourceName: "image_person")
         }
-        
-
-        self.headerCurve.layer.cornerRadius = self.headerCurve.bounds.width / 1.9
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
