@@ -4431,12 +4431,17 @@ Please Enjoy the other features while we are readying a wallet for you!</string>
                                                                 <color key="textColor" red="0.46274509800000002" green="0.59215686270000001" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VqR-VV-jL1">
+                                                                <rect key="frame" x="147.66666666666666" y="20" width="80" height="80"/>
+                                                                <color key="backgroundColor" red="0.00012333116319496185" green="0.071299724280834198" blue="0.10317131131887436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </view>
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstItem="v5z-n3-7K0" firstAttribute="top" secondItem="qEe-el-Y2a" secondAttribute="bottom" id="3js-Hz-Ht0"/>
                                                             <constraint firstItem="qEe-el-Y2a" firstAttribute="leading" secondItem="pcB-81-7hM" secondAttribute="trailing" constant="25" id="5Vz-Q6-gUl"/>
                                                             <constraint firstItem="wQU-YB-rJr" firstAttribute="top" secondItem="yAu-5t-ThJ" secondAttribute="bottom" id="7ni-tH-z0L"/>
+                                                            <constraint firstItem="VqR-VV-jL1" firstAttribute="height" secondItem="BCf-nr-beH" secondAttribute="height" id="9r5-ob-MvX"/>
                                                             <constraint firstItem="pD0-q5-ECE" firstAttribute="centerX" secondItem="yj1-Dx-TU6" secondAttribute="centerX" constant="-104.83333333333334" id="A7j-Uk-sYW"/>
                                                             <constraint firstItem="cNi-pO-O0F" firstAttribute="top" secondItem="e0I-WF-6kM" secondAttribute="bottom" id="Bma-Jc-mw2"/>
                                                             <constraint firstItem="dBx-81-Obb" firstAttribute="centerY" secondItem="pcB-81-7hM" secondAttribute="centerY" id="CSw-UI-HAe"/>
@@ -4444,6 +4449,7 @@ Please Enjoy the other features while we are readying a wallet for you!</string>
                                                             <constraint firstItem="pcB-81-7hM" firstAttribute="top" secondItem="yj1-Dx-TU6" secondAttribute="top" constant="20" id="EtJ-RP-I4b"/>
                                                             <constraint firstItem="OJ8-6a-cfs" firstAttribute="centerX" secondItem="pcB-81-7hM" secondAttribute="centerX" id="FR1-zZ-S4U"/>
                                                             <constraint firstItem="cNi-pO-O0F" firstAttribute="centerX" secondItem="e0I-WF-6kM" secondAttribute="centerX" id="Fp7-pg-WQv"/>
+                                                            <constraint firstItem="VqR-VV-jL1" firstAttribute="width" secondItem="BCf-nr-beH" secondAttribute="width" id="G0B-K7-4vy"/>
                                                             <constraint firstItem="BCf-nr-beH" firstAttribute="centerY" secondItem="yj1-Dx-TU6" secondAttribute="centerY" constant="-165.33333333333337" id="GUl-ZW-KqZ"/>
                                                             <constraint firstItem="pcB-81-7hM" firstAttribute="leading" secondItem="dBx-81-Obb" secondAttribute="trailing" constant="25" id="OAm-ei-cEM"/>
                                                             <constraint firstItem="yAu-5t-ThJ" firstAttribute="centerY" secondItem="lQj-z8-1gm" secondAttribute="centerY" id="Pq2-98-yvh"/>
@@ -4467,6 +4473,7 @@ Please Enjoy the other features while we are readying a wallet for you!</string>
                                                             <constraint firstItem="e0I-WF-6kM" firstAttribute="centerY" secondItem="J5U-ms-zD4" secondAttribute="centerY" id="lzd-Nb-hvy"/>
                                                             <constraint firstItem="BSn-GJ-3mi" firstAttribute="top" secondItem="riR-nC-V4D" secondAttribute="bottom" id="mJw-OG-suK"/>
                                                             <constraint firstItem="J5U-ms-zD4" firstAttribute="centerX" secondItem="yj1-Dx-TU6" secondAttribute="centerX" id="mNZ-Ng-Ier"/>
+                                                            <constraint firstItem="VqR-VV-jL1" firstAttribute="centerX" secondItem="BCf-nr-beH" secondAttribute="centerX" id="sdn-hT-924"/>
                                                             <constraint firstItem="GcK-6r-MpK" firstAttribute="centerX" secondItem="lQj-z8-1gm" secondAttribute="centerX" id="ttL-uu-o3b"/>
                                                             <constraint firstItem="OJ8-6a-cfs" firstAttribute="top" secondItem="pcB-81-7hM" secondAttribute="bottom" constant="-1" id="ttg-9j-Y7B"/>
                                                             <constraint firstItem="BCf-nr-beH" firstAttribute="width" secondItem="yj1-Dx-TU6" secondAttribute="width" constant="-295" id="uWc-Qf-Du4"/>
@@ -4474,9 +4481,15 @@ Please Enjoy the other features while we are readying a wallet for you!</string>
                                                             <constraint firstItem="lQj-z8-1gm" firstAttribute="top" secondItem="J5U-ms-zD4" secondAttribute="bottom" constant="35" id="w16-or-qoO"/>
                                                             <constraint firstItem="pcB-81-7hM" firstAttribute="centerX" secondItem="yj1-Dx-TU6" secondAttribute="centerX" id="xUD-HS-GTN"/>
                                                             <constraint firstItem="RoE-tW-Ab2" firstAttribute="top" secondItem="dBx-81-Obb" secondAttribute="bottom" id="xac-Ya-jm3"/>
+                                                            <constraint firstItem="VqR-VV-jL1" firstAttribute="centerY" secondItem="BCf-nr-beH" secondAttribute="centerY" id="y92-KM-1BG"/>
                                                             <constraint firstItem="v5z-n3-7K0" firstAttribute="centerX" secondItem="qEe-el-Y2a" secondAttribute="centerX" id="zE3-Sl-yUz"/>
                                                             <constraint firstItem="BCf-nr-beH" firstAttribute="centerX" secondItem="yj1-Dx-TU6" secondAttribute="centerX" id="zxa-eV-59I"/>
                                                         </constraints>
+                                                        <variation key="default">
+                                                            <mask key="subviews">
+                                                                <exclude reference="OJ8-6a-cfs"/>
+                                                            </mask>
+                                                        </variation>
                                                     </view>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_profileEdit" translatesAutoresizingMaskIntoConstraints="NO" id="vnO-8B-U9f">
                                                         <rect key="frame" x="253" y="147" width="25" height="25"/>
@@ -7033,7 +7046,48 @@ Booking Non Refundable</string>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HI7-L0-LDv" customClass="GMSMapView">
                                 <rect key="frame" x="0.0" y="86" width="375" height="726"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M0V-Ed-HDw" customClass="Marker" customModule="pikanite" customModuleProvider="target">
+                                        <rect key="frame" x="287" y="8" width="80" height="80"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_priceTag" translatesAutoresizingMaskIntoConstraints="NO" id="Aav-hk-rJI">
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LKR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KTB-KO-hrF">
+                                                <rect key="frame" x="0.0" y="4.9999999999999991" width="80" height="15.666666666666664"/>
+                                                <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="12"/>
+                                                <color key="textColor" red="0.99963909390000005" green="1" blue="0.99975615740000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00.00K" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dhx-b5-IZA">
+                                                <rect key="frame" x="5" y="20.666666666666671" width="70" height="18.333333333333329"/>
+                                                <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="15"/>
+                                                <color key="textColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="Aav-hk-rJI" firstAttribute="width" secondItem="M0V-Ed-HDw" secondAttribute="width" id="Cif-I2-Lb1"/>
+                                            <constraint firstItem="KTB-KO-hrF" firstAttribute="centerX" secondItem="Aav-hk-rJI" secondAttribute="centerX" id="Clx-Yo-gFl"/>
+                                            <constraint firstItem="KTB-KO-hrF" firstAttribute="width" secondItem="Aav-hk-rJI" secondAttribute="width" id="PkM-js-OEC"/>
+                                            <constraint firstItem="Aav-hk-rJI" firstAttribute="height" secondItem="M0V-Ed-HDw" secondAttribute="height" id="QBi-y4-8G6"/>
+                                            <constraint firstAttribute="trailing" secondItem="Dhx-b5-IZA" secondAttribute="trailing" constant="5" id="U4y-k2-ilb"/>
+                                            <constraint firstAttribute="width" constant="80" id="XPF-ZC-hMa"/>
+                                            <constraint firstItem="Dhx-b5-IZA" firstAttribute="top" secondItem="KTB-KO-hrF" secondAttribute="bottom" id="YIg-Ub-CNR"/>
+                                            <constraint firstItem="Aav-hk-rJI" firstAttribute="centerY" secondItem="M0V-Ed-HDw" secondAttribute="centerY" id="loh-uP-sY4"/>
+                                            <constraint firstItem="KTB-KO-hrF" firstAttribute="top" secondItem="M0V-Ed-HDw" secondAttribute="top" constant="5" id="pCy-Bx-1aW"/>
+                                            <constraint firstItem="Dhx-b5-IZA" firstAttribute="leading" secondItem="M0V-Ed-HDw" secondAttribute="leading" constant="5" id="s9e-as-bBr"/>
+                                            <constraint firstAttribute="height" constant="80" id="xAu-YE-jJs"/>
+                                            <constraint firstItem="Aav-hk-rJI" firstAttribute="centerX" secondItem="M0V-Ed-HDw" secondAttribute="centerX" id="xK9-pA-ezg"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
                                 <color key="backgroundColor" red="0.23921987414360046" green="0.54140239953994751" blue="0.75296825170516968" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="M0V-Ed-HDw" firstAttribute="top" secondItem="HI7-L0-LDv" secondAttribute="top" constant="8" id="Ivr-qv-LUo"/>
+                                    <constraint firstAttribute="trailing" secondItem="M0V-Ed-HDw" secondAttribute="trailing" constant="8" id="vI6-u5-mCD"/>
+                                </constraints>
                                 <connections>
                                     <outlet property="delegate" destination="2jr-h2-YjT" id="ANy-Fo-0kt"/>
                                 </connections>
@@ -7053,6 +7107,8 @@ Booking Non Refundable</string>
                     </view>
                     <connections>
                         <outlet property="mapView" destination="HI7-L0-LDv" id="63N-Jy-nt7"/>
+                        <outlet property="markerCustomView" destination="M0V-Ed-HDw" id="oL3-0p-3PG"/>
+                        <outlet property="priceLabel" destination="Dhx-b5-IZA" id="gpy-uk-zkX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ils-Dl-ysz" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -7504,6 +7560,7 @@ can let you Know the best deals in town!</string>
         <image name="icon_heart" width="100" height="100"/>
         <image name="icon_mapSearch" width="100" height="100"/>
         <image name="icon_ok" width="100" height="100"/>
+        <image name="icon_priceTag" width="100" height="100"/>
         <image name="icon_privacyPolicy" width="100" height="100"/>
         <image name="icon_profileEdit" width="100" height="100"/>
         <image name="icon_rating_blue_star" width="100" height="100"/>
