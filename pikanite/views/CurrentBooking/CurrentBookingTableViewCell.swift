@@ -22,30 +22,32 @@ class CurrentBookingTableViewCell: UITableViewCell {
     @IBOutlet weak var roomTypeLabel: UILabel!
     @IBOutlet weak var costLabel: UILabel!
     @IBOutlet weak var mapView: GMSMapView!
+    @IBOutlet weak var lonLabel: UILabel!
+    @IBOutlet weak var latLabel: UILabel!
     
     
-    var lon = 0.0000
-    var lat = 0.0000
-    var url = ""
+ var lon: Double = 0.000
+ var lat: Double = 0.000
+ var url = ""
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
 //        self.hotelImageView.sd_setImage(with: URL(string: url))
-        getMap()
+        DispatchQueue.main.async {
+          self.getMap(lon: self.lon, lat: self.lat)
+        }
+        
     }
+   
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         
-        self.hotelImageView.sd_setImage(with: URL(string: url))
-
         // Configure the view for the selected state
     }
     
-    func getMap(){
-        let lon = self.lon
-        let lat = self.lat
+    func getMap(lon: Double, lat: Double){
         
         let camera = GMSCameraPosition.camera(withLatitude: Double(lat), longitude: Double(lon), zoom: 15)
         let gMapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)

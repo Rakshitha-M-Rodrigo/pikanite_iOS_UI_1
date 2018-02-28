@@ -158,9 +158,29 @@
                             </view>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d0M-FB-m5U" customClass="GMSMapView">
                                 <rect key="frame" x="10" y="433.5" width="344" height="166"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="20Q-Bg-Bv0">
+                                        <rect key="frame" x="0.0" y="0.0" width="344" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gy1-0J-MWy">
+                                        <rect key="frame" x="0.0" y="29" width="344" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" red="0.08235294118" green="0.67450980390000004" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Gy1-0J-MWy" secondAttribute="trailing" id="1eY-Sc-ZN0"/>
                                     <constraint firstAttribute="width" secondItem="d0M-FB-m5U" secondAttribute="height" multiplier="172:83" id="AwK-fJ-AKm"/>
+                                    <constraint firstItem="Gy1-0J-MWy" firstAttribute="top" secondItem="20Q-Bg-Bv0" secondAttribute="bottom" constant="8" id="Eo8-D2-1FC"/>
+                                    <constraint firstItem="Gy1-0J-MWy" firstAttribute="leading" secondItem="d0M-FB-m5U" secondAttribute="leading" id="Ewu-4V-KEg"/>
+                                    <constraint firstAttribute="trailing" secondItem="20Q-Bg-Bv0" secondAttribute="trailing" id="KQb-bU-hIC"/>
+                                    <constraint firstItem="20Q-Bg-Bv0" firstAttribute="top" secondItem="d0M-FB-m5U" secondAttribute="top" id="fKv-pG-Yl1"/>
+                                    <constraint firstItem="20Q-Bg-Bv0" firstAttribute="leading" secondItem="d0M-FB-m5U" secondAttribute="leading" id="t8h-Qd-s47"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -231,6 +251,8 @@
                 <outlet property="hotelAddressLabel" destination="nlP-Yt-Yex" id="vtz-19-cGa"/>
                 <outlet property="hotelImageView" destination="mUy-4U-yGg" id="v3i-aq-Psn"/>
                 <outlet property="hotelNameLabel" destination="Rpl-5z-WNw" id="X8F-sP-ypA"/>
+                <outlet property="latLabel" destination="Gy1-0J-MWy" id="ARP-3L-WfF"/>
+                <outlet property="lonLabel" destination="20Q-Bg-Bv0" id="aP4-hv-pbw"/>
                 <outlet property="mapView" destination="d0M-FB-m5U" id="aNP-zx-X8A"/>
                 <outlet property="roomTypeLabel" destination="OFW-ff-aYI" id="8vm-kl-zPV"/>
             </connections>

@@ -470,6 +470,23 @@ class BaseViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelega
         self.hideActivityIndicator()
     }
     
+    var currentTime: String = ""
+    
+    func getServerCurrentTime() -> String{
+        
+        UserHelper.getServerCurrentTime { (success, response, errors) in
+            if(errors == nil){
+                print(response!)
+                self.currentTime = (response!.dictionaryObject!)["content"] as! String!
+                print(self.currentTime)
+            } else {
+                self.displayAlertWithOk(title: "Opps!", alertMessage: "Pikanite Says!, Communication to the server error..., please retry again, and if this is occuring simultinously pleased to contact admins...")
+            }
+        }
+        let time = self.currentTime
+        return time
+    }
+    
     func imageWithImage(image:UIImage, scaledToSize newSize:CGSize) -> UIImage{
         UIGraphicsBeginImageContextWithOptions(newSize, false, 0.0);
         //image.draw(in: CGRectMake(0, 0, newSize.width, newSize.height))
@@ -494,6 +511,8 @@ class BaseViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelega
         return false
     }
 
+    
+    
     func getCurrentTime()->String{
         let date = NSDate()
         let aStrDate = String(describing: date)//"2014-09-20 04:45:20 +0000"
@@ -528,6 +547,21 @@ class BaseViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelega
         aDateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
         let aDate: Date? = aDateFormatter.date(from: aStrDate)
         aDateFormatter.dateFormat = "HH:mm:ss"
+        if let aDate = aDate {
+            print("\(aDateFormatter.string(from: aDate))")
+        }
+        return ("\(aDateFormatter.string(from: aDate!))")
+    }
+    
+    //for booking past/current validation
+    func getBookingValidatoroDate(string: String)->String{
+        //        let date = NSDate()
+        let aStrDate = String(describing: string)//"2014-09-20 04:45:20 +0000"
+        let aDateFormatter = DateFormatter()
+        aDateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+        let aDate: Date? = aDateFormatter.date(from: aStrDate)
+        //to match with 12pm on utc_0 time
+        aDateFormatter.dateFormat = "yyyy-MM-dd'T'06:30:00.000'Z'"
         if let aDate = aDate {
             print("\(aDateFormatter.string(from: aDate))")
         }

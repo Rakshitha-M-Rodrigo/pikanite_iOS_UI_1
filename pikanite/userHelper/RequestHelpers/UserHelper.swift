@@ -877,4 +877,40 @@ class UserHelper: RequestHelper {
             }
         }
     }
+    
+    static func getServerCurrentTime(completion: @escaping ((_ isSuccess: Bool, _ response: JSON?, _ error: AFErrors?) -> ())) {
+        
+        let url = RequestUrls.getServerCurrentTime
+        
+        Alamofire.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: getCommonHeaders()).responseJSON { (dataResponse) in
+            if dataResponse.result.isSuccess {
+                let resultJSON = JSON(dataResponse.result.value!)
+                print(resultJSON)
+                if resultJSON["error"].stringValue  == "Unauthenticated." {
+                    self.signOut()
+                    return
+                }
+                
+                
+                if let currentTimeJson:JSON  = resultJSON{
+                    completion(true, currentTimeJson, nil)
+                    return
+                } else {
+                    completion(false, nil, RequestHelper.getDefaultApiErrors(errorId: "Parse Error", message: "Content object not found"))
+                    return
+                }
+                
+                
+                
+                guard let messageCode = resultJSON["message"].string, let messageText = resultJSON["success"].string else {
+                    completion(false, nil, RequestHelper.getDefaultApiErrors())
+                    return
+                }
+                
+                
+            } else {
+                completion(false, nil, RequestHelper.getDefaultApiErrors())
+            }
+        }
+    }
 }

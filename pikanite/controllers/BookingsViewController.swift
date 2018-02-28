@@ -27,10 +27,13 @@ class BookingsViewController: BaseViewController {
     
     var pastBookings:[BookingNew] = []
     var currentBookings:[BookingNew] = []
-    
+    var serverCurrentTime = ""
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        self.loadAllBookingsInfo()
+        DispatchQueue.main.async {
+             self.loadAllBookingsInfo()
+        }
+       
     }
 
     override func viewDidLoad() {
@@ -51,9 +54,6 @@ class BookingsViewController: BaseViewController {
         self.underLineView.center.x = self.currentLabelContainerView.center.x
         self.currentLabel.textColor = UIColor(red: 21/255, green: 172/255, blue: 162/255, alpha: 1)
         self.pastLabel.textColor = UIColor(red: 118/255, green: 151/255, blue: 162/255, alpha: 1)
-        
-        //self.loadBookingInfo()
-        
 
     }
     
@@ -61,15 +61,20 @@ class BookingsViewController: BaseViewController {
         self.showActivityIndicator()
         UserHelper.getbookings(userID: UserDefaults.standard.string(forKey: "userID")!) { (success, response, errors) in
             
+            if(response != nil && errors == nil){
+            
             self.pastBookings = []
             self.currentBookings = []
             
             print(response!.dictionaryObject!)
             let dataJson = response!.dictionaryObject!
             
-            self.hideActivityIndicator()
+            
+            
             if ((dataJson["message"]! as! String) == "success"){
                 let bookingData = dataJson["booking"]! as! Array<Any>
+                DispatchQueue.main.async {
+                 
                 for i in 0..<bookingData.count{
                     var newBookingData = BookingNew()
                     let data = bookingData[i] as! [String:Any]
@@ -86,8 +91,6 @@ class BookingsViewController: BaseViewController {
                     newBookingData.bookedCheckinTime = data["bookedCheckinTime"]! as! String
                     newBookingData.bookedCheckoutTime = data["bookedCheckoutTime"]! as! String
                     
-                    
-
                     let currentTime = self.getCurrentDateTime()
                     let recordDate = self.dateFromISOString(string: (data["recordedDate"]! as! String))
                     let recordDateString = (data["recordedDate"]! as! String)
@@ -99,106 +102,73 @@ class BookingsViewController: BaseViewController {
                     let recTimeDict = self.getTimeOn_HH_MM_Array(string: recTime)
                     
 
-                    let now = NSDate()
-                    let calendar = Calendar.current
-                    let nowDateValue = now as Date
-                    let todayAt_12AM = calendar.date(bySettingHour: 0, minute: 0, second: 0, of: nowDateValue, matchingPolicy: Calendar.MatchingPolicy.nextTime,repeatedTimePolicy: Calendar.RepeatedTimePolicy.first ,direction: Calendar.SearchDirection.forward )
-                    let todayAt_6AM = calendar.date(bySettingHour: 6, minute: 59, second: 59, of: nowDateValue, matchingPolicy: Calendar.MatchingPolicy.nextTime,repeatedTimePolicy: Calendar.RepeatedTimePolicy.first ,direction: Calendar.SearchDirection.forward )
-                    let todayAt_7AM = calendar.date(bySettingHour: 7, minute: 0, second: 0, of: nowDateValue, matchingPolicy: Calendar.MatchingPolicy.nextTime,repeatedTimePolicy: Calendar.RepeatedTimePolicy.first ,direction: Calendar.SearchDirection.forward )
-                    let todayAt_11PM = calendar.date(bySettingHour: 23, minute: 59, second: 59, of: nowDateValue, matchingPolicy: Calendar.MatchingPolicy.nextTime,repeatedTimePolicy: Calendar.RepeatedTimePolicy.first ,direction: Calendar.SearchDirection.forward )
-
-                    let todayCheck = NSCalendar.current.isDateInToday(recordDate!)
-                    let yesterDayCheck = NSCalendar.current.isDateInYesterday(recordDate!)
                     var current = false
                     
                     //recordededDate -> <convert to local time> -> take only the date part -> day 1 +append 12:00 -> then check current local time -> if before the currentTime past : else current
+                    print((data["recordedDate"]! as! String))
+                    print(self.getBookingValidatoroDate(string: self.convertNextDate(dateString:(data["recordedDate"]! as! String))))
+                    let validatorTime = self.getBookingValidatoroDate(string: self.convertNextDate(dateString:(data["recordedDate"]! as! String)))
                     
                     
+                    let validationTime_DateFormatted = self.dateFromISOString(string: validatorTime)
                     
-                    //MARK: ============== DO NOT DELETE ============================= DO NOT DELETE ============  : by Rakshitha =========================== DO NOT DELETE ====================== DO NOT DELETE ================================
-                    
-//                    if(todayCheck){
-//                        //today
-//                        if (nowDateValue >= todayAt_12AM! && nowDateValue <= todayAt_6AM!){
-//                            //is Checkout at the morning
-//                            //then today
-//                            //current
-//                            newBookingData.checkoutDate = (data["recordedDate"]! as! String)
-//                            current = true
-//                        } else {
-//                            //is Checkout at the day
-//                            //then today
-//                            //current
-//
-//                            //is Checkout at the tomorrow morning
-//                            //then tomorrow
-//                            if((0<=(recTimeDict["HH"] as! Int!)) && ((recTimeDict["HH"] as! Int!)<=6) && (0<=(checkOutTimeDict["HH"] as! Int!)) && ((checkOutTimeDict["HH"] as! Int!)<=6)){
-//                                newBookingData.checkoutDate = (data["recordedDate"]! as! String)
-//                                current = false
-//
-//                            } else if((0<=(checkOutTimeDict["HH"] as! Int!)) && ((checkOutTimeDict["HH"] as! Int!)<=6)){
-//                                newBookingData.checkoutDate = self.convertNextDate(dateString:(data["recordedDate"]! as! String))
-//                                current = true
-//                            } else {
-//                                //check if passed the checkout time already
-//                                newBookingData.checkoutDate = (data["recordedDate"]! as! String)
-//                                let currentTime = self.getCurrentTime()
-//                                let currentTimeDict = self.getTimeOn_HH_MM_Array(string: currentTime)
-//                                if(((currentTimeDict["HH"] as! Int!)<=(checkOutTimeDict["HH"] as! Int!))){
-//                                    current = true
-//                                } else {
-//                                    current = false
-//                                }
-//                            }
-//                        }
-//                    } else if (yesterDayCheck){
-//                        //yesterday
-//                        if (nowDateValue >= todayAt_12AM! && nowDateValue <= todayAt_6AM!){
-//                            //is record time at the day
-//                            //then today(nextdate)
-//                            //current
-//
-//                            if((7<=(recTimeDict["HH"] as! Int!)) && ((recTimeDict["HH"] as! Int!)<=23) && (0<=(checkOutTimeDict["HH"] as! Int!)) && ((checkOutTimeDict["HH"] as! Int!)<=6)){
-//                                newBookingData.checkoutDate = self.convertNextDate(dateString:(data["recordedDate"]! as! String))
-//                                current = true
-//                            } else {
-//                                newBookingData.checkoutDate = (data["recordedDate"]! as! String)
-//                                current = false
-//                            }
-//                        } else {
-//                            //is Checkout at the day
-//                            //then recorded date
-//                            //past
-//                            newBookingData.checkoutDate = (data["recordedDate"]! as! String)
-//                            current = false
-//                        }
-//
-//                    } else {
-//                        //older || future : for now future not allowed
-//                        //then recorded date
-//                        //past
-//                        newBookingData.checkoutDate = (data["recordedDate"]! as! String)
-//                        current = false
-//                    }
-                    
-                    
-                    
-                    if(current){
-                        self.currentBookings.append(newBookingData)
-                    } else {
-                        self.pastBookings.append(newBookingData)
+                    UserHelper.getServerCurrentTime { (success, response, errors) in
+                        if(errors == nil){
+                            print(response!)
+                            self.serverCurrentTime = (response!.dictionaryObject!)["content"] as! String!
+                            print(self.serverCurrentTime)
+                            
+                            
+                            let currentServerTime_DateFormatted = self.dateFromISOString(string: self.serverCurrentTime)
+                            print("######################################")
+                            print(validationTime_DateFormatted)
+                            print(currentServerTime_DateFormatted)
+                            print("######################################")
+                            
+                            if (validationTime_DateFormatted! > currentServerTime_DateFormatted!){
+                                print("#########=====> current offer")
+                                current = true
+                                newBookingData.checkoutDate = validatorTime
+                                self.currentBookings.append(newBookingData)
+                                print(self.currentBookings.count)
+                                print(self.pastBookings.count)
+                                self.currentBookingTableView.reloadData()
+                                self.pastBookingTableView.reloadData()
+                                self.hideActivityIndicator()
+                            } else {
+                                print("#########=====> past offer")
+                                current = false
+                                newBookingData.checkoutDate = (data["recordedDate"]! as! String)
+                                self.pastBookings.append(newBookingData)
+                                print(self.currentBookings.count)
+                                print(self.pastBookings.count)
+                                self.currentBookingTableView.reloadData()
+                                self.pastBookingTableView.reloadData()
+                                self.hideActivityIndicator()
+                            }
+                            
+                            
+                            
+                            
+                        } else {
+                            self.hideActivityIndicator()
+                            self.displayAlertWithOk(title: "Opps!", alertMessage: "Pikanite Says!, Communication to the server error..., please retry again, and if this is occuring simultinously pleased to contact admins...")
+                        }
                     }
-                }
-                print(self.currentBookings.count)
-                print(self.pastBookings.count)
-                self.currentBookingTableView.reloadData()
-                self.pastBookingTableView.reloadData()
-                self.hideActivityIndicator()
+                    
+                } }
+                
+               
+                
+                
             } else {
                 self.hideActivityIndicator()
                 self.displayAlertWithOk(title: "Oops!", alertMessage: "Pikanite says!, server connection error, contact admin...")
             }
 
+            } else {
+                 self.displayAlertWithOk(title: "Oops!", alertMessage: "Pikanite says!, server connection error, contact admin...")
+            }
         }
     }
 
@@ -264,8 +234,8 @@ extension BookingsViewController: UITableViewDataSource, UITableViewDelegate{
             cell.checkOutTime.text = self.getTimeOn_HH_MM_Format(string:(self.currentBookings[indexPath.row].bookedCheckoutTime))
             cell.roomTypeLabel.text = self.currentBookings[indexPath.row].currentRoomType
             cell.costLabel.text = "LKR \(self.currentBookings[indexPath.row].price)"
-            cell.lat = 0.00000
-            cell.lon = 0.00000
+            cell.lat = self.currentBookings[indexPath.row].lat
+            cell.lon = self.currentBookings[indexPath.row].lon
             
             cell.selectionStyle = .none
             //return cell

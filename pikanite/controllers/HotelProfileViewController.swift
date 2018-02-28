@@ -264,8 +264,8 @@ class HotelProfileViewController: BaseViewController, GMSMapViewDelegate, CLLoca
         
         self.userEmailLabel.text = UserDefaults.standard.string(forKey: "userEmail")
         self.userNameLabel.text = UserDefaults.standard.string(forKey: "UserName")
-        self.userPhoneNumberLabel.text = "Add Mobile"
-//        self.birthdayLabel.text =
+        self.userPhoneNumberLabel.text = UserDefaults.standard.string(forKey: "userContactNumber")
+        //self.birthdayLabel.text = UserDefaults.standard.string(forKey: "userBirthDay")
         
         self.roomTypeLabel.text = self.offerArray[offerIndex].roomType
         self.roomCountLabel.text = "1"

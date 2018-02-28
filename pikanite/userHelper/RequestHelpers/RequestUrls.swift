@@ -281,4 +281,10 @@ struct RequestUrls {
             return getBaseUrl() + "/user/changepwd"
         }
     }
+    
+    static var getServerCurrentTime: String {
+        get {
+            return getBaseUrl() + "/info/dateAndTimeNow"
+        }
+    }
 }
