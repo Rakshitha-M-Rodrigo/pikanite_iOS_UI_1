@@ -9,11 +9,14 @@
 import UIKit
 import GoogleMaps
 
-class NearbyHotelsViewController: UIViewController {
+class NearbyHotelsViewController: BaseViewController {
 
     //MARK: Outlets
     @IBOutlet weak var mapView: GMSMapView!
+    @IBOutlet weak var markerCustomView: UIView!
+    @IBOutlet weak var priceLabel: UILabel!
     var offerArray:[Offer] = []
+    var offerIndex = 0
     
     //MARK: Variables
     var lon: Double = 0.0000000000
@@ -69,17 +72,52 @@ class NearbyHotelsViewController: UIViewController {
 
         
         for i in 0..<offerArray.count{
-            let lon = self.offerArray[i].lon
+      
+            
             let lat = self.offerArray[i].lat
+            let long = self.offerArray[i].lon
             let marker = GMSMarker()
-            marker.position = CLLocationCoordinate2DMake(Double(lat), Double(lon))
+            marker.position = CLLocationCoordinate2DMake(lat,long)
             marker.appearAnimation = GMSMarkerAnimation.pop
-            marker.title = self.offerArray[i].hotelName
-            marker.infoWindowAnchor = CGPoint(x: 0.5, y: 0)
-            marker.icon = #imageLiteral(resourceName: "icon_mapMaker")
+                        marker.title = self.offerArray[i].hotelName
+                        let address = self.offerArray[i].hotelAddress
+                        let addressDict = self.convertToDictionary(text: address)
+                        print(addressDict!)
+                        marker.snippet = "\(addressDict!["No"]!),\(addressDict!["Street"]!), \(addressDict!["Address"]!)"
+                        marker.infoWindowAnchor = CGPoint(x: 0.5, y: 0)
+            let DynamicView=UIView(frame: CGRect(origin: CGPoint(x: 0,y :0), size: CGSize(width: 70, height: 70)))
+            DynamicView.backgroundColor=UIColor.clear
+            var imageViewForPinMarker : UIImageView
+            imageViewForPinMarker  = UIImageView(frame:CGRect(origin: CGPoint(x: 0,y :0), size: CGSize(width: 70, height: 70)))
+            imageViewForPinMarker.image = UIImage(named:"icon_priceTag") //icon_priceTag
+            
+            let textCurrency = UILabel(frame:CGRect(origin: CGPoint(x: 0,y :-20), size: CGSize(width: 70, height: 70)))
+            textCurrency.text = "LKR"
+            textCurrency.textAlignment = .center
+            textCurrency.font = UIFont(name: textCurrency.font.fontName, size: 12)
+            textCurrency.textAlignment = NSTextAlignment.center
+            textCurrency.textColor = .white
+            imageViewForPinMarker.addSubview(textCurrency)
+            
+            let text = UILabel(frame:CGRect(origin: CGPoint(x: 0,y :-5), size: CGSize(width: 70, height: 70)))
+            text.text = "\((self.offerArray[i].discount)/1000)K"
+            text.textAlignment = .center
+            text.font = UIFont(name: text.font.fontName, size: 17)
+            text.textAlignment = NSTextAlignment.center
+            text.textColor = .white
+            
+            imageViewForPinMarker.addSubview(text)
+            DynamicView.addSubview(imageViewForPinMarker)
+            UIGraphicsBeginImageContextWithOptions(DynamicView.frame.size, false, UIScreen.main.scale)
+            DynamicView.layer.render(in: UIGraphicsGetCurrentContext()!)
+            let imageConverted: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+            UIGraphicsEndImageContext()
+            
+            marker.icon = imageConverted
             marker.map = self.mapView
+            
+       
         }
-        self.mapView.addSubview(gMapView)
     }
 
     override func didReceiveMemoryWarning() {
@@ -92,6 +130,7 @@ class NearbyHotelsViewController: UIViewController {
 //        self.dismiss(animated: true, completion: nil)
     }
     
+ 
     
 
 }

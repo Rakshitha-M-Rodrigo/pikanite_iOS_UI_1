@@ -137,6 +137,7 @@
 		ACF2623E20069EB40001F6BC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF2623D20069EB40001F6BC /* LoginViewController.swift */; };
 		ACF34045202A83D00022C385 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF34044202A83D00022C385 /* SignInViewController.swift */; };
 		ACF34047202A83E90022C385 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF34046202A83E90022C385 /* SignUpViewController.swift */; };
+		ACF4E0F62046D7460006019D /* Marker.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF4E0F52046D7460006019D /* Marker.swift */; };
 		FACA1534D47EC5BE115BD016 /* Pods_pikaniteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64E52810BEE0A441FAC8095B /* Pods_pikaniteTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -305,6 +306,7 @@
 		ACF2623D20069EB40001F6BC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		ACF34044202A83D00022C385 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		ACF34046202A83E90022C385 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		ACF4E0F52046D7460006019D /* Marker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Marker.swift; sourceTree = "<group>"; };
 		BF6774A439F60211B38D9042 /* Pods-pikaniteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pikaniteTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-pikaniteTests/Pods-pikaniteTests.release.xcconfig"; sourceTree = "<group>"; };
 		CE122A53743325FE3DB9387B /* Pods-pikanite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pikanite.debug.xcconfig"; path = "Pods/Target Support Files/Pods-pikanite/Pods-pikanite.debug.xcconfig"; sourceTree = "<group>"; };
 		F78E6C94234FA849EE48135C /* Pods-pikaniteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pikaniteTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-pikaniteTests/Pods-pikaniteTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -595,6 +597,7 @@
 		AC6A69762001DD420097DC45 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				ACF4E0F42046D6BD0006019D /* Marker */,
 				AC6F3A492043CE8E004A1D0D /* CurrentBooking */,
 				ACDFE42A203AEEB900B68662 /* Rewards */,
 				ACBF43AB203AA0EB00C7F4F5 /* cards */,
@@ -753,6 +756,14 @@
 				ACDFE430203AEF3800B68662 /* InviteFriendsTableViewCell.xib */,
 			);
 			path = Rewards;
+			sourceTree = "<group>";
+		};
+		ACF4E0F42046D6BD0006019D /* Marker */ = {
+			isa = PBXGroup;
+			children = (
+				ACF4E0F52046D7460006019D /* Marker.swift */,
+			);
+			path = Marker;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1172,6 +1183,7 @@
 				AC6CED8B20449163009EBD58 /* BookingNew.swift in Sources */,
 				ACBA49AB203BE93100E2833A /* FAQViewController.swift in Sources */,
 				AC15EE5B2035443A008E2DD9 /* SocialMediaLoginHelper.swift in Sources */,
+				ACF4E0F62046D7460006019D /* Marker.swift in Sources */,
 				AC220716200D7D6E00896D87 /* DiscoverTableViewCell.swift in Sources */,
 				ACDFE429203AEBD100B68662 /* RewardsViewController.swift in Sources */,
 				ACBA49AF203C13DC00E2833A /* AboutUsViewController.swift in Sources */,
