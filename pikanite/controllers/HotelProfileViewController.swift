@@ -336,14 +336,14 @@ class HotelProfileViewController: BaseViewController, GMSMapViewDelegate, CLLoca
                 
                 
                 
-//                
-//               self.extractAmenities()
-//                print(self.hotel as! Any)
-//                //self.hideActivityIndicator()
-//                
-//                
-//                self.loadData()
-//                self.collectionView.reloadData()
+                
+               self.extractAmenities()
+                print(self.hotel as! Any)
+                //self.hideActivityIndicator()
+                
+                
+                self.loadData()
+                self.collectionView.reloadData()
                 
                 
             } else if errors != nil {
