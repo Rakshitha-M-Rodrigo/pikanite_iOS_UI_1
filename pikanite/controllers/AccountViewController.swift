@@ -30,17 +30,18 @@ class AccountViewController: BaseViewController, MFMailComposeViewControllerDele
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        self.performLoading()
+//        self.performLoading()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.headerCurve.layer.cornerRadius = self.headerCurve.bounds.width / 1.9
-        //self.performLoading()
+        self.performLoading()
     }
 
     func performLoading(){
+        self.showActivityIndicator()
         if ((UserDefaults.standard.string(forKey: "profileImageURL"))! != nil){
             
             self.picURL = (UserDefaults.standard.string(forKey: "profileImageURL"))!
@@ -61,12 +62,15 @@ class AccountViewController: BaseViewController, MFMailComposeViewControllerDele
             self.profilePicImageView.sd_setImage(with: URL(string: picURL), completed: { (image, erros, cacheType, urls) in
                 if (image != nil){
                     self.profilePicImageView.image = image
+                    self.hideActivityIndicator()
                 } else{
                     self.profilePicImageView.image = #imageLiteral(resourceName: "image_person")
+                    self.hideActivityIndicator()
                 }
             })
         } else {
             self.profilePicImageView.image = #imageLiteral(resourceName: "image_person")
+            self.hideActivityIndicator()
         }
     }
     
@@ -184,16 +188,44 @@ class AccountViewController: BaseViewController, MFMailComposeViewControllerDele
     }
   
 
+    
+    func updateProfilePicture(imageData: UIImage) -> Bool {
+        self.showActivityIndicator()
+        UserHelper.changeProfilePic(imageData: imageData, email: UserDefaults.standard.string(forKey: "userEmail")!) { (isSuccess, response, errors) in
+            
+            if isSuccess && response != nil{
+                self.displayAlertWithOk(title: "Pikanite Says!", alertMessage: "profile picture uploading success!")
+                let url = RequestUrls.getProfileUrl
+                UserDefaults.standard.set(url, forKey: "profileImageURL")
+                self.performLoading()
+                self.hideActivityIndicator()
+            } else if errors != nil {
+                if errors!.errors.count > 0 {
+                    self.displayAlertWithOk(title: "Oppps!", alertMessage: "Pikanite Says!, some thing went wrong!")
+                }
+                self.hideActivityIndicator()
+            }
+        }
+        
+        return false
+    }
+    
+    
 }
+
+
+
+
 
 extension AccountViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @objc func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         let img = (info[UIImagePickerControllerOriginalImage] as? UIImage)!
-        let resizedImage = resizeImage(image: img, newWidth: 200)
+        let resizedImage = resizeImage(image: img, newWidth: 300)
         let data  = UIImagePNGRepresentation(resizedImage) as Data?
-        self.profilePicImageView.image = img
-//        self.updateProfilePicture(imageData: data!)
+        self.profilePicImageView.image = resizedImage
+        self.updateProfilePicture(imageData: self.profilePicImageView.image!)
+        
         picker.dismiss(animated: true, completion: nil)
     }
     

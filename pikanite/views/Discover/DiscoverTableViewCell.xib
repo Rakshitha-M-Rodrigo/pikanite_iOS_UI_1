@@ -54,14 +54,15 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hotel Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WQJ-dW-HnF">
-                                <rect key="frame" x="10" y="175" width="193" height="21"/>
-                                <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="17"/>
+                                <rect key="frame" x="10" y="175" width="193" height="24.5"/>
+                                <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sea Rd, Colombo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IHU-Sm-46R">
-                                <rect key="frame" x="10" y="196" width="213" height="17"/>
-                                <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="14"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sea Rd, Colombo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="IHU-Sm-46R">
+                                <rect key="frame" x="10" y="199.5" width="193" height="18.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="15"/>
                                 <color key="textColor" red="0.46274509803921571" green="0.59215686274509804" blue="0.63529411764705879" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -72,25 +73,25 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Novel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5xr-MP-whE">
-                                <rect key="frame" x="10" y="213" width="177.5" height="14.5"/>
+                                <rect key="frame" x="10" y="218" width="177.5" height="14.5"/>
                                 <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="12"/>
                                 <color key="textColor" red="0.46274509803921571" green="0.59215686274509804" blue="0.63529411764705879" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="was LKR 19,000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vzh-PR-VUG">
-                                <rect key="frame" x="167.5" y="196.5" width="177.5" height="17"/>
+                                <rect key="frame" x="167.5" y="201" width="177.5" height="17"/>
                                 <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="14"/>
                                 <color key="textColor" red="0.46274509803921571" green="0.59215686274509804" blue="0.63529411764705879" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="~*~ pikanite - special - offer -- ~*~" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dx7-AS-8BS">
-                                <rect key="frame" x="10" y="227.5" width="335" height="18"/>
+                                <rect key="frame" x="10" y="232.5" width="335" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" red="0.46274509803921571" green="0.59215686274509804" blue="0.63529411764705879" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Incl. Tax)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d5X-hc-Nc4">
-                                <rect key="frame" x="291.5" y="212.5" width="53.5" height="14.5"/>
+                                <rect key="frame" x="291.5" y="217.5" width="53.5" height="14.5"/>
                                 <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="12"/>
                                 <color key="textColor" red="0.46274509803921571" green="0.59215686274509804" blue="0.63529411764705879" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -100,6 +101,7 @@
                         <rect key="contentStretch" x="0.0" y="0.0" width="0.94999999999999996" height="1"/>
                         <constraints>
                             <constraint firstItem="sTH-iy-ndd" firstAttribute="top" secondItem="ijE-aE-mSN" secondAttribute="top" id="4nE-bh-LNG"/>
+                            <constraint firstItem="IHU-Sm-46R" firstAttribute="trailing" secondItem="WQJ-dW-HnF" secondAttribute="trailing" id="5c2-He-lF7"/>
                             <constraint firstItem="Dx7-AS-8BS" firstAttribute="top" secondItem="d5X-hc-Nc4" secondAttribute="bottom" id="7JJ-FO-Fa7"/>
                             <constraint firstItem="5xr-MP-whE" firstAttribute="width" secondItem="sTH-iy-ndd" secondAttribute="width" multiplier="0.5" id="A4O-Wn-CNW"/>
                             <constraint firstItem="BOc-NZ-5cG" firstAttribute="top" secondItem="sTH-iy-ndd" secondAttribute="top" id="Eji-Is-fzR"/>
@@ -108,7 +110,7 @@
                             <constraint firstItem="xVF-sN-Wuh" firstAttribute="top" secondItem="WQJ-dW-HnF" secondAttribute="top" id="KW4-Xh-zg8"/>
                             <constraint firstAttribute="trailing" secondItem="Vzh-PR-VUG" secondAttribute="trailing" constant="10" id="Mkp-4d-e4o"/>
                             <constraint firstItem="5xr-MP-whE" firstAttribute="leading" secondItem="ijE-aE-mSN" secondAttribute="leading" constant="10" id="QAQ-RG-0Q1"/>
-                            <constraint firstItem="IHU-Sm-46R" firstAttribute="width" secondItem="sTH-iy-ndd" secondAttribute="width" multiplier="0.6" id="QjU-XK-q9t"/>
+                            <constraint firstItem="IHU-Sm-46R" firstAttribute="leading" secondItem="WQJ-dW-HnF" secondAttribute="leading" id="Uep-UQ-MLM"/>
                             <constraint firstItem="BOc-NZ-5cG" firstAttribute="trailing" secondItem="sTH-iy-ndd" secondAttribute="trailing" id="XJc-gL-gjf"/>
                             <constraint firstItem="sTH-iy-ndd" firstAttribute="leading" secondItem="ijE-aE-mSN" secondAttribute="leading" id="azj-wp-MTe"/>
                             <constraint firstItem="Dx7-AS-8BS" firstAttribute="top" secondItem="5xr-MP-whE" secondAttribute="bottom" id="dVt-OF-Ia9"/>
@@ -123,8 +125,7 @@
                             <constraint firstAttribute="trailing" secondItem="sTH-iy-ndd" secondAttribute="trailing" id="r3g-kT-F2Y"/>
                             <constraint firstAttribute="trailing" secondItem="d5X-hc-Nc4" secondAttribute="trailing" constant="10" id="s9j-Sm-jXr"/>
                             <constraint firstItem="5xr-MP-whE" firstAttribute="top" secondItem="IHU-Sm-46R" secondAttribute="bottom" id="tKq-lB-U2G"/>
-                            <constraint firstItem="IHU-Sm-46R" firstAttribute="leading" secondItem="ijE-aE-mSN" secondAttribute="leading" constant="10" id="uQy-Jb-WDs"/>
-                            <constraint firstAttribute="bottom" secondItem="Dx7-AS-8BS" secondAttribute="bottom" constant="10" id="wLy-gT-lps"/>
+                            <constraint firstAttribute="bottom" secondItem="Dx7-AS-8BS" secondAttribute="bottom" constant="5" id="uaO-DW-ag3"/>
                             <constraint firstItem="WQJ-dW-HnF" firstAttribute="top" secondItem="sTH-iy-ndd" secondAttribute="bottom" constant="15" id="yhQ-OZ-Iue"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>

@@ -235,6 +235,15 @@ class BaseViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelega
     }
     
     
+    func promocodePrompt(){
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "PromoCodeViewController") as! PromoCodeViewController
+        vc.modalPresentationStyle = .overFullScreen
+        vc.modalTransitionStyle = .crossDissolve
+        vc.delegate = self as! PromocodeProtocol
+        self.present(vc, animated: true, completion: nil)
+    }
+    
+    
     func passwordPrompt(userEmail: String, HotelEmail: String, RoomCount: String, recordedDate: String){
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "PasswordPromptViewController") as! PasswordPromptViewController
         vc.modalPresentationStyle = .overFullScreen
@@ -651,6 +660,8 @@ class BaseViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelega
         
         return dateFormatter.string(from: date).appending("Z")
     }
+    
+    
 
 }
 

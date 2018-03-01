@@ -152,7 +152,7 @@ class BookingsViewController: BaseViewController {
                             
                         } else {
                             self.hideActivityIndicator()
-                            self.displayAlertWithOk(title: "Opps!", alertMessage: "Pikanite Says!, Communication to the server error..., please retry again, and if this is occuring simultinously pleased to contact admins...")
+                            self.displayAlertWithOk(title: "Oops!", alertMessage: "Pikanite says!, server connection error, contact admin...")
                         }
                     }
                     
@@ -163,7 +163,7 @@ class BookingsViewController: BaseViewController {
                 
             } else {
                 self.hideActivityIndicator()
-                self.displayAlertWithOk(title: "Oops!", alertMessage: "Pikanite says!, server connection error, contact admin...")
+                //self.displayAlertWithOk(title: "Oops!", alertMessage: "Pikanite says!, server connection error, contact admin...")
             }
 
             } else {

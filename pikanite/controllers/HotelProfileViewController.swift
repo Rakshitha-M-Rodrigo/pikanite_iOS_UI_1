@@ -9,7 +9,54 @@
 import UIKit
 import GoogleMaps
 
-class HotelProfileViewController: BaseViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
+class HotelProfileViewController: BaseViewController, GMSMapViewDelegate, CLLocationManagerDelegate, PromocodeProtocol {
+    
+    var promoValues: [String:Double]?
+    
+    func setPromoCode(valueSent: [String : Double]) {
+        print("################################")
+        print(valueSent as Any)
+        print("################################")
+        self.loadPromoCodeCalculation(values: valueSent)
+        
+    }
+    
+    
+    func loadPromoCodeCalculation(values: [String: Double]?){
+        if let valueToDisplay = values {
+            print("Value from display = \(values as Any)")
+            if(values! == [:]){
+                self.promoCodeLabel.text = "Add Promo Code"
+            } else {
+                self.percentage = values!["Percentage"]!
+                self.amount = values!["Amount"]!
+                print("=================================================> Valid Promocode found ##########")
+                if ((self.percentage == 0) && (self.amount > 0)){
+                    //cal amount
+                    self.totalFinalFee = ((self.offerArray[offerIndex].discount * (100 + Double(self.offerArray[offerIndex].taxRate)!)/100) - amount)
+                    if(Double(self.totalFinalFee)>=0){
+                        self.totalCostLabel.text = String(self.totalFinalFee)
+                    } else {
+                        self.totalCostLabel.text = "0"
+                    }
+                    
+                    let promoValue = amount
+                    self.promoCodeLabel.text = "( LKR \(promoValue) )"
+                    print("===================================== totalFinalFee : amount ============> \(String(describing: self.totalCostLabel.text)) ##########")
+                } else if ((self.amount == 0) && (self.percentage > 0)){
+                    //cal percentage
+                    self.totalFinalFee = ((self.offerArray[offerIndex].discount * (100 + Double(self.offerArray[offerIndex].taxRate)!)/100)  * (100 - percentage))/100
+                    self.totalCostLabel.text = String(self.totalFinalFee)
+                    let promoValue = ((self.offerArray[offerIndex].discount * (100 + Double(self.offerArray[offerIndex].taxRate)!)/100)  * (percentage))/100
+                    self.promoCodeLabel.text = "( LKR \(promoValue) )"
+                    print("========================================== totalFinalFee : percentage =======> \(String(describing: self.totalCostLabel.text)) ##########")
+                    
+                }
+                
+                
+            }
+        }
+    }
     
     //MARK: Outlets
     @IBOutlet weak var tableView: UITableView!
@@ -31,7 +78,8 @@ class HotelProfileViewController: BaseViewController, GMSMapViewDelegate, CLLoca
     @IBOutlet weak var checkInDateLabel: UILabel!
     @IBOutlet weak var checkOutDateLabel: UILabel!
     @IBOutlet weak var roomTypeLabel: UILabel!
-    @IBOutlet weak var roomCountLabel: UILabel!
+    @IBOutlet weak var taxRate: UILabel!
+    @IBOutlet weak var taxRateNameLabel: UILabel!
     @IBOutlet weak var roomCostLabel: UILabel!
     @IBOutlet weak var promoCodeLabel: UILabel!
     @IBOutlet weak var totalCostLabel: UILabel!
@@ -52,7 +100,19 @@ class HotelProfileViewController: BaseViewController, GMSMapViewDelegate, CLLoca
     
     var roomCount = 1
     let userEmail = UserDefaults.standard.string(forKey: "userEmail")!
+    
+    var percentage = 0.0
+    var amount = 0.0
+    var totalFinalFee = 0.00
 
+    
+    
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -90,7 +150,7 @@ class HotelProfileViewController: BaseViewController, GMSMapViewDelegate, CLLoca
         
         
         getHotelProfile()
-        //getMap()
+        getMap()
         
 //        6.887755, 79.870558
 //self.offerArray[offerIndex].lat
@@ -284,6 +344,7 @@ class HotelProfileViewController: BaseViewController, GMSMapViewDelegate, CLLoca
                 self.hotel.hotelEmail = dataDictionaryOffer["hotelEmail"]! as! String
                 self.hotel.hotelWebSite = dataDictionaryOffer["hotelWebsite"]! as! String
                 self.hotel.hotelName = dataDictionaryOffer["hotelName"]! as! String
+                
                 //self.hotel.hotelPartnerId = dataDictionary["hotelPartnerId"]! as! String
                 //                self.hotel.hotelRoomCount = dataDictionary["hotelRoomCount"]! as! Int
                 //                self.hotel.multipleEmail = dataDictionary["multipleEmail"]! as! String
@@ -326,10 +387,15 @@ class HotelProfileViewController: BaseViewController, GMSMapViewDelegate, CLLoca
                     self.hotel.breakfastIncluded = breakfast
                 }
                 
-                if let hotelRoom:Int = dataDictionaryOther["hotelRoomCount"]! as! Int
-                {
-                    self.hotel.hotelRoomCount = hotelRoom
+                if (dataDictionaryOther["hotelRoomCount"]  is NSNull){
+                    self.hotel.hotelRoomCount = 0
+                } else {
+                    if let hotelRoom:Int = dataDictionaryOther["hotelRoomCount"] as? Int
+                    {
+                        self.hotel.hotelRoomCount = hotelRoom
+                    }
                 }
+                
                 
                 print("Hotel Room Count \(self.hotel.hotelRoomCount)")
                 print("Breakfast included \(self.hotel.breakfastIncluded)")
@@ -453,10 +519,11 @@ class HotelProfileViewController: BaseViewController, GMSMapViewDelegate, CLLoca
         self.birthdayLabel.text = UserDefaults.standard.string(forKey: "userBirthDay")
         
         self.roomTypeLabel.text = self.offerArray[offerIndex].roomType
-        self.roomCountLabel.text = "1"
-        self.roomCostLabel.text = String(self.offerArray[offerIndex].discount)
-        self.totalCostLabel.text = String(self.offerArray[offerIndex].discount)
-        
+//        self.roomCountLabel.text = "1"
+        self.roomCostLabel.text = ("LKR \(String(self.offerArray[offerIndex].discount))")
+        self.totalCostLabel.text = String((self.offerArray[offerIndex].discount * (100 + Double(self.offerArray[offerIndex].taxRate)!)/100) )
+        self.taxRate.text = "LKR \((self.offerArray[offerIndex].discount * (Double(self.offerArray[offerIndex].taxRate)!)/100))"
+        self.taxRateNameLabel.text = "Tax (\(self.offerArray[offerIndex].taxRate)%)"
         self.checkInDateLabel.text = self.getShrotDateTime(string: self.offerArray[offerIndex].recordDate)
         self.checkOutDateLabel.text = self.getShrotDateTime(string: self.offerArray[offerIndex].closingDate)
         
@@ -469,6 +536,14 @@ class HotelProfileViewController: BaseViewController, GMSMapViewDelegate, CLLoca
             self.amenitiesImageArray.append(self.getAmenitiesImage(amenityName: amenitiesArray[i]))
         }
     }
+    
+    //MARK:PromoCode Handler
+    @IBAction func promoCodeButtonPressed(_ sender: Any) {
+        self.promocodePrompt()
+    }
+    
+    
+    
 
     @IBAction func bookingButtonPressed(_ sender: Any) {
         let facebookLogin = UserDefaults.standard.bool(forKey: "facebookLogin")
@@ -514,6 +589,7 @@ class HotelProfileViewController: BaseViewController, GMSMapViewDelegate, CLLoca
     }
 }
 
+//MARK: User Reviews
 
 //extension HotelProfileViewController: UITableViewDataSource, UITableViewDelegate{
 //    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

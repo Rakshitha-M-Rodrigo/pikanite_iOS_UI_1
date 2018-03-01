@@ -160,9 +160,10 @@ extension DiscoverViewController: UITableViewDelegate, UITableViewDataSource{
         let address = self.offerArray[indexPath.row].hotelAddress
         let addressDict = self.convertToDictionary(text: address)
         print(addressDict!)
-        cell.address.text = "\(addressDict!["Street"]!), \(addressDict!["Address"]!)"
+        cell.address.text = "\(addressDict!["Address"]!)"
+        
         cell.profile.text = self.offerArray[indexPath.row].hotelProfile
-        cell.additoinalInfo.text = ""
+        cell.additoinalInfo.text = "Additional"
         
         return cell
     }

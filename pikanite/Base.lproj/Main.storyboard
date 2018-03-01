@@ -217,7 +217,7 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign in" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wsh-4l-Qpj">
-                                                <rect key="frame" x="123.66666666666667" y="14.333333333333258" width="49.666666666666671" height="20"/>
+                                                <rect key="frame" x="122.66666666666667" y="14.333333333333258" width="49.666666666666671" height="20"/>
                                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -749,7 +749,7 @@ Most content and some of the features on the web site are made available to visi
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="734"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgot Password ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="llF-e4-xNN">
-                                                <rect key="frame" x="101" y="30" width="175" height="24"/>
+                                                <rect key="frame" x="100" y="30" width="175" height="24"/>
                                                 <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="20"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -4027,7 +4027,7 @@ Please Enjoy the other features while we are readying a wallet for you!</string>
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="642.33333333333337"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi! Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bdc-GU-Upy">
-                                                        <rect key="frame" x="133.66666666666666" y="144.33333333333334" width="109.66666666666666" height="29.333333333333343"/>
+                                                        <rect key="frame" x="132.66666666666666" y="144.33333333333334" width="109.66666666666666" height="29.333333333333343"/>
                                                         <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="25"/>
                                                         <color key="textColor" red="0.99963909390000005" green="1" blue="0.99975615740000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -4492,14 +4492,14 @@ Please Enjoy the other features while we are readying a wallet for you!</string>
                                                         </variation>
                                                     </view>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_profileEdit" translatesAutoresizingMaskIntoConstraints="NO" id="vnO-8B-U9f">
-                                                        <rect key="frame" x="253.33333333333337" y="147" width="25" height="25"/>
+                                                        <rect key="frame" x="252.33333333333337" y="147" width="25" height="25"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="25" id="UyY-5D-p9D"/>
                                                             <constraint firstAttribute="height" constant="25" id="qUb-wU-i9l"/>
                                                         </constraints>
                                                     </imageView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zhf-8F-CzW">
-                                                        <rect key="frame" x="133.33333333333334" y="146" width="145.00000000000003" height="25"/>
+                                                        <rect key="frame" x="132.33333333333334" y="146" width="145.00000000000003" height="25"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                         <connections>
                                                             <action selector="editProfileDetailsButtonPressed:" destination="BRc-9h-Zj2" eventType="touchUpInside" id="TH1-Me-dgp"/>
@@ -5577,7 +5577,7 @@ explore them tonight.</string>
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1600"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="byf-om-jdH">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="1140"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="1141"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p11-jn-kMs" userLabel="mainimage">
                                                         <rect key="frame" x="0.0" y="0.0" width="375" height="211"/>
@@ -5915,7 +5915,7 @@ Booking Non Refundable</string>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="exT-wq-U1Z">
-                                                        <rect key="frame" x="10" y="738.66666666666663" width="355" height="228"/>
+                                                        <rect key="frame" x="10" y="738.66666666666663" width="355" height="229"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pricing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mCi-d2-MLx">
                                                                 <rect key="frame" x="10" y="10.666666666666742" width="335" height="18"/>
@@ -6040,47 +6040,8 @@ Booking Non Refundable</string>
                                                                     <constraint firstItem="a28-Ga-wH2" firstAttribute="centerY" secondItem="WvB-Tl-Dwc" secondAttribute="centerY" id="yOW-5b-M1w"/>
                                                                 </constraints>
                                                             </view>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uzc-LL-qX4">
-                                                                <rect key="frame" x="10" y="118.66666666666674" width="335" height="25"/>
-                                                                <subviews>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JvI-77-IV0">
-                                                                        <rect key="frame" x="0.0" y="24.666666666666629" width="335" height="1"/>
-                                                                        <color key="backgroundColor" red="0.28326743840000002" green="0.49251383539999999" blue="0.59217196699999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="height" constant="1" id="SJT-bD-aGI"/>
-                                                                        </constraints>
-                                                                    </view>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No of Rooms" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FJk-Qe-U8L">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="134" height="25"/>
-                                                                        <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="14"/>
-                                                                        <color key="textColor" red="0.46274509800000002" green="0.59215686270000001" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Awr-od-RXY">
-                                                                        <rect key="frame" x="134" y="0.66666666666662877" width="201" height="25"/>
-                                                                        <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="14"/>
-                                                                        <color key="textColor" red="0.46274509800000002" green="0.59215686270000001" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                </subviews>
-                                                                <color key="backgroundColor" red="0.0" green="0.1450980392" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                <constraints>
-                                                                    <constraint firstItem="FJk-Qe-U8L" firstAttribute="height" secondItem="uzc-LL-qX4" secondAttribute="height" id="38u-ol-FYn"/>
-                                                                    <constraint firstItem="Awr-od-RXY" firstAttribute="height" secondItem="uzc-LL-qX4" secondAttribute="height" id="3Uc-0A-a5y"/>
-                                                                    <constraint firstItem="Awr-od-RXY" firstAttribute="width" secondItem="uzc-LL-qX4" secondAttribute="width" multiplier="0.6" id="CKX-ik-TjU"/>
-                                                                    <constraint firstAttribute="trailing" secondItem="JvI-77-IV0" secondAttribute="trailing" id="H2i-AU-5Mj"/>
-                                                                    <constraint firstItem="FJk-Qe-U8L" firstAttribute="width" secondItem="uzc-LL-qX4" secondAttribute="width" multiplier="0.4" id="Sdg-fH-5Yo"/>
-                                                                    <constraint firstAttribute="height" constant="25" id="d9Q-K0-0dZ"/>
-                                                                    <constraint firstAttribute="trailing" secondItem="Awr-od-RXY" secondAttribute="trailing" id="ea5-Er-xkw"/>
-                                                                    <constraint firstItem="FJk-Qe-U8L" firstAttribute="centerY" secondItem="uzc-LL-qX4" secondAttribute="centerY" id="ejO-iP-EfE"/>
-                                                                    <constraint firstItem="FJk-Qe-U8L" firstAttribute="leading" secondItem="uzc-LL-qX4" secondAttribute="leading" id="hos-dh-r2N"/>
-                                                                    <constraint firstItem="JvI-77-IV0" firstAttribute="leading" secondItem="uzc-LL-qX4" secondAttribute="leading" id="keU-nw-oZU"/>
-                                                                    <constraint firstItem="Awr-od-RXY" firstAttribute="centerY" secondItem="uzc-LL-qX4" secondAttribute="centerY" id="nti-N5-QXw"/>
-                                                                    <constraint firstAttribute="bottom" secondItem="JvI-77-IV0" secondAttribute="bottom" id="tbW-U0-iWy"/>
-                                                                </constraints>
-                                                            </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TEJ-Yl-K75">
-                                                                <rect key="frame" x="10" y="143.66666666666674" width="335" height="25"/>
+                                                                <rect key="frame" x="10" y="119.33333333333337" width="335" height="25"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qS9-3x-CZY">
                                                                         <rect key="frame" x="0.0" y="24.666666666666629" width="335" height="1"/>
@@ -6118,8 +6079,48 @@ Booking Non Refundable</string>
                                                                     <constraint firstItem="qS9-3x-CZY" firstAttribute="leading" secondItem="TEJ-Yl-K75" secondAttribute="leading" id="uGt-8f-tia"/>
                                                                 </constraints>
                                                             </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uzc-LL-qX4">
+                                                                <rect key="frame" x="10" y="144.66666666666674" width="335" height="25"/>
+                                                                <subviews>
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JvI-77-IV0">
+                                                                        <rect key="frame" x="0.0" y="24.666666666666629" width="335" height="1"/>
+                                                                        <color key="backgroundColor" red="0.28326743840000002" green="0.49251383539999999" blue="0.59217196699999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="1" id="SJT-bD-aGI"/>
+                                                                        </constraints>
+                                                                    </view>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tax" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FJk-Qe-U8L">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="134" height="25"/>
+                                                                        <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="14"/>
+                                                                        <color key="textColor" red="0.46274509800000002" green="0.59215686270000001" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Awr-od-RXY">
+                                                                        <rect key="frame" x="134" y="0.66666666666662877" width="201" height="25"/>
+                                                                        <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="14"/>
+                                                                        <color key="textColor" red="0.46274509800000002" green="0.59215686270000001" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                                <color key="backgroundColor" red="0.0" green="0.1450980392" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <constraints>
+                                                                    <constraint firstItem="FJk-Qe-U8L" firstAttribute="height" secondItem="uzc-LL-qX4" secondAttribute="height" id="38u-ol-FYn"/>
+                                                                    <constraint firstItem="Awr-od-RXY" firstAttribute="height" secondItem="uzc-LL-qX4" secondAttribute="height" id="3Uc-0A-a5y"/>
+                                                                    <constraint firstItem="Awr-od-RXY" firstAttribute="width" secondItem="uzc-LL-qX4" secondAttribute="width" multiplier="0.6" id="CKX-ik-TjU"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="JvI-77-IV0" secondAttribute="trailing" id="H2i-AU-5Mj"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="Awr-od-RXY" secondAttribute="bottom" id="K4Y-Gw-MNd"/>
+                                                                    <constraint firstItem="FJk-Qe-U8L" firstAttribute="width" secondItem="uzc-LL-qX4" secondAttribute="width" multiplier="0.4" id="Sdg-fH-5Yo"/>
+                                                                    <constraint firstAttribute="height" constant="25" id="d9Q-K0-0dZ"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="Awr-od-RXY" secondAttribute="trailing" id="ea5-Er-xkw"/>
+                                                                    <constraint firstItem="FJk-Qe-U8L" firstAttribute="centerY" secondItem="uzc-LL-qX4" secondAttribute="centerY" id="ejO-iP-EfE"/>
+                                                                    <constraint firstItem="FJk-Qe-U8L" firstAttribute="leading" secondItem="uzc-LL-qX4" secondAttribute="leading" id="hos-dh-r2N"/>
+                                                                    <constraint firstItem="JvI-77-IV0" firstAttribute="leading" secondItem="uzc-LL-qX4" secondAttribute="leading" id="keU-nw-oZU"/>
+                                                                    <constraint firstItem="Awr-od-RXY" firstAttribute="centerY" secondItem="uzc-LL-qX4" secondAttribute="centerY" id="nti-N5-QXw"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="JvI-77-IV0" secondAttribute="bottom" id="tbW-U0-iWy"/>
+                                                                </constraints>
+                                                            </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sAx-fI-7DY">
-                                                                <rect key="frame" x="10" y="168.66666666666674" width="335" height="25"/>
+                                                                <rect key="frame" x="10" y="169.66666666666674" width="335" height="25"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bTc-4U-5ut">
                                                                         <rect key="frame" x="0.0" y="24.666666666666629" width="335" height="1"/>
@@ -6142,6 +6143,9 @@ Booking Non Refundable</string>
                                                                     </label>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0CW-be-bcS">
                                                                         <rect key="frame" x="0.0" y="0.0" width="335" height="25"/>
+                                                                        <connections>
+                                                                            <action selector="promoCodeButtonPressed:" destination="pZ6-sV-cbV" eventType="touchUpInside" id="ozF-KJ-fOx"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" red="0.0" green="0.1450980392" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -6165,7 +6169,7 @@ Booking Non Refundable</string>
                                                                 </constraints>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PBX-Ul-Qdx">
-                                                                <rect key="frame" x="10" y="193.66666666666674" width="335" height="25"/>
+                                                                <rect key="frame" x="10" y="194.66666666666674" width="335" height="25"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0eR-SH-5HW">
                                                                         <rect key="frame" x="0.0" y="24.666666666666629" width="335" height="1"/>
@@ -6211,14 +6215,15 @@ Booking Non Refundable</string>
                                                             <constraint firstItem="PBX-Ul-Qdx" firstAttribute="top" secondItem="sAx-fI-7DY" secondAttribute="bottom" id="55P-82-V35"/>
                                                             <constraint firstAttribute="trailing" secondItem="uzc-LL-qX4" secondAttribute="trailing" constant="10" id="8I1-1D-kfb"/>
                                                             <constraint firstItem="uzc-LL-qX4" firstAttribute="leading" secondItem="exT-wq-U1Z" secondAttribute="leading" constant="10" id="DCk-Ac-jGd"/>
+                                                            <constraint firstItem="sAx-fI-7DY" firstAttribute="top" secondItem="uzc-LL-qX4" secondAttribute="bottom" id="IgG-vd-9pk"/>
                                                             <constraint firstAttribute="trailing" secondItem="PBX-Ul-Qdx" secondAttribute="trailing" constant="10" id="IwK-3m-CwZ"/>
+                                                            <constraint firstItem="uzc-LL-qX4" firstAttribute="top" secondItem="TEJ-Yl-K75" secondAttribute="bottom" id="Jqu-8y-XR0"/>
                                                             <constraint firstItem="mCi-d2-MLx" firstAttribute="top" secondItem="exT-wq-U1Z" secondAttribute="top" constant="10" id="LPJ-iL-Kfj"/>
                                                             <constraint firstItem="5Kc-z0-4fg" firstAttribute="leading" secondItem="exT-wq-U1Z" secondAttribute="leading" constant="10" id="ORr-YU-g0s"/>
                                                             <constraint firstAttribute="trailing" secondItem="zxX-7k-w4O" secondAttribute="trailing" constant="10" id="PRC-Ay-vo5"/>
                                                             <constraint firstAttribute="trailing" secondItem="WvB-Tl-Dwc" secondAttribute="trailing" constant="10" id="U3P-FW-iNT"/>
                                                             <constraint firstAttribute="trailing" secondItem="sAx-fI-7DY" secondAttribute="trailing" constant="10" id="YzI-P8-rXP"/>
-                                                            <constraint firstItem="uzc-LL-qX4" firstAttribute="top" secondItem="WvB-Tl-Dwc" secondAttribute="bottom" id="ayQ-lH-FwZ"/>
-                                                            <constraint firstItem="TEJ-Yl-K75" firstAttribute="top" secondItem="uzc-LL-qX4" secondAttribute="bottom" id="cGD-7e-xOG"/>
+                                                            <constraint firstItem="TEJ-Yl-K75" firstAttribute="top" secondItem="WvB-Tl-Dwc" secondAttribute="bottom" id="bZa-4B-DEz"/>
                                                             <constraint firstAttribute="trailing" secondItem="mCi-d2-MLx" secondAttribute="trailing" constant="10" id="dYg-vB-b8F"/>
                                                             <constraint firstItem="WvB-Tl-Dwc" firstAttribute="top" secondItem="5Kc-z0-4fg" secondAttribute="bottom" id="eWJ-l2-zr4"/>
                                                             <constraint firstItem="WvB-Tl-Dwc" firstAttribute="leading" secondItem="exT-wq-U1Z" secondAttribute="leading" constant="10" id="g4h-UO-HuY"/>
@@ -6226,7 +6231,6 @@ Booking Non Refundable</string>
                                                             <constraint firstAttribute="trailing" secondItem="5Kc-z0-4fg" secondAttribute="trailing" constant="10" id="gtI-bd-dMk"/>
                                                             <constraint firstItem="mCi-d2-MLx" firstAttribute="leading" secondItem="exT-wq-U1Z" secondAttribute="leading" constant="10" id="kBQ-2q-2f1"/>
                                                             <constraint firstAttribute="trailing" secondItem="TEJ-Yl-K75" secondAttribute="trailing" constant="10" id="mgJ-Zg-s2u"/>
-                                                            <constraint firstItem="sAx-fI-7DY" firstAttribute="top" secondItem="TEJ-Yl-K75" secondAttribute="bottom" id="p2B-at-wmK"/>
                                                             <constraint firstItem="5Kc-z0-4fg" firstAttribute="top" secondItem="zxX-7k-w4O" secondAttribute="bottom" id="pbf-Uo-ykh"/>
                                                             <constraint firstItem="PBX-Ul-Qdx" firstAttribute="leading" secondItem="exT-wq-U1Z" secondAttribute="leading" constant="10" id="qB3-Nh-H5V"/>
                                                             <constraint firstItem="zxX-7k-w4O" firstAttribute="leading" secondItem="exT-wq-U1Z" secondAttribute="leading" constant="10" id="rQ5-Jq-YRv"/>
@@ -6240,7 +6244,7 @@ Booking Non Refundable</string>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AML-1V-JHm">
-                                                        <rect key="frame" x="10" y="976.66666666666652" width="355" height="153"/>
+                                                        <rect key="frame" x="10" y="977.66666666666652" width="355" height="153"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cPI-gL-gHG">
                                                                 <rect key="frame" x="10" y="10.666666666666742" width="335" height="18"/>
@@ -6614,10 +6618,11 @@ Booking Non Refundable</string>
                         <outlet property="needToKNowLabel" destination="HKg-lV-1oU" id="cWw-Qt-fDu"/>
                         <outlet property="promoCodeLabel" destination="XO0-DV-biE" id="HnR-Qc-nK1"/>
                         <outlet property="roomCostLabel" destination="KN8-ey-3Dv" id="lMb-aw-oAy"/>
-                        <outlet property="roomCountLabel" destination="Awr-od-RXY" id="zXa-hT-1bW"/>
                         <outlet property="roomTypeLabel" destination="qhD-CP-hL3" id="ql7-hQ-uGY"/>
                         <outlet property="scrollView" destination="OX6-Cw-DRo" id="hih-pX-WDS"/>
                         <outlet property="tableView" destination="ljr-7Q-ekq" id="33o-uI-kHx"/>
+                        <outlet property="taxRate" destination="Awr-od-RXY" id="NsF-v8-J2E"/>
+                        <outlet property="taxRateNameLabel" destination="FJk-Qe-U8L" id="gW9-sy-JXu"/>
                         <outlet property="topMenuBar" destination="qN3-Rg-FHk" id="Prg-b2-9yk"/>
                         <outlet property="totalCostLabel" destination="cIn-Tr-Zwe" id="b2n-yv-DHg"/>
                         <outlet property="userEmailLabel" destination="b90-Ji-PfW" id="s2M-Qn-kmn"/>
@@ -7539,10 +7544,10 @@ can let you Know the best deals in town!</string>
             </objects>
             <point key="canvasLocation" x="608.79999999999995" y="133.74384236453201"/>
         </scene>
-        <!--Promo Code View Controller-->
+        <!--PromoCodeViewController-->
         <scene sceneID="J3n-N4-M1X">
             <objects>
-                <viewController storyboardIdentifier="PromoCodeViewController" id="MHA-Ec-zK5" customClass="PromoCodeViewController" customModule="pikanite" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PromoCodeViewController" title="PromoCodeViewController" id="MHA-Ec-zK5" customClass="PromoCodeViewController" customModule="pikanite" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mxr-ZJ-RhE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -7553,8 +7558,8 @@ can let you Know the best deals in town!</string>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Jh-Tl-uHo">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="734"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Promo Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ePr-Op-Wyz">
-                                                <rect key="frame" x="129" y="30" width="138" height="24"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Promo Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ePr-Op-Wyz">
+                                                <rect key="frame" x="139" y="30" width="118.33333333333331" height="24"/>
                                                 <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="20"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -7580,6 +7585,11 @@ can let you Know the best deals in town!</string>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Lato-Medium" family="Lato" pointSize="25"/>
                                                         <textInputTraits key="textInputTraits"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                                                <color key="value" red="0.99963909390000005" green="1" blue="0.99975615740000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                     </textField>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2DK-bv-2er">
                                                         <rect key="frame" x="0.0" y="59" width="300" height="1"/>
@@ -7629,6 +7639,16 @@ can let you Know the best deals in town!</string>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WbC-45-tSl">
+                                                <rect key="frame" x="0.0" y="0.0" width="76" height="85"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="85" id="Y3i-Bg-Dya"/>
+                                                    <constraint firstAttribute="width" constant="76" id="rbw-NE-L37"/>
+                                                </constraints>
+                                                <connections>
+                                                    <action selector="backButtonPressed:" destination="MHA-Ec-zK5" eventType="touchUpInside" id="5UZ-Qg-Ssm"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.0" green="0.1450980392" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
@@ -7641,11 +7661,12 @@ can let you Know the best deals in town!</string>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </constraint>
-                                            <constraint firstItem="l6Q-Li-9PM" firstAttribute="centerX" secondItem="bo0-jz-v7c" secondAttribute="centerX" id="BSK-9y-53t"/>
                                             <constraint firstItem="l6Q-Li-9PM" firstAttribute="top" secondItem="bo0-jz-v7c" secondAttribute="bottom" constant="131" id="Fyj-QD-A7B"/>
                                             <constraint firstItem="rlD-u4-C36" firstAttribute="leading" secondItem="7Jh-Tl-uHo" secondAttribute="leading" constant="21" id="QQU-hf-sbf"/>
                                             <constraint firstItem="ePr-Op-Wyz" firstAttribute="centerX" secondItem="7Jh-Tl-uHo" secondAttribute="centerX" constant="10.5" id="RaD-8d-7iR"/>
+                                            <constraint firstItem="WbC-45-tSl" firstAttribute="leading" secondItem="7Jh-Tl-uHo" secondAttribute="leading" id="X0E-VE-8f4"/>
                                             <constraint firstItem="l6Q-Li-9PM" firstAttribute="top" secondItem="rlD-u4-C36" secondAttribute="bottom" constant="37" id="bhl-5h-tlq"/>
+                                            <constraint firstItem="WbC-45-tSl" firstAttribute="top" secondItem="7Jh-Tl-uHo" secondAttribute="top" id="bob-Ob-QeI"/>
                                             <constraint firstItem="yoM-4R-ThE" firstAttribute="centerX" secondItem="7Jh-Tl-uHo" secondAttribute="centerX" id="idT-e5-EQR"/>
                                             <constraint firstItem="yoM-4R-ThE" firstAttribute="centerY" secondItem="7Jh-Tl-uHo" secondAttribute="centerY" constant="-88" id="jsv-JO-tk8"/>
                                             <constraint firstItem="ePr-Op-Wyz" firstAttribute="top" secondItem="7Jh-Tl-uHo" secondAttribute="top" constant="30" id="lkF-N4-xkI"/>

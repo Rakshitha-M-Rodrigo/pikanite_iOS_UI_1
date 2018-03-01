@@ -8,13 +8,23 @@
 
 import UIKit
 
+protocol PromocodeProtocol {
+    func setPromoCode(valueSent: [String: Double])
+}
+
 class PromoCodeViewController: BaseViewController {
     
+    var delegate:PromocodeProtocol?
+    
     @IBOutlet weak var txtPromoCode: UITextField!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        //delegate?.setPromoCode(valueSent: [:])
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
     }
     
     override func didReceiveMemoryWarning() {
@@ -43,6 +53,9 @@ class PromoCodeViewController: BaseViewController {
         print("Touch began")
         
     }
+    @IBAction func backButtonPressed(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
     
     func checkPromo(code: String){
@@ -60,11 +73,15 @@ class PromoCodeViewController: BaseViewController {
                     print("Success with the getting the promo code")
                     print("Responce \(String(describing: resposnse))")
                     print("Amount \(resposnse!["amount"])")
-                    print("Persentage \(resposnse!["percentage"])")
+                    print("Percentage \(resposnse!["percentage"])")
+                    self.appDelegate.promoCode = code
+                    let percentage = (resposnse!.dictionaryObject!)["percentage"] as? Double!
+                    let amount = (resposnse!.dictionaryObject!)["amount"] as? Double!
                     
-                    
+                    self.appDelegate.promoValues = ["Amount": amount!, "Percentage": percentage!]
+                    self.delegate?.setPromoCode(valueSent: ["Amount": amount!, "Percentage": percentage!])
                     //go back to hotel page when the verify success
-                    _ = self.navigationController?.popViewController(animated: true)
+                   self.dismiss(animated: true, completion: nil)
                     
                 }
             } else {
@@ -74,16 +91,6 @@ class PromoCodeViewController: BaseViewController {
         }
     }
     
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
+ 
 }
 

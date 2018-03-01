@@ -26,6 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     var userAgreement: Bool = UserDefaults.standard.bool(forKey: "joiningAgreement")
     var password = false
     var promoCode = "nan"
+    var promoValues:[String:Double] = [:]
     //MARK: App Objects
     var userProfile = Profile()
     

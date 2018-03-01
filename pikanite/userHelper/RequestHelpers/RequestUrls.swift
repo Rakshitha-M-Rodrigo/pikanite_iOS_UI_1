@@ -7,7 +7,7 @@ private var isSandbox = true
 struct RequestUrls {
     
     private static var liveUrl = "https://container.pikanite.com"
-    private static var sandboxUrl = "https://pikanite.com:8082"
+    private static var sandboxUrl = "https://pikanite.com:8081"
     
     /**
      Returns the base url based on isSandbox property.
@@ -52,7 +52,7 @@ struct RequestUrls {
     
     static var forgotPasswordUrl: String {
         get {
-            return getBaseUrl() + ""
+            return getBaseUrl() + "/public/users/\(String(describing: UserDefaults.standard.string(forKey: "userID")))/profilePic.jpg"
         }
     }
     

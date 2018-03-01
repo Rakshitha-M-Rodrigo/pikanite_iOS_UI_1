@@ -326,49 +326,39 @@ class UserHelper: RequestHelper {
         }
     }
     
-    static func changeProfilePic(imageData: Data?, completion: @escaping ((_ isSuccess: Bool, _ response: JSON?, _ error: AFErrors?) -> ())) {
+    static func changeProfilePic(imageData: UIImage, email: String, completion: @escaping ((_ isSuccess: Bool, _ response: JSON?, _ error: AFErrors?) -> ())) {
         
-        //let params = ["profile_picture": imageData]
+        let parameters = [
+            "ProfilePic": "ProfilePic.jpeg",
+            "Email": email
+        ]
+        
         Alamofire.upload(multipartFormData: { (multipartFormData) in
-            
-            if let data = imageData{
-                multipartFormData.append(data, withName: "profile_picture", fileName: "image.png", mimeType: "image/png")
+            multipartFormData.append(UIImageJPEGRepresentation(imageData, 1)!, withName: "ProfilePic", fileName: "ProfilePic.jpeg", mimeType: "image/jpeg")
+            for (key, value) in parameters {
+                multipartFormData.append(value.data(using: String.Encoding.utf8)!, withName: key)
             }
-            
-        }, usingThreshold: UInt64.init(), to: RequestUrls.profilePicChangeUrl, method: .post, headers: getCommonHeaders(withAuth: true)) { (result) in
-            switch result{
+        }, to:RequestUrls.profilePicChangeUrl)
+        { (result) in
+            switch result {
             case .success(let upload, _, _):
+                
+                upload.uploadProgress(closure: { (progress) in
+                    //Print progress
+                    print(progress)
+                })
+                
                 upload.responseJSON { response in
-//                    print("Succesfully uploaded")
-                    if response.error != nil {
-                        completion(false, nil, nil)
-                        return
-                    }
-                    let resultJSON = JSON(response.result.value!)
-                    
-                    if resultJSON["error"].stringValue  == "Unauthenticated." {
-                        self.signOut()
-                        return
-                    }
-                    
-                    if resultJSON["success"].boolValue {
-                        completion(true, resultJSON, nil)
-                        return
-                    }else{
-                        guard let messageCode = resultJSON["message_code"].string, let messageText = resultJSON["text"].string else {
-                            let errors = RequestHelper.getDefaultApiErrors()
-                            completion(false, nil, errors)
-                            return
-                        }
-                        completion(false, nil, RequestHelper.getDefaultApiErrors(errorId: messageCode, message: messageText))
-                        return
-                    }
-                    
+                    //print response.result
+                    print(response)
                 }
-            case .failure(let error):
-                print("Error in upload: \(error.localizedDescription)")
-                completion(false, nil, nil)
+                
+            case .failure(let encodingError):
+                //print encodingError.description
+                print(encodingError)
             }
+            
+            
         }
     }
     

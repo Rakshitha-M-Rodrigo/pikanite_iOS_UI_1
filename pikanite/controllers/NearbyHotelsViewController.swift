@@ -31,16 +31,20 @@ class NearbyHotelsViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         mapView.delegate = self as? GMSMapViewDelegate
-        switch self.mode {
-        case "discover":
-            print("loading discover map....")
-            self.getMap()
-        case "hotel":
-            print("loading hotel map....")
-            loadHotelMap()
-        default:
-            print("loading discover map.....")
+        
+        if (offerArray.count != 0 ){
+            switch self.mode {
+            case "discover":
+                print("loading discover map....")
+                self.getMap()
+            case "hotel":
+                print("loading hotel map....")
+                loadHotelMap()
+            default:
+                print("loading discover map.....")
+            }
         }
+        
         
         
     }
