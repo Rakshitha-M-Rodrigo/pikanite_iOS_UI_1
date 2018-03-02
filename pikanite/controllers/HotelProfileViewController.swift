@@ -566,19 +566,25 @@ class HotelProfileViewController: BaseViewController, GMSMapViewDelegate, CLLoca
         vc.userNameLabel.text = self.userNameLabel.text
         vc.emailLabel.text = self.userEmailLabel.text
         vc.breakfastLabel.text = ""
-        
+        vc.roomTypeLabel.text = self.roomTypeLabel.text
+        vc.checkInLabel.text = "\(self.checkInDateLabel.text) at \(self.getTimeOn_HH_MM_Format(string:(self.hotel.checkInTimeStart)))"
+        vc.checkOutLabel.text = "\(self.checkInDateLabel.text) at \(self.getTimeOn_HH_MM_Format(string:(self.hotel.checkInTimeStart)))"
+        vc.roomPriceLabel.text = self.roomCostLabel.text
+        vc.taxLabel.text = self.taxRate.text
+        vc.taxLabel.text = self.totalCostLabel.text
+        vc.taxNameLabel.text = self.taxRateNameLabel.text
         self.present(vc, animated: true, completion: nil)
         
-        if(facebookLogin){
-            print("====> facebook ")
-            self.bookNow()
-        } else if(googleLogin){
-            print("====> google ")
-            self.bookNow()
-        } else if(genericLogin){
-            print("====> generic ")
-            self.passwordPrompt(userEmail: userEmail, HotelEmail: self.offerArray[offerIndex].hotelEmail, RoomCount: String(self.roomCount), recordedDate: self.offerArray[offerIndex].recordDate)
-        }
+//        if(facebookLogin){
+//            print("====> facebook ")
+//            self.bookNow()
+//        } else if(googleLogin){
+//            print("====> google ")
+//            self.bookNow()
+//        } else if(genericLogin){
+//            print("====> generic ")
+//            self.passwordPrompt(userEmail: userEmail, HotelEmail: self.offerArray[offerIndex].hotelEmail, RoomCount: String(self.roomCount), recordedDate: self.offerArray[offerIndex].recordDate)
+//        }
         
     }
     

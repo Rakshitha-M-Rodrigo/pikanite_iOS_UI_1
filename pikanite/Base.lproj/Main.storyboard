@@ -7755,6 +7755,7 @@ Booking Non Refundable</string>
                         <outlet property="roomPriceLabel" destination="GXE-dp-087" id="TLo-GL-1uk"/>
                         <outlet property="roomTypeLabel" destination="yA0-hG-qfc" id="Mqu-vx-xb0"/>
                         <outlet property="taxLabel" destination="eLG-BI-DSp" id="eSK-Eq-LyN"/>
+                        <outlet property="taxNameLabel" destination="aNX-g2-quQ" id="KGb-ya-9Ow"/>
                         <outlet property="totalLabel" destination="qoy-o3-LGT" id="zx8-s0-32O"/>
                         <outlet property="userNameLabel" destination="Fj4-J2-dzY" id="clm-DO-cFm"/>
                     </connections>

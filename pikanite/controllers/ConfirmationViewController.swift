@@ -21,6 +21,7 @@ class ConfirmationViewController: UIViewController {
     @IBOutlet weak var taxLabel: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var paymentMethodLabel: UILabel!
+    @IBOutlet weak var taxNameLabel: UILabel!
     
     
     override func viewDidLoad() {
