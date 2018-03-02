@@ -65,6 +65,7 @@
 		AC47689B202E9D8200B5F5CB /* NearbyHotelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC47689A202E9D8200B5F5CB /* NearbyHotelsViewController.swift */; };
 		AC4768A1202F215500B5F5CB /* PastBookingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC47689F202F215500B5F5CB /* PastBookingTableViewCell.swift */; };
 		AC4768A2202F215500B5F5CB /* PastBookingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC4768A0202F215500B5F5CB /* PastBookingTableViewCell.xib */; };
+		AC64444E2049477C0025FAFF /* ConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC64444D2049477C0025FAFF /* ConfirmationViewController.swift */; };
 		AC6A693C2000B45B0097DC45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6A693B2000B45B0097DC45 /* AppDelegate.swift */; };
 		AC6A693E2000B45B0097DC45 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6A693D2000B45B0097DC45 /* ViewController.swift */; };
 		AC6A69412000B45B0097DC45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC6A693F2000B45B0097DC45 /* Main.storyboard */; };
@@ -225,6 +226,7 @@
 		AC47689A202E9D8200B5F5CB /* NearbyHotelsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyHotelsViewController.swift; sourceTree = "<group>"; };
 		AC47689F202F215500B5F5CB /* PastBookingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastBookingTableViewCell.swift; sourceTree = "<group>"; };
 		AC4768A0202F215500B5F5CB /* PastBookingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PastBookingTableViewCell.xib; sourceTree = "<group>"; };
+		AC64444D2049477C0025FAFF /* ConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationViewController.swift; sourceTree = "<group>"; };
 		AC6A69382000B45A0097DC45 /* pikanite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pikanite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC6A693B2000B45B0097DC45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC6A693D2000B45B0097DC45 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -669,6 +671,7 @@
 				ACBA49B7203C4FFF00E2833A /* UserGuideViewController.swift */,
 				AC6D074A203E6FB10054DDF2 /* ProfileViewController.swift */,
 				4FD614C72046D22E00C46C48 /* PromoCodeViewController.swift */,
+				AC64444D2049477C0025FAFF /* ConfirmationViewController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -1213,6 +1216,7 @@
 				AC9F52372028A23D003D2E44 /* MainUINavigationController.swift in Sources */,
 				AC15F9B02025B13500C2D5DA /* TPKeyboardAvoidingTableView.m in Sources */,
 				AC15F9B12025B13500C2D5DA /* TPKeyboardAvoidingScrollView.m in Sources */,
+				AC64444E2049477C0025FAFF /* ConfirmationViewController.swift in Sources */,
 				ACBF43992038DFD500C7F4F5 /* YesNoPromptViewController.swift in Sources */,
 				AC47689B202E9D8200B5F5CB /* NearbyHotelsViewController.swift in Sources */,
 				ACBA49B8203C4FFF00E2833A /* UserGuideViewController.swift in Sources */,

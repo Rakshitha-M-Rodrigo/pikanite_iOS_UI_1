@@ -427,10 +427,18 @@ class HotelProfileViewController: BaseViewController, GMSMapViewDelegate, CLLoca
         let address = self.hotel.hotelAddress
         let addressDict = self.convertToDictionary(text: address)
         print(addressDict!)
-        self.hotelAddressLabel.text = "\(addressDict!["No"]!), \(addressDict!["Street"]!), \(addressDict!["Address"]!)"
+       
+        let hotelNo = "\(addressDict!["No"]!)"
+        let hotelStreet = "\(addressDict!["Street"]!)"
+        let hotelAddress = "\(addressDict!["Address"]!)"
+        let hotelNoTrimmed = hotelNo.trimmingCharacters(in: NSCharacterSet.whitespaces)
+        let hotelStreetTrimmed = hotelStreet.trimmingCharacters(in: NSCharacterSet.whitespaces)
+        let hotelAddressTrimmed = hotelAddress.trimmingCharacters(in: NSCharacterSet.whitespaces)
+        self.hotelAddressLabel.text = "\(hotelNoTrimmed), \(hotelStreetTrimmed), \(hotelAddressTrimmed)"
         self.checkingTimesLabel.text = "Check-In: \(self.getTimeOn_HH_MM_Format(string:(self.hotel.checkInTimeStart)))        Check-Out: \(self.getTimeOn_HH_MM_Format(string:self.hotel.checkOutTimeStart))"
         
         var needToKnow: [String] = []
+        
         
         
         //coupleFriendly: false, petLimit: false, cancellationLimit: false, ageLimit: "21+ to Book"
@@ -521,7 +529,7 @@ class HotelProfileViewController: BaseViewController, GMSMapViewDelegate, CLLoca
         self.roomTypeLabel.text = self.offerArray[offerIndex].roomType
 //        self.roomCountLabel.text = "1"
         self.roomCostLabel.text = ("LKR \(String(self.offerArray[offerIndex].discount))")
-        self.totalCostLabel.text = String((self.offerArray[offerIndex].discount * (100 + Double(self.offerArray[offerIndex].taxRate)!)/100) )
+        self.totalCostLabel.text = "LKR \(String((self.offerArray[offerIndex].discount * (100 + Double(self.offerArray[offerIndex].taxRate)!)/100) ))"
         self.taxRate.text = "LKR \((self.offerArray[offerIndex].discount * (Double(self.offerArray[offerIndex].taxRate)!)/100))"
         self.taxRateNameLabel.text = "Tax (\(self.offerArray[offerIndex].taxRate)%)"
         self.checkInDateLabel.text = self.getShrotDateTime(string: self.offerArray[offerIndex].recordDate)
@@ -549,8 +557,17 @@ class HotelProfileViewController: BaseViewController, GMSMapViewDelegate, CLLoca
         let facebookLogin = UserDefaults.standard.bool(forKey: "facebookLogin")
         let googleLogin = UserDefaults.standard.bool(forKey: "googleLogin")
         let genericLogin = UserDefaults.standard.bool(forKey: "genericLogin")
-        UserDefaults.standard.set(false, forKey: "joiningAgreement")
-        self.appDelegate.userAgreement = false
+//        UserDefaults.standard.set(false, forKey: "joiningAgreement")
+//        self.appDelegate.userAgreement = false
+        
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "ConfirmationViewController") as! ConfirmationViewController
+        vc.modalPresentationStyle = .overFullScreen
+        vc.modalTransitionStyle = .crossDissolve
+        vc.userNameLabel.text = self.userNameLabel.text
+        vc.emailLabel.text = self.userEmailLabel.text
+        vc.breakfastLabel.text = ""
+        
+        self.present(vc, animated: true, completion: nil)
         
         if(facebookLogin){
             print("====> facebook ")

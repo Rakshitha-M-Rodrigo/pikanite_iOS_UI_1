@@ -243,6 +243,17 @@ class BaseViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelega
         self.present(vc, animated: true, completion: nil)
     }
     
+//    func confirmBookingPrompt(){
+//        let vc = self.storyboard?.instantiateViewController(withIdentifier: "PasswordPromptViewController") as! PasswordPromptViewController
+//        vc.modalPresentationStyle = .overFullScreen
+//        vc.modalTransitionStyle = .crossDissolve
+//        vc.userEmail = userEmail
+//        vc.hotelEmail = HotelEmail
+//        vc.roomCount = RoomCount
+//        vc.recordedDate = recordedDate
+//        self.present(vc, animated: true, completion: nil)
+//    }
+    
     
     func passwordPrompt(userEmail: String, HotelEmail: String, RoomCount: String, recordedDate: String){
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "PasswordPromptViewController") as! PasswordPromptViewController

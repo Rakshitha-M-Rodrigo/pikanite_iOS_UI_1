@@ -6,8 +6,8 @@ private var isSandbox = true
 
 struct RequestUrls {
     
-    private static var liveUrl = "https://container.pikanite.com"
-    private static var sandboxUrl = "https://pikanite.com:8081"
+    private static var liveUrl = "https://pikanite.com:8081" //"https://container.pikanite.com"
+    private static var sandboxUrl = "https://pikanite.com:8082"
     
     /**
      Returns the base url based on isSandbox property.

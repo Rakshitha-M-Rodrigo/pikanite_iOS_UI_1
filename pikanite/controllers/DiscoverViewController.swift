@@ -153,14 +153,20 @@ extension DiscoverViewController: UITableViewDelegate, UITableViewDataSource{
         cell.selectionStyle = .none
         cell.hotelImageView.sd_setImage(with: URL(string: RequestUrls.getBaseUrl()+self.offerArray[indexPath.row].image1)!)
         cell.hotelName.text = self.offerArray[indexPath.row].hotelName
-        cell.price.text = "LKR \(self.offerArray[indexPath.row].discount)"
-        
-        cell.previousPrice.attributedText = getStrikeThoroughText(text: "was LKR \(self.offerArray[indexPath.row].normalRoomRate)")
-//        cell.taxDetails.attributedText = getStrikeThoroughText(text: "(Inc. Tax)")
+        cell.price.text = "LKR \(String((self.offerArray[indexPath.row].discount * (100 + Double(self.offerArray[indexPath.row].taxRate)!)/100) ))" //"LKR \(self.offerArray[indexPath.row].discount)"
+        let wasAttributted = NSAttributedString(string: "was ")
+        let previousStrikeOffPrice = (getStrikeThoroughText(text: "LKR \(self.offerArray[indexPath.row].normalRoomRate)"))
+        let previousPriceAttributed = NSMutableAttributedString()
+        previousPriceAttributed.append(wasAttributted)
+        previousPriceAttributed.append(previousStrikeOffPrice)
+        cell.previousPrice.attributedText = previousPriceAttributed
+//        cell.taxDetails.attributedText = getStrikeThoroughText(text: "(Inc. Tax: LKR \(self.offerArray[indexPath.row].discount * (Double(self.offerArray[indexPath.row].taxRate)!)/100)")
         let address = self.offerArray[indexPath.row].hotelAddress
         let addressDict = self.convertToDictionary(text: address)
         print(addressDict!)
-        cell.address.text = "\(addressDict!["Address"]!)"
+        let addressString = "\(addressDict!["Address"]!)"
+        let trimmedWhiteSpace = addressString.trimmingCharacters(in: NSCharacterSet.whitespaces) //.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+        cell.address.text = trimmedWhiteSpace //"\(addressDict!["Address"]!)"
         
         cell.profile.text = self.offerArray[indexPath.row].hotelProfile
         cell.additoinalInfo.text = "Additional"
