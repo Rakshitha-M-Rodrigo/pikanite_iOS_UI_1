@@ -563,16 +563,30 @@ class HotelProfileViewController: BaseViewController, GMSMapViewDelegate, CLLoca
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "ConfirmationViewController") as! ConfirmationViewController
         vc.modalPresentationStyle = .overFullScreen
         vc.modalTransitionStyle = .crossDissolve
-        vc.userNameLabel.text = self.userNameLabel.text
-        vc.emailLabel.text = self.userEmailLabel.text
-        vc.breakfastLabel.text = ""
-        vc.roomTypeLabel.text = self.roomTypeLabel.text
-        vc.checkInLabel.text = "\(self.checkInDateLabel.text) at \(self.getTimeOn_HH_MM_Format(string:(self.hotel.checkInTimeStart)))"
-        vc.checkOutLabel.text = "\(self.checkInDateLabel.text) at \(self.getTimeOn_HH_MM_Format(string:(self.hotel.checkInTimeStart)))"
-        vc.roomPriceLabel.text = self.roomCostLabel.text
-        vc.taxLabel.text = self.taxRate.text
-        vc.taxLabel.text = self.totalCostLabel.text
-        vc.taxNameLabel.text = self.taxRateNameLabel.text
+        vc.userName = UserDefaults.standard.string(forKey: "UserName")!
+        vc.email = self.userEmailLabel.text!
+        if(self.hotel.breakfastIncluded != nil)
+        {
+            if(self.hotel.breakfastIncluded)
+            {
+               vc.breakfast = "Breakfast included"
+            }
+            else
+            {
+                vc.breakfast = "Breakfast not included"
+            }
+        }
+        
+        vc.roomType = self.roomTypeLabel.text!
+        vc.checkIn = "\(self.checkInDateLabel.text!) at \(self.getTimeOn_HH_MM_Format(string:(self.hotel.checkInTimeStart)))"
+        vc.checkOut = "\(self.checkInDateLabel.text!) at \(self.getTimeOn_HH_MM_Format(string:(self.hotel.checkInTimeStart)))"
+        vc.roomPrice = self.roomCostLabel.text!
+        vc.tax = self.taxRate.text!
+        vc.taxName = self.taxRateNameLabel.text!
+        vc.hotelEmail = self.offerArray[offerIndex].hotelEmail
+        vc.promoCodeText = self.appDelegate.promoCode
+        vc.recordedDate = self.offerArray[offerIndex].recordDate
+        vc.roomCount = String(self.roomCount)
         self.present(vc, animated: true, completion: nil)
         
 //        if(facebookLogin){
@@ -588,28 +602,7 @@ class HotelProfileViewController: BaseViewController, GMSMapViewDelegate, CLLoca
         
     }
     
-    func bookNow(){
-        self.showActivityIndicator()
-        
-        let recordedDate = self.getCurrentDateTime()
-        let promoCode = self.appDelegate.promoCode
-        UserHelper.bookHotel(userEmail: userEmail, HotelEmail: self.offerArray[offerIndex].hotelEmail, RoomCount: String(self.roomCount), recordedDate: recordedDate, promoCode: promoCode ) { (success, response, errors) in
-            if (errors == nil){
-                self.hideActivityIndicator()
-                print(response as Any)
-                let data = response!.dictionaryObject!
-                if((data["message"] as! String) == "success"){
-                    self.promptBookingStatus()
-                } else {
-                    self.displayAlertWithOk(title: "Pikanite Says!", alertMessage: "Sorry, couldn't place the booking, please contact us...")
-                }
-            } else {
-                self.displayAlertWithOk(title: "Pikanite Says!", alertMessage: "Some thing went wrong...!")
-                self.hideActivityIndicator()
-            }
-        }
-        self.hideActivityIndicator()
-    }
+    
 }
 
 //MARK: User Reviews

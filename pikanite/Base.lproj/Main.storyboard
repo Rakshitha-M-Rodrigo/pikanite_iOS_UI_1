@@ -7121,10 +7121,10 @@ Booking Non Refundable</string>
             </objects>
             <point key="canvasLocation" x="2272.8000000000002" y="1483.7438423645322"/>
         </scene>
-        <!--Confirmation View Controller-->
+        <!--ConfirmationViewController-->
         <scene sceneID="mXw-jZ-Btp">
             <objects>
-                <viewController id="f13-gN-qcA" customClass="ConfirmationViewController" customModule="pikanite" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ConfirmationViewController" title="ConfirmationViewController" id="f13-gN-qcA" customClass="ConfirmationViewController" customModule="pikanite" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="T1x-Ne-UfY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -7151,6 +7151,9 @@ Booking Non Refundable</string>
                                             <constraint firstAttribute="width" constant="68" id="CpX-5o-vsN"/>
                                             <constraint firstAttribute="height" constant="50" id="v07-x3-IhE"/>
                                         </constraints>
+                                        <connections>
+                                            <action selector="backButtonPressed:" destination="f13-gN-qcA" eventType="touchUpInside" id="ThW-wc-aBg"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.1450980392" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -7171,7 +7174,7 @@ Booking Non Refundable</string>
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="676"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1WH-EV-iKI">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="530"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="535"/>
                                                 <subviews>
                                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YMp-aU-oSO">
                                                         <rect key="frame" x="10" y="10" width="355" height="106"/>
@@ -7624,23 +7627,23 @@ Booking Non Refundable</string>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AVF-2M-jTw">
-                                                        <rect key="frame" x="10" y="435" width="355" height="25"/>
+                                                        <rect key="frame" x="10" y="435" width="355" height="30"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bdp-n2-NKt">
-                                                                <rect key="frame" x="0.0" y="24" width="355" height="1"/>
+                                                                <rect key="frame" x="0.0" y="29" width="355" height="1"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="1" id="MSX-c9-Ahr"/>
                                                                 </constraints>
                                                             </view>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payment Method" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GRA-bY-qRg">
-                                                                <rect key="frame" x="10" y="0.0" width="142" height="25"/>
+                                                                <rect key="frame" x="10" y="0.0" width="142" height="30"/>
                                                                 <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="14"/>
                                                                 <color key="textColor" red="0.99963909390000005" green="1" blue="0.99975615740000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To be settled at the hotel" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OwE-8T-pZ2">
-                                                                <rect key="frame" x="132" y="0.0" width="213" height="25"/>
+                                                                <rect key="frame" x="132" y="0.0" width="213" height="30"/>
                                                                 <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="14"/>
                                                                 <color key="textColor" red="0.99963909390000005" green="1" blue="0.99975615740000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -7655,12 +7658,12 @@ Booking Non Refundable</string>
                                                             <constraint firstItem="GRA-bY-qRg" firstAttribute="leading" secondItem="AVF-2M-jTw" secondAttribute="leading" constant="10" id="J83-Xn-6Fr"/>
                                                             <constraint firstItem="OwE-8T-pZ2" firstAttribute="top" secondItem="AVF-2M-jTw" secondAttribute="top" id="PgK-1e-vIl"/>
                                                             <constraint firstItem="GRA-bY-qRg" firstAttribute="top" secondItem="AVF-2M-jTw" secondAttribute="top" id="RSr-sA-bio"/>
-                                                            <constraint firstAttribute="height" constant="25" id="ZqU-MA-q1Q"/>
                                                             <constraint firstAttribute="bottom" secondItem="OwE-8T-pZ2" secondAttribute="bottom" id="bgR-2g-gE0"/>
                                                             <constraint firstAttribute="trailing" secondItem="Bdp-n2-NKt" secondAttribute="trailing" id="f6R-FW-jeE"/>
                                                             <constraint firstItem="Bdp-n2-NKt" firstAttribute="leading" secondItem="AVF-2M-jTw" secondAttribute="leading" id="fk3-b7-F2s"/>
                                                             <constraint firstAttribute="bottom" secondItem="GRA-bY-qRg" secondAttribute="bottom" id="itz-9t-fpG"/>
                                                             <constraint firstAttribute="bottom" secondItem="Bdp-n2-NKt" secondAttribute="bottom" id="n7L-8v-UuG"/>
+                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="tf5-o9-Sx4"/>
                                                         </constraints>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -7669,7 +7672,7 @@ Booking Non Refundable</string>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is one-off discounted roomrate. Your booking is non-refundable and can't be cancelled." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l7l-r6-TGl">
-                                                        <rect key="frame" x="10" y="475" width="355" height="34"/>
+                                                        <rect key="frame" x="10" y="480" width="355" height="34"/>
                                                         <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="14"/>
                                                         <color key="textColor" red="0.99963909390000005" green="1" blue="0.99975615740000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -7727,6 +7730,9 @@ Booking Non Refundable</string>
                                 <state key="normal" title="Confirm Booking">
                                     <color key="titleColor" red="0.99963909390000005" green="1" blue="0.99975615740000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="confirmButtonPressed:" destination="f13-gN-qcA" eventType="touchUpInside" id="k7e-K2-6FZ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
